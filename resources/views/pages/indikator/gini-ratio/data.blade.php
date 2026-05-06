@@ -29,25 +29,16 @@
 
             <tbody style="text-align:center;">
 
-                <tr><td>2008</td><td>0,226</td></tr>
-                <tr><td>2009</td><td>0,227</td></tr>
-                <tr><td>2010</td><td>0,232</td></tr>
-                <tr><td>2011</td><td>0,331</td></tr>
-                <tr><td>2012</td><td>0,363</td></tr>
-                <tr><td>2013</td><td>0,325</td></tr>
-                <tr><td>2014</td><td>0,370</td></tr>
-                <tr><td>2015</td><td>0,344</td></tr>
-                <tr><td>2016</td><td>0,332</td></tr>
-                <tr><td>2017</td><td>0,320</td></tr>
-                <tr><td>2018</td><td>0,397</td></tr>
-                <tr><td>2019</td><td>0,435</td></tr>
-                <tr><td>2020</td><td>0,361</td></tr>
-                <tr><td>2021</td><td>0,349</td></tr>
-                <tr><td>2022</td><td>0,345</td></tr>
-                <tr><td>2023</td><td>0,351</td></tr>
-                <tr><td>2024</td><td>0,369</td></tr>
+    @foreach($gini as $item)
 
-            </tbody>
+        <tr>
+            <td>{{ $item['tahun'] }}</td>
+            <td>{{ $item['gini_ratio'] }}</td>
+        </tr>
+
+    @endforeach
+
+</tbody>
 
         </table>
 

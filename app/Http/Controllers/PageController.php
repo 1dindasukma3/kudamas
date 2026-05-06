@@ -95,7 +95,24 @@ public function pdrbPerkapita() { return view('pages.indikator.pdrb.perkapita-la
 
 // ===== GINI RATIO =====
 public function giniKonsep() { return view('pages.indikator.gini-ratio.konsep'); }
-public function giniData() { return view('pages.indikator.gini-ratio.data'); }
+public function giniData()
+{
+    $url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRkOoduh1jnZEK9TKDF1kFj_Jc_lvnvRGUL6i_hp7TeJ8YLanrdNuKP27ZE3q7_7DEcEsiZN0uPs9td/pub?output=csv";
+
+    $data = array_map('str_getcsv', file($url));
+
+    $header = array_shift($data);
+
+    $gini = [];
+
+    foreach ($data as $row) {
+
+        $gini[] = array_combine($header, $row);
+
+    }
+
+    return view('pages.indikator.gini-ratio.data', compact('gini'));
+}
 
 // ===== KETENAGAKERJAAN =====
 public function ketenagakerjaanKonsep() { return view('pages.indikator.ketenagakerjaan.konsep'); }

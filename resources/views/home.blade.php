@@ -74,6 +74,7 @@
     }
     .carousel-ctrl:hover {
         background: rgba(255,255,255,0.28);
+        border-color: rgba(255,255,255,0.35);
         transform: translateY(-50%) scale(1.08);
     }
     .carousel-ctrl.prev { left: 16px; }
@@ -90,7 +91,43 @@
         background: rgba(255,255,255,0.5); padding: 0;
         cursor: pointer; transition: all 0.25s;
     }
-    .dot-btn.active { width: 24px; background: white; opacity: 1; }
+    .dot-btn.active {
+        width: 24px; background: white; opacity: 1;
+    }
+
+    /* ── STATS ROW ── */
+    .stats-row {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 14px;
+        margin-bottom: 28px;
+    }
+
+    .stat-chip {
+        background: rgba(255,255,255,0.92);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255,255,255,0.85);
+        border-radius: 14px;
+        padding: 16px;
+        display: flex; align-items: center; gap: 12px;
+        box-shadow: 0 2px 10px rgba(27,58,107,0.07);
+        transition: all 0.22s;
+    }
+    .stat-chip:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 24px rgba(27,58,107,0.12);
+    }
+
+    .stat-chip-icon {
+        width: 44px; height: 44px; border-radius: 12px;
+        display: flex; align-items: center; justify-content: center;
+        font-size: 1.2rem; flex-shrink: 0;
+    }
+
+    .stat-chip-val {
+        font-size: 1.2rem; font-weight: 800; color: var(--biru); line-height: 1.1;
+    }
+    .stat-chip-lbl { font-size: 0.68rem; color: var(--muted); margin-top: 2px; }
 
     /* ── SECTION LABEL ── */
     .section-label {
@@ -111,22 +148,21 @@
     }
 
     .menu-card {
-        background: rgba(255,255,255,0.82);
-        backdrop-filter: blur(12px);
-        border: 1.5px solid rgba(255,255,255,0.75);
+        background: rgba(255,255,255,0.92);
+        backdrop-filter: blur(10px);
+        border: 1.5px solid rgba(255,255,255,0.85);
         border-radius: 18px;
         text-decoration: none; color: var(--text);
         display: flex; flex-direction: column;
         align-items: center; justify-content: center;
         padding: 32px 16px; gap: 14px;
-        text-align: center; min-height: 155px;
-        box-shadow:
-            0 2px 8px rgba(27,58,107,0.06),
-            0 1px 2px rgba(0,0,0,0.04);
+        text-align: center; min-height: 150px;
+        box-shadow: 0 2px 10px rgba(27,58,107,0.07);
         transition: all 0.24s cubic-bezier(.4,0,.2,1);
         position: relative; overflow: hidden;
     }
 
+    /* Garis aksen bawah */
     .menu-card::after {
         content: '';
         position: absolute; bottom: 0; left: 0; right: 0;
@@ -137,10 +173,9 @@
     }
 
     .menu-card:hover {
-        background: rgba(255,255,255,0.95);
-        border-color: rgba(27,58,107,0.12);
+        border-color: rgba(27,58,107,0.15);
         box-shadow:
-            0 12px 32px rgba(27,58,107,0.14),
+            0 10px 30px rgba(27,58,107,0.14),
             0 2px 8px rgba(27,58,107,0.06);
         transform: translateY(-5px);
         color: var(--text);
@@ -148,7 +183,7 @@
     .menu-card:hover::after { transform: scaleX(1); }
 
     .mc-icon {
-        width: 62px; height: 62px;
+        width: 60px; height: 60px;
         background: var(--biru-light);
         border-radius: 16px;
         display: flex; align-items: center; justify-content: center;
@@ -163,7 +198,7 @@
     }
 
     .mc-label {
-        font-size: 0.84rem; font-weight: 700;
+        font-size: 0.83rem; font-weight: 700;
         color: var(--text); line-height: 1.4;
         transition: color 0.2s;
     }
@@ -171,13 +206,16 @@
 
     /* ── RESPONSIVE ── */
     @media (max-width: 900px) {
+        .stats-row { grid-template-columns: repeat(2, 1fr); }
         .menu-grid { grid-template-columns: repeat(2, 1fr); }
         .banner-slide { height: 220px; }
     }
+
     @media (max-width: 576px) {
+        .stats-row { grid-template-columns: repeat(2, 1fr); gap: 10px; }
         .menu-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
         .banner-slide { height: 180px; }
-        .menu-card { padding: 22px 12px; min-height: 125px; }
+        .menu-card { padding: 22px 12px; min-height: 120px; }
         .mc-icon { width: 48px; height: 48px; font-size: 1.3rem; }
     }
 </style>
@@ -185,7 +223,7 @@
 
 @section('main-content')
 
-    {{-- BANNER --}}
+    {{-- ══ BANNER ══ --}}
     <div class="banner-wrap">
         <div id="myCarousel" class="carousel slide"
              data-bs-ride="carousel" data-bs-interval="4500">
@@ -236,17 +274,15 @@
             </button>
 
             <div class="dot-wrap">
-                <button class="dot-btn active"
-                        data-bs-target="#myCarousel" data-bs-slide-to="0"></button>
-                <button class="dot-btn"
-                        data-bs-target="#myCarousel" data-bs-slide-to="1"></button>
-                <button class="dot-btn"
-                        data-bs-target="#myCarousel" data-bs-slide-to="2"></button>
+                <button class="dot-btn active" data-bs-target="#myCarousel" data-bs-slide-to="0"></button>
+                <button class="dot-btn" data-bs-target="#myCarousel" data-bs-slide-to="1"></button>
+                <button class="dot-btn" data-bs-target="#myCarousel" data-bs-slide-to="2"></button>
             </div>
         </div>
     </div>
 
-    {{-- MENU UTAMA --}}
+    
+    {{-- ══ MENU UTAMA ══ --}}
     <div class="section-label">Menu Utama</div>
 
     <div class="menu-grid">

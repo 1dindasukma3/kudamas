@@ -67,6 +67,35 @@ Route::get('/indikator-statistik/indeks-indeks/konsep', [PageController::class, 
 Route::get('/indikator-statistik/indeks-indeks/penyusunan-ipm', [PageController::class, 'indeksPenyusunan'])->name('indeks.penyusunan');
 Route::get('/indikator-statistik/indeks-indeks/gender', [PageController::class, 'indeksGender'])->name('indeks.gender');
 
+// ==== PARIWISATA ===
+
+// Route::get('/pariwisata', function () {
+//     return view('indikator.pariwisata.pariwisata');
+// });
+
+// Route::get('/pariwisata/wisata-alam', function () {
+//     return view('indikator.pariwisata.wisata-alam');
+// });
+
+// Route::get('/pariwisata/seni-budaya', function () {
+//     return view('indikator.pariwisata.seni-budaya');
+// });
+
+// Route::get('/pariwisata/wisata-buatan', function () {
+//     return view('indikator.pariwisata.wisata-buatan');
+// });
+
+// Route::get('/pariwisata/wisata-sejarah', function () {
+//     return view('indikator.pariwisata.wisata-sejarah');
+// });
+
+// Route::get('/pariwisata/wisata-kuliner', function () {
+//     return view('indikator.pariwisata.wisata-kuliner');
+// });
+
+// Route::get('/pariwisata/hotel-penginapan', function () {
+//     return view('indikator.pariwisata.hotel-penginapan');
+// });
 
 
 

@@ -3,46 +3,62 @@
 @section('page-title', 'Indeks Penyusunan IPM')
 @section('page-content')
 
-<div class="row g-3 mb-4">
-    <div class="col-4">
-        <div class="p-3 rounded-3 text-center" style="background:#EFF6FF;">
-            <div style="font-size:1.2rem;font-weight:800;color:#1B3A6B;">0,786</div>
-            <div style="font-size:0.7rem;color:#64748B;">Indeks Kesehatan</div>
-        </div>
-    </div>
-    <div class="col-4">
-        <div class="p-3 rounded-3 text-center" style="background:#EFF6FF;">
-            <div style="font-size:1.2rem;font-weight:800;color:#1B3A6B;">0,659</div>
-            <div style="font-size:0.7rem;color:#64748B;">Indeks Pendidikan</div>
-        </div>
-    </div>
-    <div class="col-4">
-        <div class="p-3 rounded-3 text-center" style="background:#EFF6FF;">
-            <div style="font-size:1.2rem;font-weight:800;color:#1B3A6B;">0,612</div>
-            <div style="font-size:0.7rem;color:#64748B;">Indeks Pengeluaran</div>
-        </div>
-    </div>
-</div>
-
 <div class="table-responsive">
-    <table class="table table-hover table-bordered" style="font-size:0.83rem;">
+    <table class="table table-bordered" style="font-size:0.85rem;">
+
         <thead style="background:#1B3A6B;color:white;text-align:center;">
             <tr>
-                <th>Tahun</th>
-                <th>Indeks Kesehatan</th>
-                <th>Indeks Pendidikan</th>
-                <th>Indeks Pengeluaran</th>
-                <th>IPM</th>
+                <th colspan="6" style="font-size:1rem;padding:15px;">
+                    Indeks Penyusun IPM
+                </th>
+            </tr>
+
+            <tr>
+                <th>Indeks</th>
+                <th>2019</th>
+                <th>2020</th>
+                <th>2021</th>
+                <th>2022</th>
+                <th>2023</th>
             </tr>
         </thead>
+
         <tbody style="text-align:center;">
-            <tr><td>2024</td><td>0,786</td><td>0,659</td><td>0,612</td><td><strong>68,54</strong></td></tr>
-            <tr><td>2023</td><td>0,781</td><td>0,648</td><td>0,604</td><td>67,89</td></tr>
-            <tr><td>2022</td><td>0,775</td><td>0,636</td><td>0,595</td><td>67,21</td></tr>
-            <tr><td>2021</td><td>0,769</td><td>0,624</td><td>0,585</td><td>66,54</td></tr>
-            <tr><td>2020</td><td>0,764</td><td>0,612</td><td>0,571</td><td>65,92</td></tr>
+            <tr>
+                <td style="text-align:left;">Kesehatan</td>
+                <td>82,08</td>
+                <td>82,45</td>
+                <td>82,74</td>
+                <td>83,12</td>
+                <td>84,48</td>
+            </tr>
+
+            <tr>
+                <td style="text-align:left;">Pendidikan</td>
+                <td>58,21</td>
+                <td>59,18</td>
+                <td>59,97</td>
+                <td>60,27</td>
+                <td>60,36</td>
+            </tr>
+
+            <tr>
+                <td style="text-align:left;">Pengeluaran</td>
+                <td>69,12</td>
+                <td>68,44</td>
+                <td>68,27</td>
+                <td>68,95</td>
+                <td>70,17</td>
+            </tr>
         </tbody>
+
     </table>
 </div>
-<p class="text-muted" style="font-size:0.75rem;">Sumber: BPS Kabupaten Kuningan</p>
+
+<div class="mt-3">
+    <p class="text-muted" style="font-size:0.75rem;">
+        Sumber: BPS, Rilis Berita Resmi Statistik
+    </p>
+</div>
+
 @endsection
