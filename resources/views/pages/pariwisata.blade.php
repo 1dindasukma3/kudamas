@@ -1,31 +1,39 @@
 @extends('layouts.page')
-
 @section('title', 'Pariwisata')
 @section('page-title', 'Pariwisata')
 
 @section('page-content')
-<p>Objek wisata unggulan Kabupaten Kuningan:</p>
+<div class="submenu-grid">
 
-@php
-$wisata = [
-    ['nama' => 'Waduk Darma', 'deskripsi' => 'Danau buatan yang indah dengan pemandangan Gunung Ciremai.'],
-    ['nama' => 'Cibulan', 'deskripsi' => 'Kolam renang alami dengan ikan-ikan keramat.'],
-    ['nama' => 'Talaga Remis', 'deskripsi' => 'Danau alami di kaki Gunung Ciremai.'],
-    ['nama' => 'Linggarjati', 'deskripsi' => 'Situs bersejarah perjanjian Linggarjati.'],
-];
-@endphp
+    <a href="{{ route('pw.alam') }}" class="submenu-card">
+        <div class="sc-icon"><i class="bi bi-tree-fill"></i></div>
+        <span>Wisata Alam</span>
+    </a>
 
-<div class="mt-2">
-    @foreach($wisata as $item)
-    <div class="d-flex gap-3 py-3 border-bottom align-items-start">
-        <div style="width:50px;height:50px;background:#DBEAFE;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.4rem;flex-shrink:0;">
-            🏞️
-        </div>
-        <div>
-            <div class="fw-bold" style="color: #1B3A6B; font-size: 0.9rem;">{{ $item['nama'] }}</div>
-            <div style="font-size: 0.8rem; color: #64748B; margin-top: 2px;">{{ $item['deskripsi'] }}</div>
-        </div>
-    </div>
-    @endforeach
+    <a href="{{ route('pw.seni-budaya') }}" class="submenu-card">
+        <div class="sc-icon"><i class="bi bi-music-note-beamed"></i></div>
+        <span>Seni Budaya</span>
+    </a>
+
+    <a href="{{ route('pw.buatan') }}" class="submenu-card">
+        <div class="sc-icon"><i class="bi bi-buildings-fill"></i></div>
+        <span>Wisata Buatan</span>
+    </a>
+
+    <a href="{{ route('pw.sejarah') }}" class="submenu-card">
+        <div class="sc-icon"><i class="bi bi-bank2"></i></div>
+        <span>Wisata Sejarah & Religi</span>
+    </a>
+
+    <a href="{{ route('pw.kuliner') }}" class="submenu-card">
+        <div class="sc-icon"><i class="bi bi-cup-hot-fill"></i></div>
+        <span>Wisata Kuliner</span>
+    </a>
+
+    <a href="{{ route('pw.hotel') }}" class="submenu-card">
+        <div class="sc-icon"><i class="bi bi-house-fill"></i></div>
+        <span>Hotel & Penginapan</span>
+    </a>
+
 </div>
 @endsection

@@ -29,22 +29,16 @@
 
             <tbody style="text-align:center;">
 
-                <tr><td>2012</td><td>264.851</td></tr>
-                <tr><td>2013</td><td>261.858</td></tr>
-                <tr><td>2014</td><td>271.015</td></tr>
-                <tr><td>2015</td><td>276.154</td></tr>
-                <tr><td>2016</td><td>289.901</td></tr>
-                <tr><td>2017</td><td>302.061</td></tr>
-                <tr><td>2018</td><td>332.483</td></tr>
-                <tr><td>2019</td><td>340.775</td></tr>
-                <tr><td>2020</td><td>352.358</td></tr>
-                <tr><td>2021</td><td>358.069</td></tr>
-                <tr><td>2022</td><td>371.665</td></tr>
-                <tr><td>2023</td><td>402.767</td></tr>
-                <tr><td>2024</td><td>420.867</td></tr>
+@foreach($garisKemiskinan as $gk)
 
-            </tbody>
+<tr>
+    <td>{{ $gk['Tahun'] }}</td>
+    <td>{{ $gk['Garis Kemiskinan'] }}</td>
+</tr>
 
+@endforeach
+
+</tbody>
         </table>
 
     </div>

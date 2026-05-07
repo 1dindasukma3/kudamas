@@ -1,0 +1,6 @@
+{
+  "$schema": "https://json.schemastore.org/railpack.json",
+  "packages": {
+    "php": "8.3"
+  }
+}

@@ -67,35 +67,25 @@ Route::get('/indikator-statistik/indeks-indeks/konsep', [PageController::class, 
 Route::get('/indikator-statistik/indeks-indeks/penyusunan-ipm', [PageController::class, 'indeksPenyusunan'])->name('indeks.penyusunan');
 Route::get('/indikator-statistik/indeks-indeks/gender', [PageController::class, 'indeksGender'])->name('indeks.gender');
 
-// ==== PARIWISATA ===
+// ===== SEPUTAR KUNINGAN =====
+Route::get('/seputar-kuningan/daftar-desa', [PageController::class, 'skDaftarDesa'])->name('sk.daftar-desa');
+Route::get('/seputar-kuningan/hari-jadi', [PageController::class, 'skHariJadi'])->name('sk.hari-jadi');
+Route::get('/seputar-kuningan/pemerintahan', [PageController::class, 'skPemerintahan'])->name('sk.pemerintahan');
+Route::get('/seputar-kuningan/geografis', [PageController::class, 'skGeografis'])->name('sk.geografis');
+Route::get('/seputar-kuningan/bupati', [PageController::class, 'skBupati'])->name('sk.bupati');
+Route::get('/seputar-kuningan/rumah-sakit', [PageController::class, 'skRumahSakit'])->name('sk.rumah-sakit');
+Route::get('/seputar-kuningan/pendidikan', [PageController::class, 'skPendidikan'])->name('sk.pendidikan');
 
-// Route::get('/pariwisata', function () {
-//     return view('indikator.pariwisata.pariwisata');
-// });
+// ===== PARIWISATA =====
+Route::get('/pariwisata/wisata-alam', [PageController::class, 'pwAalam'])->name('pw.alam');
+Route::get('/pariwisata/seni-budaya', [PageController::class, 'pwSeniBudaya'])->name('pw.seni-budaya');
+Route::get('/pariwisata/wisata-buatan', [PageController::class, 'pwBuatan'])->name('pw.buatan');
+Route::get('/pariwisata/wisata-sejarah', [PageController::class, 'pwSejarah'])->name('pw.sejarah');
+Route::get('/pariwisata/wisata-kuliner', [PageController::class, 'pwKuliner'])->name('pw.kuliner');
+Route::get('/pariwisata/hotel', [PageController::class, 'pwHotel'])->name('pw.hotel');
 
-// Route::get('/pariwisata/wisata-alam', function () {
-//     return view('indikator.pariwisata.wisata-alam');
-// });
-
-// Route::get('/pariwisata/seni-budaya', function () {
-//     return view('indikator.pariwisata.seni-budaya');
-// });
-
-// Route::get('/pariwisata/wisata-buatan', function () {
-//     return view('indikator.pariwisata.wisata-buatan');
-// });
-
-// Route::get('/pariwisata/wisata-sejarah', function () {
-//     return view('indikator.pariwisata.wisata-sejarah');
-// });
-
-// Route::get('/pariwisata/wisata-kuliner', function () {
-//     return view('indikator.pariwisata.wisata-kuliner');
-// });
-
-// Route::get('/pariwisata/hotel-penginapan', function () {
-//     return view('indikator.pariwisata.hotel-penginapan');
-// });
+// ===== LINK SEPUTAR KUNINGAN =====
+Route::get('/link-seputar-kuningan', [PageController::class, 'linkSeputar'])->name('link-seputar');
 
 
 

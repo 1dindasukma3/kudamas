@@ -135,6 +135,16 @@
         .copyright { color: rgba(255,255,255,0.16); font-size: 0.59rem; margin-top: 12px; text-align: center; }
 
         /* ════════════════════════════════
+        YANG DITAMBAH
+         ════════════════════════════════ */
+        .semua-menu-active {
+            border-left: 3px solid var(--kuning) !important;
+        }
+        .nav-link-2:not(.semua-menu-active) {
+            border-left: 3px solid transparent;
+        }
+
+        /* ════════════════════════════════
            CONTENT AREA
         ════════════════════════════════ */
         .content-area {

@@ -307,7 +307,7 @@
             <div class="mc-label">Pariwisata</div>
         </a>
 
-        <a href="#" class="menu-card">
+        <a href="{{ route('link-seputar') }}" class="menu-card">
             <div class="mc-icon"><i class="bi bi-box-arrow-up-right"></i></div>
             <div class="mc-label">Link Seputar Kuningan</div>
         </a>

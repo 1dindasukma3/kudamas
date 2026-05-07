@@ -1,47 +1,44 @@
 @extends('layouts.page')
-
 @section('title', 'Seputar Kuningan')
 @section('page-title', 'Seputar Kuningan')
 
 @section('page-content')
+<div class="submenu-grid">
 
-{{-- Submenu accordion --}}
-<div class="accordion" id="accordionKuningan">
+    <a href="{{ route('sk.daftar-desa') }}" class="submenu-card">
+        <div class="sc-icon"><i class="bi bi-pin-map-fill"></i></div>
+        <span>Daftar Nama Desa</span>
+    </a>
 
-    <div class="accordion-item border-0 mb-2" style="border-radius: 10px; overflow: hidden; box-shadow: 0 1px 4px rgba(0,0,0,0.08);">
-        <h2 class="accordion-header">
-            <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseGeo"
-                    style="font-size: 0.85rem; background-color: #EFF6FF; color: #1B3A6B;">
-                🗺️ Geografi & Iklim
-            </button>
-        </h2>
-        <div id="collapseGeo" class="accordion-collapse collapse show" data-bs-parent="#accordionKuningan">
-            <div class="accordion-body" style="font-size: 0.85rem;">
-                Kabupaten Kuningan terletak di bagian timur Provinsi Jawa Barat, dengan luas wilayah sekitar 1.195,71 km².
-            </div>
-        </div>
-    </div>
+    <a href="{{ route('sk.hari-jadi') }}" class="submenu-card">
+        <div class="sc-icon"><i class="bi bi-calendar-heart-fill"></i></div>
+        <span>Hari Jadi / Sejarah</span>
+    </a>
 
-    <div class="accordion-item border-0 mb-2" style="border-radius: 10px; overflow: hidden; box-shadow: 0 1px 4px rgba(0,0,0,0.08);">
-        <h2 class="accordion-header">
-            <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePem"
-                    style="font-size: 0.85rem; background-color: #EFF6FF; color: #1B3A6B;">
-                🏛️ Pemerintahan
-            </button>
-        </h2>
-        <div id="collapsePem" class="accordion-collapse collapse" data-bs-parent="#accordionKuningan">
-            <div class="accordion-body" style="font-size: 0.85rem;">
-                <p><strong>Perangkat Daerah Kabupaten Kuningan, yaitu:</strong></p>
-                <ol>
-                    <li>Badan Perencanaan Pembangunan, Penelitian dan Pengembangan Daerah</li>
-                    <li>Badan Pengelolaan Pendapatan Daerah</li>
-                    <li>Badan Pengelolaan Keuangan dan Aset Daerah</li>
-                    {{-- tambahkan data lainnya --}}
-                </ol>
-            </div>
-        </div>
-    </div>
+    <a href="{{ route('sk.pemerintahan') }}" class="submenu-card">
+        <div class="sc-icon"><i class="bi bi-building-fill"></i></div>
+        <span>Pemerintahan</span>
+    </a>
+
+    <a href="{{ route('sk.geografis') }}" class="submenu-card">
+        <div class="sc-icon"><i class="bi bi-globe-asia-australia"></i></div>
+        <span>Kondisi Geografis</span>
+    </a>
+
+    <a href="{{ route('sk.bupati') }}" class="submenu-card">
+        <div class="sc-icon"><i class="bi bi-person-badge-fill"></i></div>
+        <span>Bupati Kabupaten Kuningan</span>
+    </a>
+
+    <a href="{{ route('sk.rumah-sakit') }}" class="submenu-card">
+        <div class="sc-icon"><i class="bi bi-hospital-fill"></i></div>
+        <span>Rumah Sakit</span>
+    </a>
+
+    <a href="{{ route('sk.pendidikan') }}" class="submenu-card">
+        <div class="sc-icon"><i class="bi bi-mortarboard-fill"></i></div>
+        <span>Informasi Pendidikan</span>
+    </a>
 
 </div>
-
 @endsection
