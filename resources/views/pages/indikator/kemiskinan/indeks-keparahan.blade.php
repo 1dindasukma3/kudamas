@@ -27,24 +27,18 @@
 
             </thead>
 
-            <tbody style="text-align:center;">
+           <tbody style="text-align:center;">
 
-                <tr><td>2012</td><td>0,47</td></tr>
-                <tr><td>2013</td><td>0,47</td></tr>
-                <tr><td>2014</td><td>0,53</td></tr>
-                <tr><td>2015</td><td>0,62</td></tr>
-                <tr><td>2016</td><td>0,59</td></tr>
-                <tr><td>2017</td><td>0,44</td></tr>
-                <tr><td>2018</td><td>0,40</td></tr>
-                <tr><td>2019</td><td>0,18</td></tr>
-                <tr><td>2020</td><td>0,62</td></tr>
-                <tr><td>2021</td><td>0,46</td></tr>
-                <tr><td>2022</td><td>0,53</td></tr>
-                <tr><td>2023</td><td>0,42</td></tr>
-                <tr><td>2024</td><td>0,53</td></tr>
+@foreach($keparahan as $k)
 
-            </tbody>
+<tr>
+    <td>{{ $k['Tahun'] }}</td>
+    <td>{{ $k['P2'] }}</td>
+</tr>
 
+@endforeach
+
+</tbody>
         </table>
 
     </div>

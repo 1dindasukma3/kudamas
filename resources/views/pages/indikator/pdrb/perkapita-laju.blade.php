@@ -7,19 +7,21 @@
 
 <div style="font-size:15px; color:#3A3A3A;">
 
+    {{-- TABEL PDRB --}}
     <div class="table-responsive">
 
-        <table class="table border-0 align-middle" style="font-size:15px;">
+        <table class="table border-0 align-middle"
+               style="font-size:15px; table-layout:fixed; width:100%;">
 
             <thead>
 
                 <tr style="background:#2F4B7C; color:white; text-align:center;">
 
-                    <th style="border:none; font-weight:500; padding:12px;">
+                    <th style="border:none; font-weight:500; padding:12px; width:40%;">
                         Tahun
                     </th>
 
-                    <th style="border:none; font-weight:500; padding:12px;">
+                    <th style="border:none; font-weight:500; padding:12px; width:60%;">
                         PDRB Perkapita
                     </th>
 
@@ -29,15 +31,14 @@
 
             <tbody style="text-align:center;">
 
-                <tr><td>2015</td><td>16.094.751,85</td></tr>
-                <tr><td>2016</td><td>17.481.430,36</td></tr>
-                <tr><td>2017</td><td>19.141.751,60</td></tr>
-                <tr><td>2018</td><td>21.185.937,31</td></tr>
-                <tr><td>2019</td><td>23.152.104,67</td></tr>
-                <tr><td>2020</td><td>21.996.164,37</td></tr>
-                <tr><td>2021</td><td>22.805.242,26</td></tr>
-                <tr><td>2022</td><td>24.681.782,33</td></tr>
-                <tr><td>2023</td><td>27.080.932,69</td></tr>
+                @foreach($pdrb as $p)
+
+                <tr>
+                    <td>{{ $p['Tahun'] }}</td>
+                    <td>{{ $p['PDRB Perkapita'] }}</td>
+                </tr>
+
+                @endforeach
 
             </tbody>
 
@@ -45,19 +46,21 @@
 
     </div>
 
+    {{-- TABEL LPE --}}
     <div class="table-responsive mt-4">
 
-        <table class="table border-0 align-middle" style="font-size:15px;">
+        <table class="table border-0 align-middle"
+               style="font-size:15px; table-layout:fixed; width:100%;">
 
             <thead>
 
                 <tr style="background:#2F4B7C; color:white; text-align:center;">
 
-                    <th style="border:none; font-weight:500; padding:12px;">
+                    <th style="border:none; font-weight:500; padding:12px; width:40%;">
                         Tahun
                     </th>
 
-                    <th style="border:none; font-weight:500; padding:12px;">
+                    <th style="border:none; font-weight:500; padding:12px; width:60%;">
                         Laju Pertumbuhan Ekonomi
                     </th>
 
@@ -67,15 +70,14 @@
 
             <tbody style="text-align:center;">
 
-                <tr><td>2015</td><td>6.38</td></tr>
-                <tr><td>2016</td><td>6.09</td></tr>
-                <tr><td>2017</td><td>6.36</td></tr>
-                <tr><td>2018</td><td>6.43</td></tr>
-                <tr><td>2019</td><td>6.59</td></tr>
-                <tr><td>2020</td><td>0,11</td></tr>
-                <tr><td>2021</td><td>3,56</td></tr>
-                <tr><td>2022</td><td>5,53</td></tr>
-                <tr><td>2023</td><td>5,25</td></tr>
+                @foreach($lpe as $l)
+
+                <tr>
+                    <td>{{ $l['Tahun'] }}</td>
+                    <td>{{ $l['Laju Pertumbuhan Ekonomi'] }}</td>
+                </tr>
+
+                @endforeach
 
             </tbody>
 

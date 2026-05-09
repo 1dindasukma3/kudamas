@@ -1,6 +1,6 @@
 @extends('layouts.page')
 
-@section('title', 'Data Ketenagakerjaan')
+@section('title', 'Ketenagakerjaan')
 @section('page-title', 'Ketenagakerjaan')
 
 @section('page-content')
@@ -10,39 +10,34 @@
     {{-- ANGKATAN KERJA --}}
     <div class="table-responsive">
 
-        <table class="table border-0 align-middle" style="font-size:15px;">
+        <table class="table border-0 align-middle"
+               style="font-size:15px; table-layout:fixed; width:100%;">
 
             <thead>
 
                 <tr>
                     <th colspan="4"
-                        style="
-                            background:#2F4B7C;
-                            color:white;
-                            text-align:center;
-                            font-weight:500;
-                            padding:14px;
-                            border:none;
-                        ">
+                        style="background:#2F4B7C; color:white; text-align:center;
+                               font-weight:500; padding:14px; border:none;">
                         Angkatan Kerja 2023
                     </th>
                 </tr>
 
                 <tr style="background:#2F4B7C; color:white; text-align:center;">
 
-                    <th style="border:none; font-weight:500;">
+                    <th style="border:none; padding:12px; width:40%;">
                         Kegiatan Utama
                     </th>
 
-                    <th style="border:none; font-weight:500;">
+                    <th style="border:none; padding:12px; width:20%;">
                         Laki-Laki
                     </th>
 
-                    <th style="border:none; font-weight:500;">
+                    <th style="border:none; padding:12px; width:20%;">
                         Perempuan
                     </th>
 
-                    <th style="border:none; font-weight:500;">
+                    <th style="border:none; padding:12px; width:20%;">
                         Jumlah
                     </th>
 
@@ -50,28 +45,18 @@
 
             </thead>
 
-            <tbody style="vertical-align:top;">
+            <tbody style="text-align:center;">
+
+                @foreach($angkatan as $a)
 
                 <tr>
-                    <td><strong>Angkatan Kerja</strong></td>
-                    <td class="text-center">382.883</td>
-                    <td class="text-center">191.286</td>
-                    <td class="text-center">574.169</td>
+                    <td style="text-align:left;">{{ $a['kegiatan'] }}</td>
+                    <td>{{ $a['laki'] }}</td>
+                    <td>{{ $a['perempuan'] }}</td>
+                    <td>{{ $a['jumlah'] }}</td>
                 </tr>
 
-                <tr>
-                    <td>Bekerja</td>
-                    <td class="text-center">345.408</td>
-                    <td class="text-center">174.250</td>
-                    <td class="text-center">519.658</td>
-                </tr>
-
-                <tr>
-                    <td>Pengangguran Terbuka</td>
-                    <td class="text-center">37.475</td>
-                    <td class="text-center">17.036</td>
-                    <td class="text-center">54.511</td>
-                </tr>
+                @endforeach
 
             </tbody>
 
@@ -82,39 +67,34 @@
     {{-- BUKAN ANGKATAN KERJA --}}
     <div class="table-responsive mt-4">
 
-        <table class="table border-0 align-middle" style="font-size:15px;">
+        <table class="table border-0 align-middle"
+               style="font-size:15px; table-layout:fixed; width:100%;">
 
             <thead>
 
                 <tr>
                     <th colspan="4"
-                        style="
-                            background:#2F4B7C;
-                            color:white;
-                            text-align:center;
-                            font-weight:500;
-                            padding:14px;
-                            border:none;
-                        ">
+                        style="background:#2F4B7C; color:white; text-align:center;
+                               font-weight:500; padding:14px; border:none;">
                         Bukan Angkatan Kerja 2023
                     </th>
                 </tr>
 
                 <tr style="background:#2F4B7C; color:white; text-align:center;">
 
-                    <th style="border:none; font-weight:500;">
+                    <th style="border:none; padding:12px; width:40%;">
                         Kegiatan Utama
                     </th>
 
-                    <th style="border:none; font-weight:500;">
+                    <th style="border:none; padding:12px; width:20%;">
                         Laki-Laki
                     </th>
 
-                    <th style="border:none; font-weight:500;">
+                    <th style="border:none; padding:12px; width:20%;">
                         Perempuan
                     </th>
 
-                    <th style="border:none; font-weight:500;">
+                    <th style="border:none; padding:12px; width:20%;">
                         Jumlah
                     </th>
 
@@ -122,35 +102,18 @@
 
             </thead>
 
-            <tbody style="vertical-align:top;">
+            <tbody style="text-align:center;">
+
+                @foreach($bukanAngkatan as $b)
 
                 <tr>
-                    <td><strong>Bukan Angkatan Kerja</strong></td>
-                    <td class="text-center">84.632</td>
-                    <td class="text-center">267.985</td>
-                    <td class="text-center">352.617</td>
+                    <td style="text-align:left;">{{ $b['Kegiatan'] }}</td>
+                    <td>{{ $b['laki'] }}</td>
+                    <td>{{ $b['perempuan'] }}</td>
+                    <td>{{ $b['jumlah'] }}</td>
                 </tr>
 
-                <tr>
-                    <td>Sekolah</td>
-                    <td class="text-center">38.397</td>
-                    <td class="text-center">35.458</td>
-                    <td class="text-center">73.855</td>
-                </tr>
-
-                <tr>
-                    <td>Mengurus Rumah Tangga</td>
-                    <td class="text-center">16.349</td>
-                    <td class="text-center">223.268</td>
-                    <td class="text-center">239.617</td>
-                </tr>
-
-                <tr>
-                    <td>Lainnya</td>
-                    <td class="text-center">29.886</td>
-                    <td class="text-center">9.259</td>
-                    <td class="text-center">39.145</td>
-                </tr>
+                @endforeach
 
             </tbody>
 

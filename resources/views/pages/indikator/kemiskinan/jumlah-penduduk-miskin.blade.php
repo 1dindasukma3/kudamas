@@ -27,23 +27,18 @@
 
             </thead>
 
-            <tbody style="text-align:center;">
+<tbody style="text-align:center;">
 
-                <tr><td>2012</td><td>142,90</td></tr>
-                <tr><td>2013</td><td>139,40</td></tr>
-                <tr><td>2014</td><td>133,60</td></tr>
-                <tr><td>2015</td><td>147,20</td></tr>
-                <tr><td>2016</td><td>144,10</td></tr>
-                <tr><td>2017</td><td>141,60</td></tr>
-                <tr><td>2018</td><td>131,20</td></tr>
-                <tr><td>2019</td><td>123,16</td></tr>
-                <tr><td>2020</td><td>139,20</td></tr>
-                <tr><td>2021</td><td>143,35</td></tr>
-                <tr><td>2022</td><td>140,25</td></tr>
-                <tr><td>2023</td><td>133,88</td></tr>
-                <tr><td>2024</td><td>131,83</td></tr>
+@foreach($jumlahMiskin as $jm)
 
-            </tbody>
+<tr>
+    <td>{{ $jm['Tahun'] }}</td>
+    <td>{{ str_replace('.', ',', $jm['Ribuan Orang']) }}</td>
+</tr>
+
+@endforeach
+
+</tbody>
 
         </table>
 

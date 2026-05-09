@@ -29,22 +29,16 @@
 
             <tbody style="text-align:center;">
 
-                <tr><td>2012</td><td>13,69</td></tr>
-                <tr><td>2013</td><td>13,34</td></tr>
-                <tr><td>2014</td><td>12,72</td></tr>
-                <tr><td>2015</td><td>13,97</td></tr>
-                <tr><td>2016</td><td>13,59</td></tr>
-                <tr><td>2017</td><td>13,27</td></tr>
-                <tr><td>2018</td><td>12,22</td></tr>
-                <tr><td>2019</td><td>11,41</td></tr>
-                <tr><td>2020</td><td>12,82</td></tr>
-                <tr><td>2021</td><td>13,10</td></tr>
-                <tr><td>2022</td><td>12,76</td></tr>
-                <tr><td>2023</td><td>12,12</td></tr>
-                <tr><td>2024</td><td>11,88</td></tr>
+@foreach($persentase as $p)
 
-            </tbody>
+<tr>
+    <td>{{ $p['Tahun'] }}</td>
+    <td>{{ str_replace('.', ',', $p['Persen']) }}</td>
+</tr>
 
+@endforeach
+
+</tbody>
         </table>
 
     </div>
