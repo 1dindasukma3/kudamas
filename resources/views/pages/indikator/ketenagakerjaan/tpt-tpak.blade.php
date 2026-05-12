@@ -10,41 +10,25 @@
     {{-- TPT --}}
     <div class="table-responsive">
 
-        <table class="table border-0 align-middle" style="font-size:15px;">
+        <table class="table border-0 align-middle"
+               style="font-size:15px; table-layout:fixed; width:100%;">
 
             <thead>
 
                 <tr>
                     <th colspan="4"
-                        style="
-                            background:#2F4B7C;
-                            color:white;
-                            text-align:center;
-                            font-weight:500;
-                            padding:14px;
-                            border:none;
-                        ">
+                        style="background:#2F4B7C; color:white; text-align:center;
+                               font-weight:500; padding:14px; border:none;">
                         Tingkat Pengangguran Terbuka (TPT)
                     </th>
                 </tr>
 
                 <tr style="background:#2F4B7C; color:white; text-align:center;">
 
-                    <th style="border:none; font-weight:500;">
-                        Tahun
-                    </th>
-
-                    <th style="border:none; font-weight:500;">
-                        Bekerja (jiwa)
-                    </th>
-
-                    <th style="border:none; font-weight:500;">
-                        Pengangguran Terbuka (jiwa)
-                    </th>
-
-                    <th style="border:none; font-weight:500;">
-                        TPT (%)
-                    </th>
+                    <th>Tahun</th>
+                    <th>Bekerja (jiwa)</th>
+                    <th>Pengangguran Terbuka (jiwa)</th>
+                    <th>TPT (%)</th>
 
                 </tr>
 
@@ -52,40 +36,16 @@
 
             <tbody style="text-align:center;">
 
-                <tr>
-                    <td>2020</td>
-                    <td>463.164</td>
-                    <td>58.513</td>
-                    <td>11,22</td>
-                </tr>
+                @foreach($tpt as $t)
 
                 <tr>
-                    <td>2021</td>
-                    <td>479.405</td>
-                    <td>63.377</td>
-                    <td>11,68</td>
+                    <td>{{ $t['Tahun'] }}</td>
+                    <td>{{ $t['Bekerja (jiwa)'] }}</td>
+                    <td>{{ $t['Pengangguran Terbuka (jiwa)'] }}</td>
+                    <td>{{ $t['TPT(%)'] }}</td>
                 </tr>
 
-                <tr>
-                    <td>2022</td>
-                    <td>478.750</td>
-                    <td>52.075</td>
-                    <td>9,81</td>
-                </tr>
-
-                <tr>
-                    <td>2023</td>
-                    <td>519.658</td>
-                    <td>54.511</td>
-                    <td>9,49</td>
-                </tr>
-
-                <tr>
-                    <td>2024</td>
-                    <td>570.023</td>
-                    <td>48.106</td>
-                    <td>7,78</td>
-                </tr>
+                @endforeach
 
             </tbody>
 
@@ -96,41 +56,25 @@
     {{-- TPAK --}}
     <div class="table-responsive mt-4">
 
-        <table class="table border-0 align-middle" style="font-size:15px;">
+        <table class="table border-0 align-middle"
+               style="font-size:15px; table-layout:fixed; width:100%;">
 
             <thead>
 
                 <tr>
                     <th colspan="4"
-                        style="
-                            background:#2F4B7C;
-                            color:white;
-                            text-align:center;
-                            font-weight:500;
-                            padding:14px;
-                            border:none;
-                        ">
+                        style="background:#2F4B7C; color:white; text-align:center;
+                               font-weight:500; padding:14px; border:none;">
                         Tingkat Partisipasi Angkatan Kerja (TPAK)
                     </th>
                 </tr>
 
                 <tr style="background:#2F4B7C; color:white; text-align:center;">
 
-                    <th style="border:none; font-weight:500;">
-                        Tahun
-                    </th>
-
-                    <th style="border:none; font-weight:500;">
-                        Tingkat Kesempatan Kerja (%)
-                    </th>
-
-                    <th style="border:none; font-weight:500;">
-                        TPT (%)
-                    </th>
-
-                    <th style="border:none; font-weight:500;">
-                        TPAK (%)
-                    </th>
+                    <th>Tahun</th>
+                    <th>Tingkat Kesempatan Kerja (%)</th>
+                    <th>TPT (%)</th>
+                    <th>TPAK (%)</th>
 
                 </tr>
 
@@ -138,40 +82,16 @@
 
             <tbody style="text-align:center;">
 
-                <tr>
-                    <td>2020</td>
-                    <td>88,78</td>
-                    <td>11,22</td>
-                    <td>61,98</td>
-                </tr>
+                @foreach($tpak as $t)
 
                 <tr>
-                    <td>2021</td>
-                    <td>88,32</td>
-                    <td>11,68</td>
-                    <td>63,82</td>
+                    <td>{{ $t['Tahun'] }}</td>
+                    <td>{{ $t['Tingkat Kesempatan Kerja (%)'] }}</td>
+                    <td>{{ $t['TPT(%)'] }}</td>
+                    <td>{{ $t['TPAK(%)'] }}</td>
                 </tr>
 
-                <tr>
-                    <td>2022</td>
-                    <td>90,19</td>
-                    <td>9,81</td>
-                    <td>61,80</td>
-                </tr>
-
-                <tr>
-                    <td>2023</td>
-                    <td>90,51</td>
-                    <td>9,49</td>
-                    <td>61,95</td>
-                </tr>
-
-                <tr>
-                    <td>2024</td>
-                    <td>92,22</td>
-                    <td>7,78</td>
-                    <td>65,84</td>
-                </tr>
+                @endforeach
 
             </tbody>
 

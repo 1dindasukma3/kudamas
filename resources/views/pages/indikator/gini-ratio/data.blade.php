@@ -32,8 +32,8 @@
     @foreach($gini as $item)
 
         <tr>
-            <td>{{ $item['tahun'] }}</td>
-            <td>{{ $item['gini_ratio'] }}</td>
+            <td>{{ $item['Tahun'] }}</td>
+            <td>{{ $item['Gini Ratio'] }}</td>
         </tr>
 
     @endforeach

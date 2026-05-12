@@ -107,7 +107,7 @@
                 @foreach($bukanAngkatan as $b)
 
                 <tr>
-                    <td style="text-align:left;">{{ $b['Kegiatan'] }}</td>
+                    <td style="text-align:left;">{{ $b['kegiatan'] }}</td>
                     <td>{{ $b['laki'] }}</td>
                     <td>{{ $b['perempuan'] }}</td>
                     <td>{{ $b['jumlah'] }}</td>

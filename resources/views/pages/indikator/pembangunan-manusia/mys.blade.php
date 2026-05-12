@@ -1,41 +1,49 @@
 @extends('layouts.page')
-@section('title', 'Rerata Lama Sekolah')
-@section('page-title', 'Rerata Lama Sekolah/ MYS')
+
+@section('title', 'Rerata Lama Sekolah / MYS')
+@section('page-title', 'Rerata Lama Sekolah / MYS')
+
 @section('page-content')
 
-<div class="table-responsive">
-    <table class="table table-bordered table-hover" style="font-size:0.9rem;">
-        <thead style="background:#1B3A6B;color:white;text-align:center;">
-            <tr>
-                <th>Tahun</th>
-                <th>MYS</th>
-            </tr>
-        </thead>
+<div style="font-size:15px; color:#3A3A3A;">
 
-        <tbody style="text-align:center;">
-            <tr><td>2010</td><td>6,58</td></tr>
-            <tr><td>2011</td><td>6,87</td></tr>
-            <tr><td>2012</td><td>6,93</td></tr>
-            <tr><td>2013</td><td>6,98</td></tr>
-            <tr><td>2014</td><td>7,04</td></tr>
-            <tr><td>2015</td><td>7,20</td></tr>
-            <tr><td>2016</td><td>7,34</td></tr>
-            <tr><td>2017</td><td>7,35</td></tr>
-            <tr><td>2018</td><td>7,36</td></tr>
-            <tr><td>2019</td><td>7,38</td></tr>
-            <tr><td>2020</td><td>7,57</td></tr>
-            <tr><td>2021</td><td>7,80</td></tr>
-            <tr><td>2022</td><td>7,88</td></tr>
-            <tr><td>2023</td><td>7,89</td></tr>
-            <tr><td>2024</td><td>7,90</td></tr>
-        </tbody>
-    </table>
-</div>
+    <div class="table-responsive">
 
-<div class="mt-3">
-    <p class="text-muted" style="font-size:0.75rem;">
+        <table class="table border-0 align-middle"
+            style="font-size:15px; table-layout:fixed; width:100%;">
+
+            <thead>
+
+                <tr style="background:#2F4B7C; color:white; text-align:center;">
+
+                    <th>Tahun</th>
+                    <th>MYS</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody style="text-align:center;">
+
+                @foreach($mys as $m)
+
+                <tr>
+                    <td>{{ $m['tahun'] }}</td>
+                    <td>{{ $m['mys'] }}</td>
+                </tr>
+
+                @endforeach
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+    <p style="font-size:13px; color:#6B7280; margin-top:10px; font-style:italic;">
         Sumber: BPS, Rilis Berita Resmi Statistik
     </p>
+
 </div>
 
 @endsection
