@@ -52,18 +52,21 @@
 
             <tbody style="text-align:center;">
 
-@foreach($kelompokUmur as $umur)
+                @foreach($kelompokUmur as $umur)
 
-<tr>
-    <td>{{ $umur['Kelompok Umur'] }}</td>
-    <td>{{ $umur['Laki-Laki'] }}</td>
-    <td>{{ $umur['Perempuan'] }}</td>
-    <td>{{ $umur['Jumlah'] }}</td>
-</tr>
+                <tr style="{{ $umur['Kelompok Umur'] == 'Jumlah' ? 'font-weight:bold;' : '' }}">
 
-@endforeach
+                    <td>{{ $umur['Kelompok Umur'] }}</td>
+                    <td>{{ $umur['Laki-Laki'] }}</td>
+                    <td>{{ $umur['Perempuan'] }}</td>
+                    <td>{{ $umur['Jumlah'] }}</td>
 
-</tbody>
+                </tr>
+
+                @endforeach
+
+            </tbody>
+
         </table>
 
     </div>
