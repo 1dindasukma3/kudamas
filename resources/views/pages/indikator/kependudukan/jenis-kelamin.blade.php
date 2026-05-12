@@ -48,22 +48,24 @@
 
                 </tr>
 
-                </thead>
+            </thead>
 
-<tbody>
+            <tbody>
 
-@foreach($jenisKelamin as $jk)
+                @foreach($jenisKelamin as $jk)
 
-<tr>
-    <td>{{ $jk['Kecamatan'] }}</td>
-    <td class="text-center">{{ $jk['Laki-Laki'] }}</td>
-    <td class="text-center">{{ $jk['Perempuan'] }}</td>
-    <td class="text-center">{{ $jk['Jumlah'] }}</td>
-</tr>
+                <tr style="{{ $jk['Kecamatan'] == 'Kab. Kuningan' ? 'font-weight:bold;' : '' }}">
 
-@endforeach
+                    <td>{{ $jk['Kecamatan'] }}</td>
+                    <td class="text-center">{{ $jk['Laki-Laki'] }}</td>
+                    <td class="text-center">{{ $jk['Perempuan'] }}</td>
+                    <td class="text-center">{{ $jk['Jumlah'] }}</td>
 
-</tbody>
+                </tr>
+
+                @endforeach
+
+            </tbody>
 
         </table>
 
