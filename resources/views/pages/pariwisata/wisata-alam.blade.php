@@ -112,18 +112,6 @@
         <div class="lbl">Tiket Termurah</div>
     </div>
 </div>
-
-{{--
-    CARA PAKAI FOTO LOKAL:
-    1. Download foto wisata masing-masing
-    2. Simpan di folder: public/images/wisata/
-    3. Nama file sesuai yang ada di src="" di bawah
-    Contoh: public/images/wisata/telaga-remis.jpg
-
-    Sementara, jika foto belum tersedia, tampilan fallback
-    (gradasi warna + emoji) akan otomatis muncul via JavaScript.
---}}
-
 <div class="row g-3">
 
     @php
