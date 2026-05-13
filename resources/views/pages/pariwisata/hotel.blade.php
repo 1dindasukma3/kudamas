@@ -161,7 +161,7 @@
         [
             'no'      => 2,
             'nama'    => 'Grand Cordela Hotel',
-            'foto'    => '/images/hotel/grand-cordela.jpg',
+            'foto'    => '/images/hotel/grand-cordela.jpeg',
             'emoji'   => '🏩',
             'bg'      => 'linear-gradient(135deg,#7c3aed,#6d28d9)',
             'alamat'  => 'Jl. Siliwangi No.91, Purwawinangun, Kec. Kuningan, Jawa Barat 45511',
@@ -185,7 +185,7 @@
         [
             'no'      => 4,
             'nama'    => 'Hotel Sangkan Indah',
-            'foto'    => '/images/hotel/sangkan-indah.jpg',
+            'foto'    => '/images/hotel/sangkan-indah.webp',
             'emoji'   => '🏡',
             'bg'      => 'linear-gradient(135deg,#0c4a6e,#0284c7)',
             'alamat'  => 'Komplek Pemandian Air Panas Alam No.304, Desa Sangkanhurip',
@@ -221,7 +221,7 @@
         [
             'no'      => 7,
             'nama'    => 'Villa Linggajati Indah',
-            'foto'    => '/images/hotel/villa-linggajati.jpg',
+            'foto'    => '/images/hotel/villa-linggajati.webp',
             'emoji'   => '🏡',
             'bg'      => 'linear-gradient(135deg,#166534,#15803d)',
             'alamat'  => 'Jl. Linggajati No.4, Desa Linggasana, Kec. Cilimus — Kuningan',
@@ -245,7 +245,7 @@
         [
             'no'      => 9,
             'nama'    => 'Anugerah Villa',
-            'foto'    => '/images/hotel/anugerah-villa.jpg',
+            'foto'    => '/images/hotel/anugerah-villa.webp',
             'emoji'   => '🌺',
             'bg'      => 'linear-gradient(135deg,#713f12,#d97706)',
             'alamat'  => 'Jl. Linggasana, Kec. Cilimus — Kuningan',

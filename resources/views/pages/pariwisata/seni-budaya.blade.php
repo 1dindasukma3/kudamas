@@ -132,7 +132,7 @@
             'no'    => 2,
             'nama'  => 'Seni Budaya Sapton',
             'lokasi'=> 'Digelar setiap Hari Jadi Kuningan, Kab. Kuningan',
-            'foto'  => '/images/seni/sapton.jpg',
+            'foto'  => '/images/seni/sapton.jpeg',
             'emoji' => '🐎',
             'bg'    => 'linear-gradient(135deg,#1B3A6B,#2563EB)',
             'desc'  => 'Seni Budaya Sapton digelar pada setiap Hari Jadi Kuningan, setelah upacara ulang tahun dilaksanakan. Para pejabat dan tamu undangan dipersilahkan menyaksikan permainan ketangkasan berkuda ini, dengan peserta para demang/kepala/desa/kuwu.',
