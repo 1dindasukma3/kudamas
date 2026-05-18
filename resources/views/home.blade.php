@@ -235,7 +235,7 @@
                         <div class="banner-caption">
                             <div class="banner-badge">📢 Pengumuman</div>
                             <h5>Sensus Ekonomi 2026</h5>
-                            <p>Mari Kita Sukseskan Sensus Ekonomi 2026 — Mencatat Ekonomi Indonesia</p>
+                            <p>Mari Kita Sukseskan Sensus Ekonomi 2026 - Mencatat Ekonomi Indonesia</p>
                         </div>
                     </div>
                 </div>
@@ -246,7 +246,7 @@
                         <div class="banner-caption">
                             <div class="banner-badge">📊 Statistik</div>
                             <h5>IPM Kabupaten Kuningan 2024</h5>
-                            <p>Indeks Pembangunan Manusia mencapai 68,54 — terus meningkat setiap tahun</p>
+                            <p>Indeks Pembangunan Manusia mencapai 68,54 - terus meningkat setiap tahun</p>
                         </div>
                     </div>
                 </div>

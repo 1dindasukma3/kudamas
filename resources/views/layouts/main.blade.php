@@ -492,7 +492,7 @@
             <div class="header-right">
                 <div class="bps-block">
                     <div class="bps-name">BADAN PUSAT STATISTIK KUNINGAN</div>
-                    <div class="bps-sub">Kabupaten Kuningan — Provinsi Jawa Barat</div>
+                    <div class="bps-sub">Kabupaten Kuningan - Provinsi Jawa Barat</div>
                 </div>
 
                 <div class="header-sep"></div>
