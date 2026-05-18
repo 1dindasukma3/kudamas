@@ -128,7 +128,7 @@
         [
             'no'     => 2,
             'nama'   => 'Taman Purbakala Cipari',
-            'lokasi' => 'Kampung Cipari, Desa Cigugur, Kec. Cigugur — ±4 km dari Kota Kuningan, 661 mdpl',
+            'lokasi' => 'Kampung Cipari, Desa Cigugur, Kec. Cigugur, ±4 km dari Kota Kuningan, 661 mdpl',
             'foto'   => '/images/sejarah/cipari.jpg',
             'emoji'  => '🗿',
             'bg'     => 'linear-gradient(135deg,#713f12,#92400e)',

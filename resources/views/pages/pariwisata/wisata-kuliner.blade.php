@@ -128,7 +128,7 @@
         [
             'no'     => 1,
             'nama'   => 'Tahu Kopeci',
-            'lokasi' => 'Tersebar di seluruh wilayah Kab. Kuningan — Oleh-oleh khas',
+            'lokasi' => 'Tersebar di seluruh wilayah Kab. Kuningan - Oleh-oleh khas',
             'foto'   => '/images/kuliner/tahu-kopeci.jpg',
             'emoji'  => '🍢',
             'harga'  => 'Rp 500/biji',

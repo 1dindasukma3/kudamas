@@ -119,7 +119,7 @@
         [
             'no'      => 1,
             'nama'    => 'Telaga Remis',
-            'lokasi'  => 'Desa Kaduela, Kec. Pasawahan — ±37 km dari Kuningan',
+            'lokasi'  => 'Desa Kaduela, Kec. Pasawahan, ±37 km dari Kuningan',
             'foto'    => '/images/wisata/telaga-remis.jpg',
             'emoji'   => '🌊',
             'tiket'   => 'Rp 10.000 – 15.000',
@@ -130,7 +130,7 @@
         [
             'no'      => 2,
             'nama'    => 'Telaga Biru Ciceureum',
-            'lokasi'  => 'Desa Kaduela, Kec. Pasawahan — ±37 km dari Kuningan',
+            'lokasi'  => 'Desa Kaduela, Kec. Pasawahan, ±37 km dari Kuningan',
             'foto'    => '/images/wisata/telaga-biru-cicerem.jpg',
             'emoji'   => '💙',
             'tiket'   => 'Rp 5.000 – 10.000/kendaraan',
@@ -141,7 +141,7 @@
         [
             'no'      => 3,
             'nama'    => 'Kebun Raya Kuningan',
-            'lokasi'  => 'Desa Padabeunghar, Kec. Pasawahan — Kuningan',
+            'lokasi'  => 'Desa Padabeunghar, Kec. Pasawahan, Kuningan',
             'foto'    => '/images/wisata/kebun-raya-kuningan.jpg',
             'emoji'   => '🌿',
             'tiket'   => null,
@@ -152,7 +152,7 @@
         [
             'no'      => 4,
             'nama'    => 'Linggarjati',
-            'lokasi'  => 'Kec. Cilimus — Kuningan',
+            'lokasi'  => 'Kec. Cilimus, Kab. Kuningan',
             'foto'    => '/images/wisata/linggarjati.jpg',
             'emoji'   => '🏛️',
             'tiket'   => 'Rp 2.000',
@@ -174,7 +174,7 @@
         [
             'no'      => 6,
             'nama'    => 'Curug Bangkong',
-            'lokasi'  => 'Desa Kertawirama, Kec. Nusaherang — ±12 km dari Kuningan',
+            'lokasi'  => 'Desa Kertawirama, Kec. Nusaherang, ±12 km dari Kuningan',
             'foto'    => '/images/wisata/curug-bangkong.jpg',
             'emoji'   => '🌊',
             'tiket'   => null,
@@ -196,7 +196,7 @@
         [
             'no'      => 8,
             'nama'    => 'Curug Putri Palutungan',
-            'lokasi'  => 'Kec. Cigugur — ±10 km dari Kuningan',
+            'lokasi'  => 'Kec. Cigugur, ±10 km dari Kuningan',
             'foto'    => '/images/wisata/curug-putri.jpg',
             'emoji'   => '💦',
             'tiket'   => null,
@@ -207,7 +207,7 @@
         [
             'no'      => 9,
             'nama'    => 'Cibulan',
-            'lokasi'  => 'Desa Manis Kidul, Kec. Jalaksana — Kuningan',
+            'lokasi'  => 'Desa Manis Kidul, Kec. Jalaksana, Kuningan',
             'foto'    => '/images/wisata/cibulan.jpg',
             'emoji'   => '🐠',
             'tiket'   => null,
@@ -218,7 +218,7 @@
         [
             'no'      => 10,
             'nama'    => 'Telaga Nilem',
-            'lokasi'  => 'Desa Kaduela, Kec. Pasawahan — Kuningan',
+            'lokasi'  => 'Desa Kaduela, Kec. Pasawahan, Kuningan',
             'foto'    => '/images/wisata/telaga-nilem.jpg',
             'emoji'   => '🌊',
             'tiket'   => null,
@@ -240,7 +240,7 @@
         [
             'no'      => 12,
             'nama'    => 'Pemandian Air Panas Subang',
-            'lokasi'  => 'Dusun Kliwon, Desa Subang, Kec. Subang — Kuningan',
+            'lokasi'  => 'Dusun Kliwon, Desa Subang, Kec. Subang, Kab. Kuningan',
             'foto'    => '/images/wisata/air-panas-subang.jpg',
             'emoji'   => '♨️',
             'tiket'   => null,
@@ -251,7 +251,7 @@
         [
             'no'      => 13,
             'nama'    => 'Lembah Cilengkrang',
-            'lokasi'  => 'Desa Pajambon, Kec. Karamatmulya — Kuningan',
+            'lokasi'  => 'Desa Pajambon, Kec. Karamatmulya, Kab. Kuningan',
             'foto'    => '/images/wisata/lembah-cilengkrang.jpg',
             'emoji'   => '🏞️',
             'tiket'   => null,
@@ -273,7 +273,7 @@
         [
             'no'      => 15,
             'nama'    => 'Balong Dalem',
-            'lokasi'  => 'Desa Babakanmulya, Kec. Jalaksana — Kuningan',
+            'lokasi'  => 'Desa Babakanmulya, Kec. Jalaksana, Kab. Kuningan',
             'foto'    => '/images/wisata/balong-dalem.jpg',
             'emoji'   => '💧',
             'tiket'   => null,
@@ -284,7 +284,7 @@
         [
             'no'      => 16,
             'nama'    => 'Bumi Perkemahan Palutungan',
-            'lokasi'  => 'Desa Cisantana, Kec. Cigugur — Kuningan',
+            'lokasi'  => 'Desa Cisantana, Kec. Cigugur, Kab. Kuningan',
             'foto'    => '/images/wisata/buper-palutungan.jpg',
             'emoji'   => '⛺',
             'tiket'   => null,
@@ -295,7 +295,7 @@
         [
             'no'      => 17,
             'nama'    => 'Bumi Perkemahan Paniis',
-            'lokasi'  => 'Desa Singkup, Kec. Pasawahan — Kuningan',
+            'lokasi'  => 'Desa Singkup, Kec. Pasawahan, Kab. Kuningan',
             'foto'    => '/images/wisata/buper-paniis.jpg',
             'emoji'   => '🏕️',
             'tiket'   => null,
@@ -306,7 +306,7 @@
         [
             'no'      => 18,
             'nama'    => 'Cigugur',
-            'lokasi'  => 'Desa Cigugur, Kec. Cigugur — Kuningan',
+            'lokasi'  => 'Desa Cigugur, Kec. Cigugur, Kab. Kuningan',
             'foto'    => '/images/wisata/cigugur.jpg',
             'emoji'   => '🌄',
             'tiket'   => null,
@@ -317,7 +317,7 @@
         [
             'no'      => 19,
             'nama'    => 'Curug Landung',
-            'lokasi'  => 'Desa Cisantana, Kec. Cigugur — Kuningan',
+            'lokasi'  => 'Desa Cisantana, Kec. Cigugur, Kab. Kuningan',
             'foto'    => '/images/wisata/curug-landung.jpg',
             'emoji'   => '🌊',
             'tiket'   => null,
