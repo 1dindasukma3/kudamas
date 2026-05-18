@@ -387,8 +387,57 @@ public function ketenagakerjaanData()
         compact('angkatan', 'bukanAngkatan')
     );
 }
-public function ketenagakerjaanTpt() { return view('pages.indikator.ketenagakerjaan.tpt-tpak'); }
+public function ketenagakerjaanTpt()
+{
+    // ===== TPT =====
+    $urlTpt = "https://docs.google.com/spreadsheets/d/1WmnAGk-5fXNCCPcjjw_f9OkVJ0A6v1JnLo23QJJIagY/export?format=csv&gid=305309167";
 
+    $responseTpt = Http::timeout(10)->get($urlTpt);
+
+    $rowsTpt = array_map('str_getcsv', explode("\n", $responseTpt->body()));
+
+    $tpt = [];
+
+    for ($i = 1; $i < count($rowsTpt); $i++) {
+
+        if(count($rowsTpt[$i]) >= 4){
+
+            $tpt[] = [
+                'Tahun' => $rowsTpt[$i][0] ?? '',
+                'Bekerja (jiwa)' => $rowsTpt[$i][1] ?? '',
+                'Pengangguran Terbuka (jiwa)' => $rowsTpt[$i][2] ?? '',
+                'TPT(%)' => $rowsTpt[$i][3] ?? '',
+            ];
+        }
+    }
+
+    // ===== TPAK =====
+    $urlTpak = "https://docs.google.com/spreadsheets/d/1WmnAGk-5fXNCCPcjjw_f9OkVJ0A6v1JnLo23QJJIagY/export?format=csv&gid=767782761";
+
+    $responseTpak = Http::timeout(10)->get($urlTpak);
+
+    $rowsTpak = array_map('str_getcsv', explode("\n", $responseTpak->body()));
+
+    $tpak = [];
+
+    for ($i = 1; $i < count($rowsTpak); $i++) {
+
+        if(count($rowsTpak[$i]) >= 4){
+
+            $tpak[] = [
+                'Tahun' => $rowsTpak[$i][0] ?? '',
+                'Tingkat Kesempatan Kerja (%)' => $rowsTpak[$i][1] ?? '',
+                'TPT(%)' => $rowsTpak[$i][2] ?? '',
+                'TPAK(%)' => $rowsTpak[$i][3] ?? '',
+            ];
+        }
+    }
+
+    return view(
+        'pages.indikator.ketenagakerjaan.tpt-tpak',
+        compact('tpt', 'tpak')
+    );
+}
 // ===== PEMBANGUNAN MANUSIA =====
 public function pmKonsep() { return view('pages.indikator.pembangunan-manusia.konsep'); }
 public function pmUhh()
