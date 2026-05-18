@@ -8,17 +8,22 @@
 <div style="font-size:15px; color:#3A3A3A;">
 
     {{-- TPT --}}
-    <div class="table-responsive">
+    <div class="table-responsive mb-4">
 
-        <table class="table border-0 align-middle"
-               style="font-size:15px; table-layout:fixed; width:100%;">
+        <table class="table table-bordered align-middle"
+               style="width:100%; font-size:15px;">
 
             <thead>
 
                 <tr>
                     <th colspan="4"
-                        style="background:#2F4B7C; color:white; text-align:center;
-                               font-weight:500; padding:14px; border:none;">
+                        style="
+                            background:#2F4B7C;
+                            color:white;
+                            text-align:center;
+                            padding:14px;
+                            border:none;
+                        ">
                         Tingkat Pengangguran Terbuka (TPT)
                     </th>
                 </tr>
@@ -36,16 +41,26 @@
 
             <tbody style="text-align:center;">
 
-                @foreach($tpt as $t)
+                @if(isset($tpt) && count($tpt) > 0)
 
-                <tr>
-                    <td>{{ $t['Tahun'] }}</td>
-                    <td>{{ $t['Bekerja (jiwa)'] }}</td>
-                    <td>{{ $t['Pengangguran Terbuka (jiwa)'] }}</td>
-                    <td>{{ $t['TPT(%)'] }}</td>
-                </tr>
+                    @foreach($tpt as $t)
 
-                @endforeach
+                    <tr>
+                        <td>{{ $t['Tahun'] ?? '-' }}</td>
+                        <td>{{ $t['Bekerja (jiwa)'] ?? '-' }}</td>
+                        <td>{{ $t['Pengangguran Terbuka (jiwa)'] ?? '-' }}</td>
+                        <td>{{ $t['TPT(%)'] ?? '-' }}</td>
+                    </tr>
+
+                    @endforeach
+
+                @else
+
+                    <tr>
+                        <td colspan="4">Data TPT tidak tersedia</td>
+                    </tr>
+
+                @endif
 
             </tbody>
 
@@ -54,17 +69,22 @@
     </div>
 
     {{-- TPAK --}}
-    <div class="table-responsive mt-4">
+    <div class="table-responsive">
 
-        <table class="table border-0 align-middle"
-               style="font-size:15px; table-layout:fixed; width:100%;">
+        <table class="table table-bordered align-middle"
+               style="width:100%; font-size:15px;">
 
             <thead>
 
                 <tr>
                     <th colspan="4"
-                        style="background:#2F4B7C; color:white; text-align:center;
-                               font-weight:500; padding:14px; border:none;">
+                        style="
+                            background:#2F4B7C;
+                            color:white;
+                            text-align:center;
+                            padding:14px;
+                            border:none;
+                        ">
                         Tingkat Partisipasi Angkatan Kerja (TPAK)
                     </th>
                 </tr>
@@ -82,16 +102,26 @@
 
             <tbody style="text-align:center;">
 
-                @foreach($tpak as $t)
+                @if(isset($tpak) && count($tpak) > 0)
 
-                <tr>
-                    <td>{{ $t['Tahun'] }}</td>
-                    <td>{{ $t['Tingkat Kesempatan Kerja (%)'] }}</td>
-                    <td>{{ $t['TPT(%)'] }}</td>
-                    <td>{{ $t['TPAK(%)'] }}</td>
-                </tr>
+                    @foreach($tpak as $t)
 
-                @endforeach
+                    <tr>
+                        <td>{{ $t['Tahun'] ?? '-' }}</td>
+                        <td>{{ $t['Tingkat Kesempatan Kerja (%)'] ?? '-' }}</td>
+                        <td>{{ $t['TPT(%)'] ?? '-' }}</td>
+                        <td>{{ $t['TPAK(%)'] ?? '-' }}</td>
+                    </tr>
+
+                    @endforeach
+
+                @else
+
+                    <tr>
+                        <td colspan="4">Data TPAK tidak tersedia</td>
+                    </tr>
+
+                @endif
 
             </tbody>
 
@@ -99,7 +129,12 @@
 
     </div>
 
-    <p style="font-size:13px; color:#6B7280; margin-top:10px; font-style:italic;">
+    <p style="
+        font-size:13px;
+        color:#6B7280;
+        margin-top:15px;
+        font-style:italic;
+    ">
         Sumber: BPS, Rilis Berita Resmi Statistik
     </p>
 
