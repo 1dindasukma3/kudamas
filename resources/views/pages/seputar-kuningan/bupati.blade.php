@@ -133,55 +133,30 @@
 
 </div>
 
-<h6 class="section-title">Daftar Bupati Kabupaten Kuningan</h6>
+<h6 class="section-title">
+    Daftar Bupati Kabupaten Kuningan
+</h6>
 
-@php
-$bupati = [
-['nama'=>'R. Noer Armadibrata'],
-['nama'=>'R. Moch. Hafil'],
-['nama'=>'R. Tikok Moch. Ichlas'],
-['nama'=>'R. Soemitra'],
-['nama'=>'Tb. Amin Abdullah'],
-['nama'=>'Saleh Alibasah','tahun'=>'1958 - 1961'],
-['nama'=>'Usman Djatikusumah'],
-['nama'=>'Rd. Komar Suryaatmadja'],
-['nama'=>'S. Soemintaatmadja'],
-['nama'=>'Aruman Wirananggapathi','tahun'=>'1967 - 1973'],
-['nama'=>'Karli Akbar','tahun'=>'1973 - 1978'],
-['nama'=>'R. H. Unang Sunardjo, S.H.','tahun'=>'1978 - 1983'],
-['nama'=>'Drs. H. Moch. Djufri Pringadi','tahun'=>'1983 - 1988'],
-['nama'=>'Drs. H. Subandi','tahun'=>'1988 - 1993'],
-['nama'=>'H. Yeng Ds. Partawinata, SH','tahun'=>'1993 - 1998'],
-['nama'=>'Drs. H. Arifin Setiamihardja, MM','tahun'=>'1998 - 2003'],
-['nama'=>'H. Aang Hamid Suganda, S.Sos.','tahun'=>'2003 - 2008'],
-['nama'=>'H. Aang Hamid Suganda, S.Sos.','tahun'=>'2008 - 2013'],
-['nama'=>'Hj. Utje Choeriah Hamid Suganda, S.Sos., M.AP.','tahun'=>'2013 - 2015'],
-['nama'=>'H. Acep Purnama, SH., MH','tahun'=>'2015 - 2018'],
-['nama'=>'H. Acep Purnama, SH., MH','tahun'=>'2018 - 2023'],
-['nama'=>'(Penjabat Bupati) Raden Iip Hidayat, M.Pd.','tahun'=>'2023 - 2024'],
-['nama'=>'(Penjabat Bupati) Dr. Agus Toyib, S.Sos., M.Si.','tahun'=>'2024'],
-['nama'=>'Dr. Dian Rachmat Yanuar, M.Si.','tahun'=>'2024 - 2029'],
-];
-@endphp
-
-@foreach($bupati as $i => $item)
+@foreach($bupati as $item)
 
 <div class="bupati-item">
 
     <div class="bupati-no">
-        {{ $i + 1 }}
+        {{ $item['No'] }}
     </div>
 
     <div>
+
         <div class="bupati-name">
-            {{ $item['nama'] }}
+            {{ $item['Nama Bupati'] }}
         </div>
 
-        @if(isset($item['tahun']))
+        @if(!empty($item['Masa Jabatan']))
         <div class="bupati-year">
-            Masa Jabatan : {{ $item['tahun'] }}
+            Masa Jabatan : {{ $item['Masa Jabatan'] }}
         </div>
         @endif
+
     </div>
 
 </div>

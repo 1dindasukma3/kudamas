@@ -107,25 +107,42 @@
 
 <div class="hero-government mb-4">
     <div class="d-flex align-items-center gap-3 position-relative">
+
         <div style="font-size:2.5rem;">🏛️</div>
 
         <div>
-            <div style="font-size:0.8rem;opacity:0.8;letter-spacing:1px;text-transform:uppercase;">
+
+            <div style="
+                font-size:0.8rem;
+                opacity:0.8;
+                letter-spacing:1px;
+                text-transform:uppercase;
+            ">
                 Pemerintah Kabupaten Kuningan
             </div>
 
-            <div style="font-size:1.6rem;font-weight:800;line-height:1.2;">
+            <div style="
+                font-size:1.6rem;
+                font-weight:800;
+                line-height:1.2;
+            ">
                 Perangkat Daerah
             </div>
 
-            <div style="font-size:0.85rem;opacity:0.85;">
+            <div style="
+                font-size:0.85rem;
+                opacity:0.85;
+            ">
                 Daftar organisasi perangkat daerah Kabupaten Kuningan
             </div>
+
         </div>
+
     </div>
 </div>
 
 <div class="row g-3 mb-4">
+
     <div class="col-4">
         <div class="stat-card-modern">
             <div style="font-size:1.4rem;">🏘️</div>
@@ -149,67 +166,30 @@
             <div class="stat-label">Perangkat</div>
         </div>
     </div>
+
 </div>
 
-<h6 class="section-title">Daftar Perangkat Daerah Kabupaten Kuningan</h6>
+<h5 class="section-title">
+    Daftar Perangkat Daerah Kabupaten Kuningan
+</h5>
 
 <div class="opd-list">
 
-@php
-$opd = [
-'Badan Perencanaan Pembangunan, Penelitian dan Pengembangan Daerah Kabupaten Kuningan',
-'Badan Pengelolaan Pendapatan Daerah Kabupaten Kuningan',
-'Badan Pengelolaan Keuangan dan Aset Daerah Kabupaten Kuningan',
-'Badan Kepegawaian dan Pengembangan Sumber Daya Manusia Kabupaten Kuningan',
-'Badan Rumah Sakit Umum 45 Kabupaten Kuningan',
-'Badan Rumah Sakit Umum Linggajati Kabupaten Kuningan',
-'Badan Kesatuan Bangsa dan Politik Kabupaten Kuningan',
-'Badan Penanggulangan Bencana Daerah Kabupaten Kuningan',
-'Sekretariat DPRD Kabupaten Kuningan',
-'Inspektorat Kabupaten Kuningan',
-'Dinas Pendidikan dan Kebudayaan Kabupaten Kuningan',
-'Dinas Kesehatan Kabupaten Kuningan',
-'Dinas Pekerjaan Umum dan Tata Ruang Kabupaten Kuningan',
-'Dinas Perumahan, Kawasan Permukiman dan Pertanahan Kabupaten Kuningan',
-'Satuan Polisi Pamong Praja Kabupaten Kuningan',
-'Dinas Sosial Kabupaten Kuningan',
-'Dinas Tenaga Kerja dan Transmigrasi Kabupaten Kuningan',
-'Dinas Ketahanan Pangan dan Pertanian Kabupaten Kuningan',
-'Dinas Lingkungan Hidup Kabupaten Kuningan',
-'Dinas Kependudukan dan Catatan Sipil Kabupaten Kuningan',
-'Dinas Pemberdayaan Masyarakat dan Desa Kabupaten Kuningan',
-'Dinas Pengendalian Penduduk, Keluarga Berencana, Pemberdayaan Perempuan dan Perlindungan Anak Kabupaten Kuningan',
-'Dinas Perhubungan Kabupaten Kuningan',
-'Dinas Komunikasi dan Informatika Kabupaten Kuningan',
-'Dinas Koperasi, Usaha Mikro Kecil dan Menengah, Perindustrian dan Perdagangan Kabupaten Kuningan',
-'Dinas Penanaman Modal dan Pelayanan Terpadu Satu Pintu Kabupaten Kuningan',
-'Dinas Pemuda, Olahraga dan Pariwisata Kabupaten Kuningan',
-'Dinas Kearsipan dan Perpustakaan Kabupaten Kuningan',
-'Dinas Perikanan dan Peternakan Kabupaten Kuningan',
-'Bagian Hukum Sekretariat Daerah Kabupaten Kuningan',
-'Bagian Tata Pemerintahan Sekretariat Daerah Kabupaten Kuningan',
-'Bagian Protokol dan Komunikasi Pimpinan Sekretariat Daerah Kabupaten Kuningan',
-'Bagian Kesejahteraan Rakyat Sekretariat Daerah Kabupaten Kuningan',
-'Bagian Administrasi Pembangunan Daerah Kabupaten Kuningan',
-'Bagian Perekonomian dan Sumber Daya Alam Sekretariat Daerah Kabupaten Kuningan',
-'Bagian Pengadaan Barang/Jasa Sekretariat Daerah Kabupaten Kuningan',
-'Bagian Umum Sekretariat Daerah Kabupaten Kuningan',
-'Bagian Perencanaan dan Keuangan Sekretariat Daerah Kabupaten Kuningan',
-'Bagian Organisasi Sekretariat Daerah Kabupaten Kuningan',
-];
-@endphp
+    @foreach($opd as $o)
 
-@foreach($opd as $i => $nama)
+    <div class="opd-item">
 
-<div class="opd-item">
-    <div class="opd-num">{{ $i + 1 }}</div>
+        <div class="opd-num">
+            {{ $o['no'] }}
+        </div>
 
-    <div class="opd-name">
-        {{ $nama }}
+        <div class="opd-name">
+            {{ $o['nama'] }}
+        </div>
+
     </div>
-</div>
 
-@endforeach
+    @endforeach
 
 </div>
 

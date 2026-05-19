@@ -673,9 +673,68 @@ public function indeksGender()
 // ===== SEPUTAR KUNINGAN =====
 public function skDaftarDesa()    { return view('pages.seputar-kuningan.daftar-desa'); }
 public function skHariJadi()      { return view('pages.seputar-kuningan.hari-jadi'); }
-public function skPemerintahan()  { return view('pages.seputar-kuningan.pemerintahan'); }
+public function skPemerintahan()
+{
+    $url = "https://docs.google.com/spreadsheets/d/1WmnAGk-5fXNCCPcjjw_f9OkVJ0A6v1JnLo23QJJIagY/export?format=csv&gid=887110616";
+
+    $response = Http::get($url);
+
+    $csv = $response->body();
+
+    $rows = array_map('str_getcsv', explode("\n", $csv));
+
+    array_shift($rows);
+
+    $opd = [];
+
+    foreach ($rows as $row) {
+
+        if (count($row) >= 2) {
+
+            $opd[] = [
+                'no' => trim($row[0]),
+                'nama' => trim($row[1]),
+            ];
+        }
+    }
+
+    return view(
+        'pages.seputar-kuningan.pemerintahan',
+        compact('opd')
+    );
+}
 public function skGeografis()     { return view('pages.seputar-kuningan.geografis'); }
-public function skBupati()        { return view('pages.seputar-kuningan.bupati'); }
+public function skBupati()
+{
+    $url = "https://docs.google.com/spreadsheets/d/1WmnAGk-5fXNCCPcjjw_f9OkVJ0A6v1JnLo23QJJIagY/export?format=csv&gid=1107923714";
+
+    $response = Http::get($url);
+
+    $csv = $response->body();
+
+    $rows = array_map('str_getcsv', explode("\n", $csv));
+
+    $header = array_shift($rows);
+
+    $bupati = [];
+
+    foreach ($rows as $row) {
+
+        if(count($row) >= 3){
+
+            $bupati[] = [
+                'No' => trim($row[0]),
+                'Nama Bupati' => trim($row[1]),
+                'Masa Jabatan' => trim($row[2]),
+            ];
+        }
+    }
+
+    return view(
+        'pages.seputar-kuningan.bupati',
+        compact('bupati')
+    );
+}
 public function skRumahSakit()    { return view('pages.seputar-kuningan.rumah-sakit'); }
 public function skPendidikan()    { return view('pages.seputar-kuningan.pendidikan'); }
 
