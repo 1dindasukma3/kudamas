@@ -320,3 +320,18 @@
     </div>
 
 @endsection
+
+@push('scripts')
+<script>
+    const carousel = document.getElementById('myCarousel');
+    const dots = document.querySelectorAll('.dot-btn');
+
+    if (carousel && dots.length){
+        carousel.addEventListener('slide.bs.carousel', function (e) {
+            dots.forEach(d => d.classList.remove('active'));
+            if (dots[e.to]) dots[e.to].classList.add('active');
+        });
+    }
+</script>
+    
+@endpush
