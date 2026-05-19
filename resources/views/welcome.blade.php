@@ -29,25 +29,20 @@
         }
 
         .splash-logo {
-            width: 120px;
-            height: 120px;
-            background-color: var(--kuning);
-            border-radius: 50%;
+            width: 260px;
+            height: 260px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 60px;
-            box-shadow: 0 8px 32px rgba(0,0,0,0.25);
         }
 
-        /* Di laptop logo lebih besar */
-        @media (min-width: 768px) {
-            .splash-logo {
-                width: 160px;
-                height: 160px;
-                font-size: 80px;
-            }
+        .logo-img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            filter: drop-shadow(0 10px 25px rgba(0,0,0,0.25));
         }
+
 
         .splash-title {
             color: white;
@@ -126,7 +121,9 @@
 
     <div class="splash-wrapper">
 
-        <div class="splash-logo">🐴</div>
+        <div class="splash-logo">
+                        <img src="{{ asset('images/logo kudamas.png') }}" alt="Logo" class="logo-img">
+        </div>
 
         <div>
             <div class="splash-title">KUDAMAS</div>
