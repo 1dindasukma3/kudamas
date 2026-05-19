@@ -126,14 +126,6 @@
         background: #EFF6FF;
         color: var(--biru);
     }
-    .desa-item::before {
-        content: '';
-        width: 6px; height: 6px;
-        background: var(--biru-muda);
-        border-radius: 50%;
-        flex-shrink: 0;
-    }
-
     .desa-count {
         font-size: 0.68rem;
         color: rgba(255,255,255,0.65);

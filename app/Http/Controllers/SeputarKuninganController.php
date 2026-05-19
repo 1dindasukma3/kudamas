@@ -9,7 +9,7 @@ class SeputarKuninganController extends Controller
 {
     public function daftarDesa()
     {
-        $url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRkOoduh1jnZEK9TKDF1kFj_Jc_lvnvRGUL6i_hp7TeJ8YLanrdNuKP27ZE3q7_7DEcEsiZN0uPs9td/pubhtml?gid=183407791&single=true";
+        $url = "https://docs.google.com/spreadsheets/d/1WmnAGk-5fXNCCPcjjw_f9OkVJ0A6v1JnLo23QJJIagY/export?format=csv&gid=183407791";
 
         $response = Http::get($url);
 
@@ -74,7 +74,31 @@ class SeputarKuninganController extends Controller
 
     public function rumahSakit()
     {
-        return view('pages.seputar-kuningan.rumah-sakit');
+        $url = "https://docs.google.com/spreadsheets/d/1WmnAGk-5fXNCCPcjjw_f9OkVJ0A6v1JnLo23QJJIagY/export?format=csv&gid=1382886338";
+
+        $response = Http::get($url);
+
+        $rows = array_map('str_getcsv', explode("\n", $response->body()));
+
+        array_shift($rows);
+
+        $rumahsakit = [];
+
+        foreach ($rows as $row) {
+
+            if(count($row) < 3) continue;
+
+            $rumahsakit[] = [
+                'nama'   => trim($row[0]),
+                'alamat' => trim($row[1]),
+                'telp'   => trim($row[2]),
+            ];
+        }
+
+        return view(
+            'pages.seputar-kuningan.rumah-sakit',
+            compact('rumahsakit')
+        );
     }
 
     public function pendidikan()

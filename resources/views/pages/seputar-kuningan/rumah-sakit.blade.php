@@ -144,7 +144,9 @@
     <div class="col-4">
         <div class="stat-card-modern">
             <div style="font-size:1.4rem;">🏥</div>
-            <div class="stat-value">12</div>
+            <div class="stat-value">
+                {{ count($rumahsakit) }}
+            </div>
             <div class="stat-label">Rumah Sakit</div>
         </div>
     </div>
@@ -169,70 +171,6 @@
 
 <h6 class="section-title">Daftar 12 Rumah Sakit di Kabupaten Kuningan</h6>
 
-@php
-$rumahsakit = [
-[
-'nama' => 'Rumah Sakit Umum Daerah 45',
-'alamat' => 'Jl. Jend. Sudirman No.68 Kuningan',
-'telp' => '(0232) 871885'
-],
-[
-'nama' => 'Rumah Sakit Umum Wijaya Kusumah',
-'alamat' => 'Jl. RE. Martadinata No.172 Kelurahan Ciporang, Kuningan',
-'telp' => '(0232) 871565'
-],
-[
-'nama' => 'Rumah Sakit Umum Sekar Kamulyan',
-'alamat' => 'Jl. Rumah Sakit No.28 Kelurahan Cigugur, Kec. Cigugur, Kab. Kuningan',
-'telp' => '(0232) 873206'
-],
-[
-'nama' => 'Rumah Sakit Umum Juanda',
-'alamat' => 'Jl. Ir. H. Juanda No.207 Kelurahan Purwawinangun, Kec. Kuningan',
-'telp' => '(0232) 876433'
-],
-[
-'nama' => 'Rumah Sakit Umum El-Syifa',
-'alamat' => 'Jl. RE. Martadinata No.108 Desa Ancaran, Kec. Kuningan',
-'telp' => '(0232) 876240'
-],
-[
-'nama' => 'Rumah Sakit Umum Kuningan Medical Centre',
-'alamat' => 'Jl. RE. Martadinata No.01 Desa Kertawangunan, Kec. Sindangagung',
-'telp' => '(0232) 8890300'
-],
-[
-'nama' => 'Rumah Sakit Umum Daerah Linggajati',
-'alamat' => 'Jl. Bandorasa – Cilimus No.36 Kec. Cilimus Kab. Kuningan',
-'telp' => '(0232) 614884'
-],
-[
-'nama' => 'Rumah Sakit Umum KMC Luragung',
-'alamat' => 'Dusun Rahayu RT 002 RW 001 Desa Cirahayu, Kec. Luragung, Kab. Kuningan',
-'telp' => '(0232) 8900112'
-],
-[
-'nama' => 'Rumah Sakit Jantung Hasna Medika Kuningan',
-'alamat' => 'Jl. Raya Cigugur Lingkungan Manis RT 030 RW 011, Kelurahan Cigugur, Kec. Cigugur, Kab. Kuningan',
-'telp' => '(0232) 8611111'
-],
-[
-'nama' => 'Rumah Sakit Mitra Husada Ciawigebang',
-'alamat' => 'Jl. Raya Siliwangi No.151, Kec. Ciawigebang, Kab. Kuningan',
-'telp' => '-'
-],
-[
-'nama' => 'Rumah Sakit Umum Arya Kamuning',
-'alamat' => 'Jl. Raya Cihideunggirang Dusun Manis RT 001 RW 002 Desa Cihideunggirang, Kec. Cidahu, Kab. Kuningan',
-'telp' => '(0232) 891188'
-],
-[
-'nama' => 'RS Permata Kuningan',
-'alamat' => 'Jl. Cut Nyak Dien RT 007 RW 002 Kelurahan Ciporang Kec. Kuningan Kab. Kuningan',
-'telp' => '(0232) 8905556'
-],
-];
-@endphp
 
 @foreach($rumahsakit as $i => $rs)
 
