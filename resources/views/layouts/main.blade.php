@@ -280,7 +280,7 @@
 
         .scroll-inner {
             position: relative; z-index: 1;
-            padding: 28px 30px;
+            padding: 28px 60px;
         }
 
         .center-wrap { max-width: 940px; margin: 0 auto; }
