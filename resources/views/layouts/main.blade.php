@@ -281,11 +281,7 @@
 
         .scroll-inner {
             position: relative; z-index: 1;
-<<<<<<< HEAD
-            padding: 28px 30px 60px; /* ← ubah angka terakhir jadi 60px */
-=======
-            padding: 28px 60px;
->>>>>>> 15f54123d5dfe81d0807098ee05627015c39cb05
+            padding: 28px 30px 60px;
         }
 
         .center-wrap { max-width: 940px; margin: 0 auto; }

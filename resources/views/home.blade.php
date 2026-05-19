@@ -253,11 +253,7 @@
 
                 <div class="carousel-item">
                     <div class="banner-slide"
-<<<<<<< HEAD
                          style="background-image: url('/images/1.png');">
-=======
-                         style="background-image: url('/images/mencatatIndonesia.png');">
->>>>>>> 15f54123d5dfe81d0807098ee05627015c39cb05
                         <div class="banner-caption">
                             <div class="banner-badge">👥 Kependudukan</div>
                             <h5>Penduduk Kuningan 2024</h5>
