@@ -231,7 +231,7 @@
 
                 <div class="carousel-item active">
                     <div class="banner-slide"
-                         style="background-image: url('/images/banner1.jpg');">
+                         style="background-image: url('/images/3.png');">
                         <div class="banner-caption">
                             <div class="banner-badge">📢 Pengumuman</div>
                             <h5>Sensus Ekonomi 2026</h5>
@@ -242,7 +242,7 @@
 
                 <div class="carousel-item">
                     <div class="banner-slide"
-                         style="background-image: url('/images/banner2.jpg');">
+                         style="background-image: url('/images/2.png');">
                         <div class="banner-caption">
                             <div class="banner-badge">📊 Statistik</div>
                             <h5>IPM Kabupaten Kuningan 2024</h5>
@@ -253,7 +253,7 @@
 
                 <div class="carousel-item">
                     <div class="banner-slide"
-                         style="background-image: url('/images/banner3.jpg');">
+                         style="background-image: url('/images/1.png');">
                         <div class="banner-caption">
                             <div class="banner-badge">👥 Kependudukan</div>
                             <h5>Penduduk Kuningan 2024</h5>

@@ -246,6 +246,7 @@
             color: var(--text); font-size: 0.82rem; width: 100%;
         }
         .search-box input::placeholder { color: #94A3B8; }
+        
 
         /* ════════════════════════════════
            SCROLL AREA + BG TRANSPARAN
@@ -280,7 +281,7 @@
 
         .scroll-inner {
             position: relative; z-index: 1;
-            padding: 28px 30px;
+            padding: 28px 30px 60px; /* ← ubah angka terakhir jadi 60px */
         }
 
         .center-wrap { max-width: 940px; margin: 0 auto; }
@@ -453,6 +454,29 @@
             .top-header { padding: 0 14px; gap: 10px; }
             .brand-sub { display: none; }
         }
+
+        /* ════════════════════════════════
+           LOGO BADGE 
+        ════════════════════════════════ */
+        .logo-badge {
+            width: 45px;
+            height: 45px;
+            background: white;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            box-shadow: 0 1px 8px rgba(27,58,107,0.18);
+            flex-shrink: 0;
+            padding: 1px;
+        }
+
+        .logo-img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
     </style>
 
     @stack('styles')
@@ -477,7 +501,9 @@
                 </div>
 
                 <a href="{{ route('home') }}" class="header-brand">
-                    <div class="logo-badge">🐴</div>
+                    <div class="logo-badge">
+                        <img src="{{ asset('images/logo kudamas.png') }}" alt="Logo" class="logo-img">
+                    </div>
                     <div>
                         <div class="brand-name">KUDAMAS</div>
                         <div class="brand-sub">Kuningan Dalam Angka Statistik</div>
@@ -497,9 +523,39 @@
 
                 <div class="header-sep"></div>
 
-                <div class="search-box">
-                    <i class="bi bi-search"></i>
-                    <input type="text" placeholder="Cari data statistik...">
+                {{-- Search --}}
+                <div class="search-wrapper" style="position:relative; margin-left:auto; flex-shrink:0;">
+
+                    <div class="search-box" id="searchBox">
+                        <i class="bi bi-search"></i>
+                        <input type="text"
+                            id="searchInput"
+                            placeholder="Cari data statistik..."
+                            autocomplete="off">
+                        <button id="searchClear"
+                                style="display:none;background:none;border:none;color:var(--muted);padding:0;cursor:pointer;font-size:0.8rem;">
+                            <i class="bi bi-x-lg"></i>
+                        </button>
+                    </div>
+
+                    {{-- Dropdown hasil pencarian --}}
+                    <div id="searchDropdown"
+                        style="display:none;position:absolute;top:calc(100% + 8px);right:0;
+                                width:320px;background:white;border-radius:14px;
+                                box-shadow:0 8px 32px rgba(27,58,107,0.15);
+                                border:1px solid var(--border);z-index:999;
+                                max-height:400px;overflow-y:auto;">
+
+                        <div id="searchResults"></div>
+
+                        <div id="searchEmpty"
+                            style="display:none;padding:20px;text-align:center;
+                                    color:var(--muted);font-size:0.83rem;">
+                            <i class="bi bi-search" style="font-size:1.5rem;opacity:0.3;display:block;margin-bottom:8px;"></i>
+                            Tidak ditemukan hasil untuk "<span id="searchEmptyQuery"></span>"
+                        </div>
+
+                    </div>
                 </div>
             </div>
 
