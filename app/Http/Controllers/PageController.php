@@ -670,15 +670,6 @@ public function indeksGender()
     );
 }
 
-// ===== SEPUTAR KUNINGAN =====
-public function skDaftarDesa()    { return view('pages.seputar-kuningan.daftar-desa'); }
-public function skHariJadi()      { return view('pages.seputar-kuningan.hari-jadi'); }
-public function skPemerintahan()  { return view('pages.seputar-kuningan.pemerintahan'); }
-public function skGeografis()     { return view('pages.seputar-kuningan.geografis'); }
-public function skBupati()        { return view('pages.seputar-kuningan.bupati'); }
-public function skRumahSakit()    { return view('pages.seputar-kuningan.rumah-sakit'); }
-public function skPendidikan()    { return view('pages.seputar-kuningan.pendidikan'); }
-
 // ===== PARIWISATA =====
 public function pwAalam()         { return view('pages.pariwisata.wisata-alam'); }
 public function pwSeniBudaya()    { return view('pages.pariwisata.seni-budaya'); }

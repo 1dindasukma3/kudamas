@@ -54,8 +54,7 @@
 
                 @foreach($kelompokUmur as $umur)
 
-                <tr style="{{ $umur['Kelompok Umur'] == 'Jumlah' ? 'font-weight:bold;' : '' }}">
-
+            <tr @if($loop->remaining < 3) style="font-weight:bold;" @endif>
                     <td>{{ $umur['Kelompok Umur'] }}</td>
                     <td>{{ $umur['Laki-Laki'] }}</td>
                     <td>{{ $umur['Perempuan'] }}</td>

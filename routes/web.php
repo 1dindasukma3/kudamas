@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PageController;
+use App\Http\Controllers\SeputarKuninganController;
 
 // Splash screen (halaman pertama)
 Route::get('/', [PageController::class, 'splash'])->name('splash');
@@ -68,13 +69,30 @@ Route::get('/indikator-statistik/indeks-indeks/penyusunan-ipm', [PageController:
 Route::get('/indikator-statistik/indeks-indeks/gender', [PageController::class, 'indeksGender'])->name('indeks.gender');
 
 // ===== SEPUTAR KUNINGAN =====
-Route::get('/seputar-kuningan/daftar-desa', [PageController::class, 'skDaftarDesa'])->name('sk.daftar-desa');
-Route::get('/seputar-kuningan/hari-jadi', [PageController::class, 'skHariJadi'])->name('sk.hari-jadi');
-Route::get('/seputar-kuningan/pemerintahan', [PageController::class, 'skPemerintahan'])->name('sk.pemerintahan');
-Route::get('/seputar-kuningan/geografis', [PageController::class, 'skGeografis'])->name('sk.geografis');
-Route::get('/seputar-kuningan/bupati', [PageController::class, 'skBupati'])->name('sk.bupati');
-Route::get('/seputar-kuningan/rumah-sakit', [PageController::class, 'skRumahSakit'])->name('sk.rumah-sakit');
-Route::get('/seputar-kuningan/pendidikan', [PageController::class, 'skPendidikan'])->name('sk.pendidikan');
+Route::prefix('seputar-kuningan')->group(function () {
+
+    Route::get('/daftar-desa', [SeputarKuninganController::class, 'daftarDesa'])
+        ->name('sk.daftar-desa');
+
+    Route::get('/hari-jadi', [SeputarKuninganController::class, 'hariJadi'])
+        ->name('sk.hari-jadi');
+
+    Route::get('/pemerintahan', [SeputarKuninganController::class, 'pemerintahan'])
+        ->name('sk.pemerintahan');
+
+    Route::get('/geografis', [SeputarKuninganController::class, 'geografis'])
+        ->name('sk.geografis');
+
+    Route::get('/bupati', [SeputarKuninganController::class, 'bupati'])
+        ->name('sk.bupati');
+
+    Route::get('/rumah-sakit', [SeputarKuninganController::class, 'rumahSakit'])
+        ->name('sk.rumah-sakit');
+
+    Route::get('/pendidikan', [SeputarKuninganController::class, 'pendidikan'])
+        ->name('sk.pendidikan');
+
+});
 
 // ===== PARIWISATA =====
 Route::get('/pariwisata/wisata-alam', [PageController::class, 'pwAalam'])->name('pw.alam');
