@@ -112,138 +112,9 @@
     </div>
 </div>
 
-{{--
-    Simpan foto di: public/images/wisata-buatan/
-    Contoh: public/images/wisata-buatan/sangkan-resort.jpg
---}}
 
 <div class="row g-3">
 
-    @php
-    $wisata = [
-        [
-            'no'    => 1,
-            'nama'  => 'Sangkan Resort Aqua Park',
-            'lokasi'=> 'Jl. Raya Bandorasa No. KM. 12, Bandorasa Wetan, Kec. Cilimus, Kabupaten Kuningan, Jawa Barat 45556',
-            'foto'  => '/images/wisata-buatan/sangkan-resort.jpg',
-            'emoji' => '🏖️',
-            'tiket' => null,
-            'bg'    => 'linear-gradient(135deg,#0369a1,#0ea5e9)',
-            'desc'  => 'Resort wisata air terpadu yang menawarkan wahana permainan air, kolam renang, serta fasilitas penginapan dengan pemandangan alam pegunungan Kuningan yang asri.',
-            'tags'  => ['🏊 Kolam Renang','🎢 Wahana Air','🏨 Resort','🌄 Pegunungan'],
-        ],
-        [
-            'no'    => 2,
-            'nama'  => 'Ghifafari Valley',
-            'lokasi'=> 'Linggarjati, Kec. Cilimus, Kabupaten Kuningan, Jawa Barat 45556',
-            'foto'  => '/images/wisata-buatan/ghifafari-valley.jpg',
-            'emoji' => '🌄',
-            'tiket' => null,
-            'bg'    => 'linear-gradient(135deg,#3b0764,#7e22ce)',
-            'desc'  => 'Destinasi wisata dengan konsep valley modern yang memadukan spot foto instagramable, area bermain, dan pemandangan alam Linggarjati yang hijau dan sejuk.',
-            'tags'  => ['📸 Spot Foto','🌿 Alam Hijau','🎭 Rekreasi'],
-        ],
-        [
-            'no'    => 3,
-            'nama'  => 'Zazam Pool',
-            'lokasi'=> 'Jl. Veteran Blok Pakuwon, Desa Manislor, Kec. Jalaksana, Kabupaten Kuningan, Jawa Barat 45556',
-            'foto'  => '/images/wisata-buatan/zazam-pool.jpg',
-            'emoji' => '🏊',
-            'tiket' => null,
-            'bg'    => 'linear-gradient(135deg,#0c4a6e,#0284c7)',
-            'desc'  => 'Kolam renang modern yang dilengkapi fasilitas lengkap, cocok untuk rekreasi keluarga maupun anak-anak. Berlokasi di kawasan Jalaksana yang mudah diakses.',
-            'tags'  => ['🏊 Kolam Renang','👨‍👩‍👧 Keluarga','🎽 Olahraga'],
-        ],
-        [
-            'no'    => 4,
-            'nama'  => 'Kolam Renang Grage Sangkan',
-            'lokasi'=> 'Jl. Raya Sangkanurip No. 1, Panawuan, Kec. Cigandamekar, Kabupaten Kuningan, Jawa Barat 45556',
-            'foto'  => '/images/wisata-buatan/grage-sangkan.jpg',
-            'emoji' => '🏊',
-            'tiket' => null,
-            'bg'    => 'linear-gradient(135deg,#1B3A6B,#2563EB)',
-            'desc'  => 'Kolam renang yang memanfaatkan sumber air panas alami Sangkanhurip. Menjadi salah satu destinasi wisata air terpopuler di Kuningan dengan fasilitas yang memadai.',
-            'tags'  => ['♨️ Air Panas','🏊 Kolam Renang','👨‍👩‍👧 Keluarga'],
-        ],
-        [
-            'no'    => 5,
-            'nama'  => 'The Mountain Rekreasion Park',
-            'lokasi'=> 'Perumahan Pesona Alam Kuningan, Jl. Raya Cirendang-Cigugur, Cipari, Kec. Cigugur, Kabupaten Kuningan, Jawa Barat 45518',
-            'foto'  => '/images/wisata-buatan/mountain-park.jpg',
-            'emoji' => '⛰️',
-            'tiket' => null,
-            'bg'    => 'linear-gradient(135deg,#14532d,#16a34a)',
-            'desc'  => 'Taman rekreasi modern dengan konsep pegunungan yang menawarkan berbagai wahana permainan, area outbound, dan spot foto dengan latar belakang Gunung Ciremai.',
-            'tags'  => ['🎢 Wahana','🏕️ Outbound','📸 Spot Foto','🏔️ Gunung Ciremai'],
-        ],
-        [
-            'no'    => 6,
-            'nama'  => 'Waduk Darma',
-            'lokasi'=> 'Desa Jagara, Kec. Darma, Kabupaten Kuningan',
-            'foto'  => '/images/wisata-buatan/waduk-darma.jpeg',
-            'emoji' => '🌊',
-            'tiket' => null,
-            'bg'    => 'linear-gradient(135deg,#155e75,#0891b2)',
-            'desc'  => 'Waduk buatan seluas 430 Ha yang dimanfaatkan sebagai kawasan wisata air. Menawarkan aktivitas memancing, perahu wisata, dan pemandangan alam yang indah di sekitarnya.',
-            'tags'  => ['⛵ Perahu Wisata','🎣 Memancing','🏞️ Panorama','💧 Waduk'],
-        ],
-        [
-            'no'    => 7,
-            'nama'  => 'Taman Rekreasi Salsabila',
-            'lokasi'=> 'Jl. Panawuan No. 2, Rt.01/Rw.01, Dusun 01, Desa Panawuan, Kec. Cigandamekar, Kabupaten Kuningan',
-            'foto'  => '/images/wisata-buatan/salsabila.jpg',
-            'emoji' => '🌳',
-            'tiket' => null,
-            'bg'    => 'linear-gradient(135deg,#166534,#15803d)',
-            'desc'  => 'Taman rekreasi keluarga dengan berbagai fasilitas bermain anak, area piknik, dan taman yang terawat. Cocok untuk liburan akhir pekan bersama keluarga.',
-            'tags'  => ['🎠 Area Bermain','🧺 Piknik','👨‍👩‍👧 Keluarga','🌿 Taman'],
-        ],
-        [
-            'no'    => 8,
-            'nama'  => 'Sangkanhurip Alami',
-            'lokasi'=> 'Jl. Pemandian Air Panas Sangkanhurip No. 210, Desa Sangkanhurip, Kec. Cigandamekar, Kabupaten Kuningan',
-            'foto'  => '/images/wisata-buatan/sangkanhurip-alami.webp',
-            'emoji' => '♨️',
-            'tiket' => null,
-            'bg'    => 'linear-gradient(135deg,#7c2d12,#c2410c)',
-            'desc'  => 'Kawasan pemandian air panas alami Sangkanhurip yang terkenal dengan khasiat terapeutiknya. Suasana alam yang asri dan udara segar menambah kenyamanan pengunjung.',
-            'tags'  => ['♨️ Air Panas Alami','💆 Terapi','🌿 Udara Segar'],
-        ],
-        [
-            'no'    => 9,
-            'nama'  => 'Linggarjati Indah',
-            'lokasi'=> 'Jl. Linggarjati No. 04, Desa Linggasana, Kec. Cigandamekar, Kabupaten Kuningan',
-            'foto'  => '/images/wisata-buatan/linggarjati-indah.jpg',
-            'emoji' => '🏡',
-            'tiket' => null,
-            'bg'    => 'linear-gradient(135deg,#1B3A6B,#3b82f6)',
-            'desc'  => 'Kawasan wisata yang memanfaatkan keindahan alam sekitar Linggarjati. Menawarkan suasana pedesaan yang tenang dengan pemandangan kebun dan perbukitan yang hijau.',
-            'tags'  => ['🌿 Alam Pedesaan','🏡 Suasana Tenang','🏔️ Perbukitan'],
-        ],
-        [
-            'no'    => 10,
-            'nama'  => 'Kolam Renang Sanggariang',
-            'lokasi'=> 'Jl. Siliwangi No. 75, Kec. Purwawinangun, Kabupaten Kuningan',
-            'foto'  => '/images/wisata-buatan/kolam-sanggariang.jpeg',
-            'emoji' => '🏊',
-            'tiket' => null,
-            'bg'    => 'linear-gradient(135deg,#0c4a6e,#0369a1)',
-            'desc'  => 'Kolam renang yang berlokasi strategis di kawasan Purwawinangun, mudah diakses dari pusat kota Kuningan. Fasilitas lengkap untuk renang rekreasi maupun olahraga.',
-            'tags'  => ['🏊 Kolam Renang','🎽 Olahraga','📍 Lokasi Strategis'],
-        ],
-        [
-            'no'    => 11,
-            'nama'  => 'Kolam Renang Tirta Gunung Mas',
-            'lokasi'=> 'Jl. Luragung No. 5, Kec. Luragung, Kabupaten Kuningan',
-            'foto'  => '/images/wisata-buatan/tirta-gunung-mas.jpg',
-            'emoji' => '🏊',
-            'tiket' => null,
-            'bg'    => 'linear-gradient(135deg,#1e3a5f,#1B3A6B)',
-            'desc'  => 'Kolam renang yang terletak di kawasan Luragung, menjadi sarana rekreasi air bagi masyarakat sekitar. Dilengkapi fasilitas ganti pakaian dan area istirahat.',
-            'tags'  => ['🏊 Kolam Renang','👨‍👩‍👧 Keluarga','🌿 Sejuk'],
-        ],
-    ];
-    @endphp
 
     @foreach($wisata as $w)
     <div class="col-md-6">
@@ -264,7 +135,6 @@
 
             <div class="wisata-thumb-fallback"
                  style="background: {{ $w['bg'] }}; display: none;">
-                <span style="font-size:3.5rem;">{{ $w['emoji'] }}</span>
                 <span class="badge-num">{{ $w['no'] }}</span>
                 @if($w['tiket'])
                     <span class="badge-tiket">{{ $w['tiket'] }}</span>

@@ -114,160 +114,24 @@
 {{-- STATS --}}
 <div class="wisata-stats">
     <div class="wisata-stat">
-        <div class="val">10</div>
+        <div class="val">{{ count($hotel) }}</div>
         <div class="lbl">Hotel & Villa</div>
     </div>
     <div class="wisata-stat">
-        <div class="val">3</div>
-        <div class="lbl">Hotel Berbintang</div>
+        <div class="val">
+            {{ collect($hotel)->filter(fn($h) => str_contains(strtolower(implode(',', $h['tags'])), 'villa'))->count() }}
+        </div>
+        <div class="lbl">Villa</div>
     </div>
     <div class="wisata-stat">
-        <div class="val">2</div>
-        <div class="lbl">Spa Resort</div>
+        <div class="val">
+            {{ collect($hotel)->filter(fn($h) => str_contains(strtolower(implode(',', $h['tags'])), 'resort'))->count() }}
+        </div>
+        <div class="lbl">Resort & Spa</div>
     </div>
 </div>
 
-{{--
-    Simpan foto di: public/images/hotel/
-    File yang dibutuhkan:
-    - grage-sangkan.jpg
-    - grand-cordela.jpg
-    - tirta-sanita.jpg
-    - sangkan-indah.jpg
-    - adikarama.jpg
-    - ayong.jpg
-    - villa-linggajati.jpg
-    - mata-air.jpg
-    - anugerah-villa.jpg
-    - hotel-linggajati.jpg
---}}
-
 <div class="row g-3">
-
-    @php
-    $hotel = [
-        [
-            'no'      => 1,
-            'nama'    => 'Grage Sangkan Hotel dan Spa',
-            'foto'    => '/images/hotel/grage-sangkan.jpg',
-            'emoji'   => '🏨',
-            'bg'      => 'linear-gradient(135deg,#1B3A6B,#2563EB)',
-            'alamat'  => 'Jl. Raya Sangkanhurip No.1, Desa Sangkanhurip, Kec. Cigandamekar',
-            'telp'    => '(0232) 614534',
-            'website' => null,
-            'email'   => null,
-            'tags'    => ['♨️ Spa','🏊 Kolam Renang','🏨 Hotel','🌿 Resort'],
-        ],
-        [
-            'no'      => 2,
-            'nama'    => 'Grand Cordela Hotel',
-            'foto'    => '/images/hotel/grand-cordela.jpeg',
-            'emoji'   => '🏩',
-            'bg'      => 'linear-gradient(135deg,#7c3aed,#6d28d9)',
-            'alamat'  => 'Jl. Siliwangi No.91, Purwawinangun, Kec. Kuningan, Jawa Barat 45511',
-            'telp'    => '(0232) 872272',
-            'website' => null,
-            'email'   => null,
-            'tags'    => ['⭐ Bintang','🏨 Hotel','📍 Pusat Kota'],
-        ],
-        [
-            'no'      => 3,
-            'nama'    => 'Tirta Sanita Spa Resort',
-            'foto'    => '/images/hotel/tirta-sanita.jpg',
-            'emoji'   => '💆',
-            'bg'      => 'linear-gradient(135deg,#155e75,#0891b2)',
-            'alamat'  => 'Jl. Panawuwan No. 98, Kec. Cigandamekar - Kuningan',
-            'telp'    => '(0232) 613061',
-            'website' => 'www.tirtasanita.com',
-            'email'   => null,
-            'tags'    => ['♨️ Spa','🌿 Resort','💆 Relaksasi','🏊 Kolam'],
-        ],
-        [
-            'no'      => 4,
-            'nama'    => 'Hotel Sangkan Indah',
-            'foto'    => '/images/hotel/sangkan-indah.webp',
-            'emoji'   => '🏡',
-            'bg'      => 'linear-gradient(135deg,#0c4a6e,#0284c7)',
-            'alamat'  => 'Komplek Pemandian Air Panas Alam No.304, Desa Sangkanhurip',
-            'telp'    => '(0232) 613191 — 613378',
-            'website' => null,
-            'email'   => null,
-            'tags'    => ['♨️ Air Panas','🏡 Penginapan','🌄 Alam'],
-        ],
-        [
-            'no'      => 5,
-            'nama'    => 'Hotel Adikarama',
-            'foto'    => '/images/hotel/adikarama.jpg',
-            'emoji'   => '🏨',
-            'bg'      => 'linear-gradient(135deg,#14532d,#16a34a)',
-            'alamat'  => 'Jl. Panawuwan No. 128, Desa Panawuwan, Kec. Cigandamekar - Kuningan',
-            'telp'    => '(0232) 613666',
-            'website' => null,
-            'email'   => null,
-            'tags'    => ['🏨 Hotel','🌿 Nyaman','📍 Panawuwan'],
-        ],
-        [
-            'no'      => 6,
-            'nama'    => 'Hotel Ayong',
-            'foto'    => '/images/hotel/ayong.jpg',
-            'emoji'   => '🏠',
-            'bg'      => 'linear-gradient(135deg,#1e3a5f,#2563EB)',
-            'alamat'  => 'Jl. Linggajati No. 4, Kec. Cilimus',
-            'telp'    => '(0232) 613188',
-            'website' => null,
-            'email'   => null,
-            'tags'    => ['🏨 Hotel','🌿 Cilimus','🏔️ Pegunungan'],
-        ],
-        [
-            'no'      => 7,
-            'nama'    => 'Villa Linggajati Indah',
-            'foto'    => '/images/hotel/villa-linggajati.webp',
-            'emoji'   => '🏡',
-            'bg'      => 'linear-gradient(135deg,#166534,#15803d)',
-            'alamat'  => 'Jl. Linggajati No.4, Desa Linggasana, Kec. Cilimus - Kuningan',
-            'telp'    => '(0232) 613188',
-            'website' => null,
-            'email'   => null,
-            'tags'    => ['🏡 Villa','🌿 Asri','🏔️ Pegunungan','🌺 Indah'],
-        ],
-        [
-            'no'      => 8,
-            'nama'    => 'Hotel Mata Air',
-            'foto'    => '/images/hotel/mata-air.jpg',
-            'emoji'   => '💧',
-            'bg'      => 'linear-gradient(135deg,#0369a1,#0ea5e9)',
-            'alamat'  => 'Jl. Linggajati No.208, Desa Sangkanhurip, Kec. Cigandamekar - Kuningan',
-            'telp'    => '(0923) 615131',
-            'website' => null,
-            'email'   => null,
-            'tags'    => ['💧 Mata Air','🏨 Hotel','🌿 Segar'],
-        ],
-        [
-            'no'      => 9,
-            'nama'    => 'Anugerah Villa',
-            'foto'    => '/images/hotel/anugerah-villa.webp',
-            'emoji'   => '🌺',
-            'bg'      => 'linear-gradient(135deg,#713f12,#d97706)',
-            'alamat'  => 'Jl. Linggasana, Kec. Cilimus - Kuningan',
-            'telp'    => '(0232) 613604',
-            'website' => null,
-            'email'   => 'anugerahvilla@yahoo.com',
-            'tags'    => ['🏡 Villa','🌺 Premium','🌿 Cilimus'],
-        ],
-        [
-            'no'      => 10,
-            'nama'    => 'Hotel Linggajati',
-            'foto'    => '/images/hotel/hotel-linggajati.jpg',
-            'emoji'   => '🏛️',
-            'bg'      => 'linear-gradient(135deg,#1B3A6B,#1e40af)',
-            'alamat'  => 'Jl. Linggarjati, Desa Linggasana, Kec. Cilimus - Kuningan',
-            'telp'    => '(0232) 613185',
-            'website' => null,
-            'email'   => null,
-            'tags'    => ['🏨 Hotel','🏛️ Bersejarah','🌿 Cilimus'],
-        ],
-    ];
-    @endphp
 
     @foreach($hotel as $h)
     <div class="col-md-6">

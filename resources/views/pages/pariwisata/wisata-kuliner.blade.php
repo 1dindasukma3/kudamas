@@ -108,58 +108,13 @@
         <div class="lbl">Harga Termurah</div>
     </div>
     <div class="wisata-stat">
-        <div class="val">3</div>
+        <div class="val">{{ count($kuliner) }}</div>
         <div class="lbl">Lokasi Tersebar</div>
     </div>
 </div>
 
-{{--
-    Simpan foto di: public/images/kuliner/
-    File yang dibutuhkan:
-    - tahu-kopeci.jpg
-    - rujak-kangkung.jpg
-    - nasi-kasreng.jpg
---}}
 
 <div class="row g-3">
-
-    @php
-    $kuliner = [
-        [
-            'no'     => 1,
-            'nama'   => 'Tahu Kopeci',
-            'lokasi' => 'Tersebar di seluruh wilayah Kab. Kuningan - Oleh-oleh khas',
-            'foto'   => '/images/kuliner/tahu-kopeci.jpg',
-            'emoji'  => '🍢',
-            'harga'  => 'Rp 500/biji',
-            'bg'     => 'linear-gradient(135deg,#713f12,#d97706)',
-            'desc'   => 'Tahu Kuningan berukuran kecil dan berwarna cokelat di bagian luarnya dengan cita rasa kedelai yang masih sangat kental. Sangat cocok dinikmati bersamaan dengan cabai rawit. Rasanya gurih dan empuk, harganya pun sangat terjangkau hanya Rp 500 per buah. Jika dibeli dalam jumlah banyak, Tahu Kopeci dibungkus dengan tempat khusus dari bambu. Sebagai pelengkap, pedagang juga menyediakan lontong dan susu kedelai. Gigitan pertama terasa renyah di luar, kemudian gurih dan lembut di dalam. Mengingat rasanya yang lezat, Tahu Kopeci kerap dijadikan oleh-oleh khas Kuningan.',
-            'tags'   => ['🍢 Tahu Khas','🌶️ Pedas Gurih','🎁 Oleh-oleh','🥛 Susu Kedelai','🌿 Kedelai Asli'],
-        ],
-        [
-            'no'     => 2,
-            'nama'   => 'Rujak Kangkung dan Tutut',
-            'lokasi' => 'Jl. RE Martadinata No.111, Cipang, Kec. Kuningan, Jawa Barat 45514',
-            'foto'   => '/images/kuliner/rujak-kangkung.jpeg',
-            'emoji'  => '🥗',
-            'harga'  => null,
-            'bg'     => 'linear-gradient(135deg,#166534,#15803d)',
-            'desc'   => 'Kuliner rujak kangkung dan tutut diolah secara sederhana dan cepat, bahan pokoknya pun sangat mudah didapat. Namun tidak semua orang bisa meraciknya dengan bumbu yang pas dan menggigit lidah, sehingga banyak orang yang penasaran dan ingin mencoba meraciknya sendiri di rumah. Sajian unik ini memadukan kangkung segar dengan tutut (keong sawah) dalam balutan bumbu rujak yang khas.',
-            'tags'   => ['🥗 Rujak Khas','🐚 Tutut','🌿 Kangkung','🌶️ Bumbu Pedas'],
-        ],
-        [
-            'no'     => 3,
-            'nama'   => 'Nasi Kasreng',
-            'lokasi' => 'Desa Luragung Tonggoh, Kec. Luragung, Kab. Kuningan',
-            'foto'   => '/images/kuliner/nasi-kasreng.webp',
-            'emoji'  => '🍚',
-            'harga'  => null,
-            'bg'     => 'linear-gradient(135deg,#7c2d12,#c2410c)',
-            'desc'   => 'Nasi Kasreng adalah sajian kuliner khas daerah Kuningan Timur yang seringkali menjadi menu makan bagi kalangan masyarakat menengah ke bawah. Salah satu kuliner Nasi Kasreng yang paling banyak dikunjungi berada di Desa Luragung Tonggoh, Kecamatan Luragung. Nama "Kasreng" merupakan perpaduan antara pedagang yang pada waktu itu juga berjualan gorengan. Nasi dan gorengan tersebut dilengkapi dengan tauge mentah, rebon, dan sambal.',
-            'tags'   => ['🍚 Nasi Khas','🌶️ Sambal','🫘 Tauge','🦐 Rebon','🍟 Gorengan'],
-        ],
-    ];
-    @endphp
 
     @foreach($kuliner as $k)
     <div class="col-md-6">

@@ -5,6 +5,7 @@ use App\Http\Controllers\PageController;
 use App\Http\Controllers\SeputarKuninganController;
 use App\Http\Controllers\PariwisataKuninganController;
 
+
 // Splash screen (halaman pertama)
 Route::get('/', [PageController::class, 'splash'])->name('splash');
 
@@ -96,12 +97,42 @@ Route::prefix('seputar-kuningan')->group(function () {
 });
 
 // ===== PARIWISATA =====
+<<<<<<< HEAD
 Route::get('/pariwisata/wisata-alam', [PariwisataKuninganController::class, 'pwAalam'])->name('pw.alam');
 Route::get('/pariwisata/seni-budaya', [PariwisataKuninganController::class, 'pwSeniBudaya'])->name('pw.seni-budaya');
 Route::get('/pariwisata/wisata-buatan', [PageController::class, 'pwBuatan'])->name('pw.buatan');
 Route::get('/pariwisata/wisata-sejarah', [PariwisataKuninganController::class, 'pwSejarah'])->name('pw.sejarah');
 Route::get('/pariwisata/wisata-kuliner', [PageController::class, 'pwKuliner'])->name('pw.kuliner');
 Route::get('/pariwisata/hotel', [PageController::class, 'pwHotel'])->name('pw.hotel');
+=======
+Route::prefix('pariwisata')->group(function () {
+
+    Route::get('/wisata-alam',
+        [PariwisataKuninganController::class, 'pwAalam']
+    )->name('pw.alam');
+
+    Route::get('/seni-budaya',
+        [PariwisataKuninganController::class, 'pwSeniBudaya']
+    )->name('pw.seni-budaya');
+
+    Route::get('/wisata-buatan',
+        [PariwisataKuninganController::class, 'pwBuatan']
+    )->name('pw.buatan');
+
+    Route::get('/wisata-sejarah',
+        [PariwisataKuninganController::class, 'pwSejarah']
+    )->name('pw.sejarah');
+
+    Route::get('/wisata-kuliner',
+        [PariwisataKuninganController::class, 'pwKuliner']
+    )->name('pw.kuliner');
+
+    Route::get('/hotel',
+        [PariwisataKuninganController::class, 'pwHotel']
+    )->name('pw.hotel');
+
+});
+>>>>>>> 7abbd1cbdbf19e40a23502ae6c2ebbc29c0de35f
 
 // ===== LINK SEPUTAR KUNINGAN =====
 Route::get('/link-seputar-kuningan', [PageController::class, 'linkSeputar'])->name('link-seputar');
