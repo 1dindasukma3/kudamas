@@ -124,6 +124,7 @@ Route::prefix('pariwisata')->group(function () {
     )->name('pw.hotel');
 
 });
+>>>>>>> 7abbd1cbdbf19e40a23502ae6c2ebbc29c0de35f
 
 // ===== LINK SEPUTAR KUNINGAN =====
 Route::get('/link-seputar-kuningan',

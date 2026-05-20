@@ -86,9 +86,29 @@ foreach ($rows as $row) {
         );
     }
     public function pwSejarah()
-    {
-        return view('pages.pariwisata.wisata-sejarah');
+{
+    $url = "https://docs.google.com/spreadsheets/d/1WmnAGk-5fXNCCPcjjw_f9OkVJ0A6v1JnLo23QJJIagY/export?format=csv&gid=1338656171";
+
+    $rows = array_map('str_getcsv', file($url));
+
+    $header = array_map('trim', array_shift($rows));
+
+    $sejarah = [];
+
+    foreach ($rows as $row) {
+
+        if(count($header) == count($row)) {
+
+            $sejarah[] = array_combine($header, $row);
+
+        }
     }
+
+    return view(
+        'pages.pariwisata.wisata-sejarah',
+        compact('sejarah')
+    );
+}
 
     public function pwKuliner()
     {
