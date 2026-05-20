@@ -96,7 +96,7 @@ Route::prefix('seputar-kuningan')->group(function () {
 });
 
 // ===== PARIWISATA =====
-Route::get('/pariwisata/wisata-alam', [PageController::class, 'pwAalam'])->name('pw.alam');
+Route::get('/pariwisata/wisata-alam', [PariwisataKuninganController::class, 'pwAalam'])->name('pw.alam');
 Route::get('/pariwisata/seni-budaya', [PariwisataKuninganController::class, 'pwSeniBudaya'])->name('pw.seni-budaya');
 Route::get('/pariwisata/wisata-buatan', [PageController::class, 'pwBuatan'])->name('pw.buatan');
 Route::get('/pariwisata/wisata-sejarah', [PageController::class, 'pwSejarah'])->name('pw.sejarah');
