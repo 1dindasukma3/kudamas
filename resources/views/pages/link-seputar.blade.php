@@ -109,54 +109,6 @@
 </p>
 
 <div class="link-grid">
-
-    @php
-    $links = [
-        [
-            'nama'  => 'Pemerintah Daerah Kabupaten Kuningan',
-            'url'   => 'https://kuningankab.go.id',
-            'icon'  => '🏛️',
-            'label' => 'kuningankab.go.id',
-        ],
-        [
-            'nama'  => 'Polres Kuningan',
-            'url'   => 'https://polreskubu.com',
-            'icon'  => '🚔',
-            'label' => 'polreskubu.com',
-        ],
-        [
-            'nama'  => 'Dinas Komunikasi dan Informatika',
-            'url'   => 'https://diskominfo.kuningankab.go.id',
-            'icon'  => '📡',
-            'label' => 'diskominfo.kuningankab.go.id',
-        ],
-        [
-            'nama'  => 'Pengadilan Negeri Kuningan',
-            'url'   => 'https://pn-kuningan.go.id',
-            'icon'  => '⚖️',
-            'label' => 'pn-kuningan.go.id',
-        ],
-        [
-            'nama'  => 'Pengadilan Agama Kuningan',
-            'url'   => 'https://pa-kuningan.go.id',
-            'icon'  => '🕌',
-            'label' => 'pa-kuningan.go.id',
-        ],
-        [
-            'nama'  => 'Dinas Kependudukan & Pencatatan Sipil',
-            'url'   => 'https://disdukcapil.kuningankab.go.id',
-            'icon'  => '👥',
-            'label' => 'disdukcapil.kuningankab.go.id',
-        ],
-        [
-            'nama'  => 'Dinas Pemuda, Olahraga dan Pariwisata',
-            'url'   => 'https://disporapar.kuningankab.go.id',
-            'icon'  => '⛹️',
-            'label' => 'disporapar.kuningankab.go.id',
-        ],
-    ];
-    @endphp
-
     @foreach($links as $link)
     <a href="{{ $link['url'] }}" target="_blank" rel="noopener" class="link-card">
         <div class="link-logo">{{ $link['icon'] }}</div>

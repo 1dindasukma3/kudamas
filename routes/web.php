@@ -126,7 +126,8 @@ Route::prefix('pariwisata')->group(function () {
 });
 
 // ===== LINK SEPUTAR KUNINGAN =====
-Route::get('/link-seputar-kuningan', [PageController::class, 'linkSeputar'])->name('link-seputar');
-
+Route::get('/link-seputar-kuningan',
+    [SeputarKuninganController::class, 'linkSeputar']
+)->name('link-seputar');
 
 

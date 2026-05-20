@@ -157,4 +157,27 @@ class SeputarKuninganController extends Controller
     {
         return view('pages.seputar-kuningan.pendidikan');
     }
+    public function linkSeputar()
+    {
+        $url = "https://docs.google.com/spreadsheets/d/1WmnAGk-5fXNCCPcjjw_f9OkVJ0A6v1JnLo23QJJIagY/export?format=csv&gid=931452637";
+
+        $rows = array_map('str_getcsv', file($url));
+
+        $header = array_map('trim', array_shift($rows));
+
+        $links = [];
+
+        foreach ($rows as $row) {
+
+            if(count($header) == count($row)) {
+
+                $links[] = array_combine($header, $row);
+            }
+        }
+
+        return view(
+            'pages.link-seputar',
+            compact('links')
+        );
+    }
 }
