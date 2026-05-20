@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\SeputarKuninganController;
+use App\Http\Controllers\PariwisataKuninganController;
 
 // Splash screen (halaman pertama)
 Route::get('/', [PageController::class, 'splash'])->name('splash');
@@ -96,7 +97,7 @@ Route::prefix('seputar-kuningan')->group(function () {
 
 // ===== PARIWISATA =====
 Route::get('/pariwisata/wisata-alam', [PageController::class, 'pwAalam'])->name('pw.alam');
-Route::get('/pariwisata/seni-budaya', [PageController::class, 'pwSeniBudaya'])->name('pw.seni-budaya');
+Route::get('/pariwisata/seni-budaya', [PariwisataKuninganController::class, 'pwSeniBudaya'])->name('pw.seni-budaya');
 Route::get('/pariwisata/wisata-buatan', [PageController::class, 'pwBuatan'])->name('pw.buatan');
 Route::get('/pariwisata/wisata-sejarah', [PageController::class, 'pwSejarah'])->name('pw.sejarah');
 Route::get('/pariwisata/wisata-kuliner', [PageController::class, 'pwKuliner'])->name('pw.kuliner');
