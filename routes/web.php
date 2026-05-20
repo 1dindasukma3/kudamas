@@ -97,6 +97,7 @@ Route::prefix('seputar-kuningan')->group(function () {
 });
 
 // ===== PARIWISATA =====
+<<<<<<< HEAD
 Route::prefix('pariwisata')->group(function () {
 
     Route::get('/wisata-alam',
@@ -124,6 +125,14 @@ Route::prefix('pariwisata')->group(function () {
     )->name('pw.hotel');
 
 });
+=======
+Route::get('/pariwisata/wisata-alam', [PariwisataKuninganController::class, 'pwAalam'])->name('pw.alam');
+Route::get('/pariwisata/seni-budaya', [PariwisataKuninganController::class, 'pwSeniBudaya'])->name('pw.seni-budaya');
+Route::get('/pariwisata/wisata-buatan', [PageController::class, 'pwBuatan'])->name('pw.buatan');
+Route::get('/pariwisata/wisata-sejarah', [PageController::class, 'pwSejarah'])->name('pw.sejarah');
+Route::get('/pariwisata/wisata-kuliner', [PageController::class, 'pwKuliner'])->name('pw.kuliner');
+Route::get('/pariwisata/hotel', [PageController::class, 'pwHotel'])->name('pw.hotel');
+>>>>>>> 8c2e9a6a50fbf54366df4b831355ecc3df1f8d2a
 
 // ===== LINK SEPUTAR KUNINGAN =====
 Route::get('/link-seputar-kuningan', [PageController::class, 'linkSeputar'])->name('link-seputar');
