@@ -264,7 +264,7 @@
             left: var(--sidebar-w);
             right: 0; bottom: 0;
             z-index: 0;
-            background: url('/images/bg.jpeg') center/cover no-repeat;
+            background: url('/images/bg.png') center/cover no-repeat;
             transition: left 0.32s cubic-bezier(.4,0,.2,1);
         }
 

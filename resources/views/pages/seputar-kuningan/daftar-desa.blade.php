@@ -1,6 +1,6 @@
 @extends('layouts.page')
 @section('title', 'Daftar Nama Desa')
-@section('page-title', 'Daftar Nama Desa')
+@section('page-title', 'Daftar Nama Desa dan Klasifikasinya')
 
 @push('styles')
 <style>
@@ -103,6 +103,21 @@
         border-radius: 50%;
         flex-shrink: 0;
     }
+    .desa-kd {
+        font-size: 0.65rem;
+        font-weight: 690;
+        color: #2563EB;
+        background: #DBEAFE;
+        padding: 2px 5px;
+        border-radius: 6px;
+        min-width: 25px;
+        text-align: center;
+        flex-shrink: 0;
+    }
+
+    .desa-nama {
+        font-weight: 600;
+    }
 
     .desa-badge {
         font-size: 0.65rem;
@@ -183,8 +198,13 @@
                 @foreach($kec['desa'] as $desa)
                 <div class="desa-item">
                     <div class="desa-info">
-                        <span>{{ $desa['nama'] }}</span>
-                    </div>
+                    <span class="desa-kd">
+                        {{ $desa['kd_desa'] }}
+                    </span>
+                    <span class="desa-nama">
+                        {{ $desa['nama'] }}
+                    </span>
+                </div>
                     <span class="desa-badge 
                         {{ strtolower($desa['kategori']) == 'perkotaan' ? 'badge-kota' : 'badge-desa' }}">
                         {{ $desa['kategori'] }}

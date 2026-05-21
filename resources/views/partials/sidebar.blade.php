@@ -305,11 +305,11 @@
         <div class="footer-title">Kontak & Info</div>
         <div class="contact-item">
             <i class="bi bi-geo-alt-fill"></i>
-            <span>Jl. Siliwangi No. 2, Kuningan, Jawa Barat 45511</span>
+            <span>Jl. RE. Martadinata No.66, Cijoho, Kec. Kuningan, Kabupaten Kuningan, Jawa Barat 45513</span>
         </div>
         <div class="contact-item">
             <i class="bi bi-telephone-fill"></i>
-            <a href="tel:+62232871014">(0232) 871014</a>
+            <a href="tel:+62 232 871662">(0232) 871662</a>
         </div>
         <div class="contact-item">
             <i class="bi bi-envelope-fill"></i>
@@ -318,6 +318,10 @@
         <div class="contact-item">
             <i class="bi bi-globe"></i>
             <a href="https://kuningankab.bps.go.id" target="_blank">kuningankab.bps.go.id</a>
+        </div>
+        <div class="contact-item">
+            <i class="bi bi-globe"></i>
+            <a href="https://ppid.bps.go.id/?mfd=3208" target="_blank">ppid.bps.go.id</a>
         </div>
         <div class="copyright">© {{ date('Y') }} BPS Kabupaten Kuningan</div>
     </div>

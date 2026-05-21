@@ -19,7 +19,7 @@
                     <th colspan="4"
                         style="background:#2F4B7C; color:white; text-align:center;
                                font-weight:500; padding:14px; border:none;">
-                        Angkatan Kerja 2023
+                        Angkatan Kerja 2025
                     </th>
                 </tr>
 
@@ -76,7 +76,7 @@
                     <th colspan="4"
                         style="background:#2F4B7C; color:white; text-align:center;
                                font-weight:500; padding:14px; border:none;">
-                        Bukan Angkatan Kerja 2023
+                        Bukan Angkatan Kerja 2025
                     </th>
                 </tr>
 
