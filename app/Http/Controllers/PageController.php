@@ -262,50 +262,54 @@ public function kemiskinanKeparahan()
 public function pdrbKonsep() { return view('pages.indikator.pdrb.konsep'); }
 public function pdrbPerkapita()
 {
-    // PDRB Perkapita
     $urlPdrb = "https://docs.google.com/spreadsheets/d/1WmnAGk-5fXNCCPcjjw_f9OkVJ0A6v1JnLo23QJJIagY/export?format=csv&gid=809516038";
 
-    $dataPdrb = array_map('str_getcsv', file($urlPdrb));
+    $response = Http::get($urlPdrb);
 
-    $headerPdrb = array_shift($dataPdrb);
+    $rows = array_map('str_getcsv', explode("\n", $response->body()));
+
+    $headerPdrb = array_shift($rows);
 
     $pdrb = [];
 
-    foreach ($dataPdrb as $row) {
+    foreach ($rows as $row) {
 
-        if(count($headerPdrb) == count($row)){
+        if(count($headerPdrb) == count($row)) {
 
             $pdrb[] = array_combine($headerPdrb, $row);
 
         }
-
     }
 
-    // LPE
-    $urlLpe = "https://docs.google.com/spreadsheets/d/1WmnAGk-5fXNCCPcjjw_f9OkVJ0A6v1JnLo23QJJIagY/export?format=csv&gid=467430730";
-
-    $dataLpe = array_map('str_getcsv', file($urlLpe));
-
-    $headerLpe = array_shift($dataLpe);
-
-    $lpe = [];
-
-    foreach ($dataLpe as $row) {
-
-        if(count($headerLpe) == count($row)){
-
-            $lpe[] = array_combine($headerLpe, $row);
-
-        }
-
-    }
-
-    return view(
-        'pages.indikator.pdrb.perkapita-laju',
-        compact('pdrb', 'lpe')
-    );
+    return view('pages.indikator.pdrb.perkapita', compact('pdrb'));
 }
-
+    // LPE
+    public function lajuEkonomi()
+    {
+        $urlLpe = "https://docs.google.com/spreadsheets/d/1WmnAGk-5fXNCCPcjjw_f9OkVJ0A6v1JnLo23QJJIagY/export?format=csv&gid=467430730";
+    
+        $response = Http::get($urlLpe);
+    
+        $rows = array_map('str_getcsv', explode("\n", $response->body()));
+    
+        $headerLpe = array_shift($rows);
+    
+        $lpe = [];
+    
+        foreach ($rows as $row) {
+    
+            if(count($headerLpe) == count($row)) {
+    
+                $lpe[] = array_combine($headerLpe, $row);
+    
+            }
+        }
+    
+        return view(
+            'pages.indikator.pdrb.laju-ekonomi',
+            compact('lpe')
+        );
+    }
 // ===== GINI RATIO =====
 public function giniKonsep() { return view('pages.indikator.gini-ratio.konsep'); }
 public function giniData()

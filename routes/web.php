@@ -40,7 +40,11 @@ Route::get('/indikator-statistik/kemiskinan/indeks-keparahan', [PageController::
 // ===== PDRB =====
 Route::get('/indikator-statistik/pdrb', [PageController::class, 'pdrb'])->name('pdrb');
 Route::get('/indikator-statistik/pdrb/konsep', [PageController::class, 'pdrbKonsep'])->name('pdrb.konsep');
-Route::get('/indikator-statistik/pdrb/perkapita-laju', [PageController::class, 'pdrbPerkapita'])->name('pdrb.perkapita');
+Route::get('/indikator-statistik/pdrb/perkapita', [PageController::class, 'pdrbPerkapita'])
+    ->name('pdrb.perkapita');
+
+Route::get('/indikator-statistik/pdrb/laju-ekonomi', [PageController::class, 'lajuEkonomi'])
+    ->name('pdrb.lajuEkonomi');
 
 // ===== GINI RATIO =====
 Route::get('/indikator-statistik/gini-ratio', [PageController::class, 'giniRatio'])->name('gini-ratio');

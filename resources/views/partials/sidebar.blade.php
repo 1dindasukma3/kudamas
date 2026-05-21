@@ -49,9 +49,23 @@
                 <span>PDRB</span><i class="bi bi-chevron-right arrow"></i>
             </div>
             <div class="nav-subsub {{ request()->routeIs('pdrb*') ? 'show' : '' }}" id="sub-pdrb">
-                <a href="{{ route('pdrb.konsep') }}" class="nav-link-3 {{ request()->routeIs('pdrb.konsep') ? 'active' : '' }}">Konsep</a>
-                <a href="{{ route('pdrb.perkapita') }}" class="nav-link-3 {{ request()->routeIs('pdrb.perkapita') ? 'active' : '' }}">PDRB Perkapita & Laju</a>
-            </div>
+    
+    <a href="{{ route('pdrb.konsep') }}"
+       class="nav-link-3 {{ request()->routeIs('pdrb.konsep') ? 'active' : '' }}">
+        Konsep
+    </a>
+
+    <a href="{{ route('pdrb.perkapita') }}"
+       class="nav-link-3 {{ request()->routeIs('pdrb.perkapita') ? 'active' : '' }}">
+        PDRB Perkapita
+    </a>
+
+    <a href="{{ route('pdrb.lajuEkonomi') }}"
+       class="nav-link-3 {{ request()->routeIs('pdrb.lajuEkonomi') ? 'active' : '' }}">
+        Laju Pertumbuhan Ekonomi
+    </a>
+
+</div>
 
             <div class="nav-link-2 {{ request()->routeIs('gini-ratio*') ? 'open' : '' }}"
                  onclick="toggleNav('gini', this)">
