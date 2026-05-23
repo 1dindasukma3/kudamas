@@ -13,7 +13,9 @@ class PariwisataKuninganController extends Controller
 {
     $url = "https://docs.google.com/spreadsheets/d/1WmnAGk-5fXNCCPcjjw_f9OkVJ0A6v1JnLo23QJJIagY/export?format=csv&gid=191964697";
 
-    $rows = array_map('str_getcsv', file($url));
+    $response = Http::get($url);
+
+    $rows = array_map('str_getcsv', explode("\n", $response->body()));
 
     $header = array_map('trim', array_shift($rows));
 
@@ -33,7 +35,6 @@ class PariwisataKuninganController extends Controller
         compact('alam')
     );
 }
-
     public function pwSeniBudaya()
     {
         $url = "https://docs.google.com/spreadsheets/d/1WmnAGk-5fXNCCPcjjw_f9OkVJ0A6v1JnLo23QJJIagY/export?format=csv&gid=1906661929";
