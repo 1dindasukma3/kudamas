@@ -11,37 +11,35 @@ class SeputarKuninganController extends Controller
     {
         $url = "https://docs.google.com/spreadsheets/d/1WmnAGk-5fXNCCPcjjw_f9OkVJ0A6v1JnLo23QJJIagY/export?format=csv&gid=183407791";
 
-        $response = Http::get($url);
+        $rows = array_map('str_getcsv', file($url));
 
-        $rows = array_map('str_getcsv', explode("\n", $response->body()));
-
-        array_shift($rows);
+        $header = array_map('trim', array_shift($rows));
 
         $data = [];
 
         foreach ($rows as $row) {
 
-            if(count($row) < 4) continue;
+            if(count($header) == count($row)) {
 
-            $kode      = trim($row[0]);
-            $kecamatan = trim($row[1]);
-            $desa      = trim($row[2]);
-            $kategori  = trim($row[3]);
+                $item = array_combine($header, $row);
 
-            if (!isset($data[$kecamatan])) {
+                $kecamatan = trim($item['kecamatan']);
 
-                $data[$kecamatan] = [
-                    'kode' => $kode,
-                    'nama' => $kecamatan,
-                    'desa' => []
+                if (!isset($data[$kecamatan])) {
+
+                    $data[$kecamatan] = [
+                        'kode' => trim($item['kode']),
+                        'nama' => $kecamatan,
+                        'desa' => []
+                    ];
+                }
+
+                $data[$kecamatan]['desa'][] = [
+                    'kd_desa'  => trim($item['kd_desa']),
+                    'nama'     => trim($item['desa']),
+                    'kategori' => trim($item['kategori'])
                 ];
-
             }
-
-            $data[$kecamatan]['desa'][] = [
-                'nama' => $desa,
-                'kategori' => $kategori
-            ];
         }
 
         return view(

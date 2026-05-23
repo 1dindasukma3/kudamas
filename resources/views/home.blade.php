@@ -17,7 +17,7 @@
     }
 
     .banner-slide {
-        height: 280px;
+        height: 420px;
         background-size: cover;
         background-position: center;
         background-color: var(--biru);
@@ -231,33 +231,34 @@
 
                 <div class="carousel-item active">
                     <div class="banner-slide"
-                         style="background-image: url('/images/3.png');">
+                         style="background-image: url('/images/banner1.png');">
                         <div class="banner-caption">
                             <div class="banner-badge">📢 Pengumuman</div>
                             <h5>Sensus Ekonomi 2026</h5>
-                            <p>Mari Kita Sukseskan Sensus Ekonomi 2026 - Mencatat Ekonomi Indonesia</p>
+                            <p>Mari sukseskan Sensus Ekonomi 2026 yang akan dilaksanakan pada bulan Juni - Agustus 2026</p>
+                            <p>guna mewujudkan data ekonomi yang akurat dan terpercaya</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="carousel-item">
                     <div class="banner-slide"
-                         style="background-image: url('/images/2.png');">
+                         style="background-image: url('/images/banner2.png');">
                         <div class="banner-caption">
-                            <div class="banner-badge">📊 Statistik</div>
-                            <h5>IPM Kabupaten Kuningan 2024</h5>
-                            <p>Indeks Pembangunan Manusia mencapai 68,54 - terus meningkat setiap tahun</p>
+                            <h5>Pelayanan Statistik Terpadu</h5>
+                            <p>Pelayanan Statistik Terpadu sebagai pusat informasi data terpercaya</p>
+                            <p>untuk mendukung transparansi dan pembangunan daerah</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="carousel-item">
                     <div class="banner-slide"
-                         style="background-image: url('/images/1.png');">
+                         style="background-image: url('/images/banner3.png');">
                         <div class="banner-caption">
-                            <div class="banner-badge">👥 Kependudukan</div>
-                            <h5>Penduduk Kuningan 2024</h5>
-                            <p>Jumlah penduduk Kabupaten Kuningan sebanyak 1.132.543 jiwa</p>
+                            <h5>Kuningan Dalam Angka Statistik</h5>
+                            <p>Mewujudkan integrasi data daerah yang akurat, transparan, dan mudah diakses</p>
+                            <p>untuk mendukung pembangunan Kabupaten Kuningan</p>
                         </div>
                     </div>
                 </div>
