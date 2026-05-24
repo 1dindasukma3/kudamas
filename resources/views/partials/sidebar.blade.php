@@ -314,30 +314,4 @@
         </div>
 
     </nav>
-
-    <div class="sidebar-footer">
-        <div class="footer-title">Kontak & Info</div>
-        <div class="contact-item">
-            <i class="bi bi-geo-alt-fill"></i>
-            <span>Jl. RE. Martadinata No.66, Cijoho, Kec. Kuningan, Kabupaten Kuningan, Jawa Barat 45513</span>
-        </div>
-        <div class="contact-item">
-            <i class="bi bi-telephone-fill"></i>
-            <a href="tel:+62 232 871662">(0232) 871662</a>
-        </div>
-        <div class="contact-item">
-            <i class="bi bi-envelope-fill"></i>
-            <a href="mailto:bps3208@bps.go.id">bps3208@bps.go.id</a>
-        </div>
-        <div class="contact-item">
-            <i class="bi bi-globe"></i>
-            <a href="https://kuningankab.bps.go.id" target="_blank">kuningankab.bps.go.id</a>
-        </div>
-        <div class="contact-item">
-            <i class="bi bi-globe"></i>
-            <a href="https://ppid.bps.go.id/?mfd=3208" target="_blank">ppid.bps.go.id</a>
-        </div>
-        <div class="copyright">© {{ date('Y') }} BPS Kabupaten Kuningan</div>
-    </div>
-
 </aside>
