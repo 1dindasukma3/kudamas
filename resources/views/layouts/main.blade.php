@@ -93,30 +93,20 @@
             color: rgba(255,255,255,0.52);
             text-decoration: none; font-size: 0.78rem;
             border-left: 3px solid transparent;
-            cursor: pointer; transition: all 0.18s;
-            user-select: none; white-space: nowrap;
+            cursor: pointer; transition: all 0.18s; user-select: none; white-space: nowrap;
         }
         .nav-link-2 .arrow { margin-left: auto; font-size: 0.56rem; transition: transform 0.22s; }
         .nav-link-2.open .arrow { transform: rotate(90deg); }
+        .nav-link-2:hover { color: white; background: rgba(255,255,255,0.06); border-left-color: rgba(245,197,24,0.35); }
+        
+        .nav-link-2.active {
+            color: rgba(255,255,255,0.9);
+            border-left: 3px solid var(--kuning);
+            background: rgba(0,0,0,0.08);
+        }
+        .nav-subsub { display: none; background: rgba(0,0,0,0.1); }
+        .nav-subsub.show { display: block; }
 
-        /* Sama persis dengan nav-link-1.active */
-        .nav-link-2:hover {
-            color: white;
-            background: rgba(255,255,255,0.06);
-            border-left-color: rgba(245,197,24,0.4);
-        }
-        .nav-link-2.active, .nav-link-2.open {
-            color: white;
-            background: rgba(255,255,255,0.1);
-            border-left-color: var(--kuning); /* ← kuning full opacity */
-            font-weight: 600;
-        }
-        .nav-link-2.active.open {
-            color: white;
-            background: rgba(255,255,255,0.1);
-            border-left-color: var(--kuning);
-            font-weight: 600;
-        }
         .nav-link-3 {
             display: flex; align-items: center; gap: 5px;
             padding: 6px 18px 6px 54px;
