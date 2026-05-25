@@ -205,15 +205,30 @@
             color: rgba(255,255,255,0.52);
             text-decoration: none; font-size: 0.78rem;
             border-left: 3px solid transparent;
-            cursor: pointer; transition: all 0.18s; user-select: none; white-space: nowrap;
+            cursor: pointer; transition: all 0.18s;
+            user-select: none; white-space: nowrap;
         }
         .nav-link-2 .arrow { margin-left: auto; font-size: 0.56rem; transition: transform 0.22s; }
         .nav-link-2.open .arrow { transform: rotate(90deg); }
-        .nav-link-2:hover { color: white; background: rgba(255,255,255,0.06); border-left-color: rgba(245,197,24,0.35); }
 
-        .nav-subsub { display: none; background: rgba(0,0,0,0.1); }
-        .nav-subsub.show { display: block; }
-
+        /* Sama persis dengan nav-link-1.active */
+        .nav-link-2:hover {
+            color: white;
+            background: rgba(255,255,255,0.06);
+            border-left-color: rgba(245,197,24,0.4);
+        }
+        .nav-link-2.active, .nav-link-2.open {
+            color: white;
+            background: rgba(255,255,255,0.1);
+            border-left-color: var(--kuning); /* ← kuning full opacity */
+            font-weight: 600;
+        }
+        .nav-link-2.active.open {
+            color: white;
+            background: rgba(255,255,255,0.1);
+            border-left-color: var(--kuning);
+            font-weight: 600;
+        }
         .nav-link-3 {
             display: flex; align-items: center; gap: 5px;
             padding: 6px 18px 6px 54px;
@@ -341,24 +356,6 @@
         .header-sep {
             width: 1px; height: 30px; background: var(--border); flex-shrink: 0;
         }
-
-        .search-box {
-            display: flex; align-items: center;
-            background: var(--bg); border: 1.5px solid var(--border);
-            border-radius: 99px; padding: 7px 16px; gap: 8px;
-            width: 230px; transition: all 0.22s;
-        }
-        .search-box:focus-within {
-            border-color: var(--biru-muda); background: white;
-            box-shadow: 0 0 0 3px rgba(37,99,235,0.1); width: 270px;
-        }
-        .search-box i { color: var(--muted); font-size: 0.82rem; flex-shrink: 0; }
-        .search-box input {
-            background: none; border: none; outline: none;
-            color: var(--text); font-size: 0.82rem; width: 100%;
-        }
-        .search-box input::placeholder { color: #94A3B8; }
-        
 
         /* ════════════════════════════════
            SCROLL AREA + BG TRANSPARAN
@@ -590,7 +587,7 @@
             object-fit: contain;
         }
 
-        /* ════════ FOOTER FIX — FULL WIDTH NO GAP ════════ */
+        /* ════════ FOOTER ════════ */
         .main-footer-info {
             width: 100%;
             background: #FFFFFF;
@@ -605,7 +602,7 @@
         .footer-container {
             width: 100%;
             max-width: 100%;
-            margin: 0 auto;
+            margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
@@ -614,8 +611,8 @@
             display: flex;
             align-items: flex-start;
             justify-content: space-between;
-            gap: 60px;
-            flex-wrap: nowrap;
+            gap: 40px;
+            flex-wrap: wrap;
             margin-bottom: 28px;
             width: 100%;
         }
@@ -624,7 +621,7 @@
             display: flex;
             align-items: flex-start;
             gap: 14px;
-            max-width: 380px;
+            max-width: 360px;
             flex-shrink: 0;
         }
 
@@ -661,23 +658,19 @@
             margin: 0;
         }
 
-        /* ═══ PERBAIKAN UTAMA ═══ */
         .footer-links {
             flex: 1;
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 16px 40px;
+            gap: 14px;
             align-content: start;
             min-width: 0;
-            width: 100%;
-            justify-items: stretch;
         }
 
         .footer-item {
             display: flex;
             align-items: flex-start;
-            gap: 12px;
-            width: 100%;
+            gap: 10px;
         }
 
         .footer-icon {
@@ -696,7 +689,6 @@
             text-decoration: none;
             line-height: 1.6;
             font-size: 0.82rem;
-            word-break: break-word;
         }
 
         .footer-item a:hover { color: #1B3A6B; font-weight: 600; }
@@ -709,29 +701,11 @@
             font-size: 0.78rem;
         }
 
-        /* ═══ RESPONSIVE ═══ */
         @media (max-width: 991px) {
             .main-footer-info { padding: 28px 20px 20px; }
-            .footer-top { 
-                flex-direction: column; 
-                gap: 24px; 
-                flex-wrap: wrap;
-            }
+            .footer-top { flex-direction: column; gap: 20px; }
             .footer-brand { max-width: 100%; }
-            .footer-links { 
-                grid-template-columns: 1fr;
-                width: 100%;
-            }
-        }
-
-        @media (max-width: 640px) {
-            .footer-links {
-                grid-template-columns: 1fr;
-                gap: 12px;
-            }
-            .footer-top {
-                gap: 20px;
-            }
+            .footer-links { grid-template-columns: 1fr; }
         }
     </style>
 
@@ -778,41 +752,6 @@
                 </div>
 
                 <div class="header-sep"></div>
-
-                {{-- Search --}}
-                <div class="search-wrapper" style="position:relative; margin-left:auto; flex-shrink:0;">
-
-                    <div class="search-box" id="searchBox">
-                        <i class="bi bi-search"></i>
-                        <input type="text"
-                            id="searchInput"
-                            placeholder="Cari data statistik..."
-                            autocomplete="off">
-                        <button id="searchClear"
-                                style="display:none;background:none;border:none;color:var(--muted);padding:0;cursor:pointer;font-size:0.8rem;">
-                            <i class="bi bi-x-lg"></i>
-                        </button>
-                    </div>
-
-                    {{-- Dropdown hasil pencarian --}}
-                    <div id="searchDropdown"
-                        style="display:none;position:absolute;top:calc(100% + 8px);right:0;
-                                width:320px;background:white;border-radius:14px;
-                                box-shadow:0 8px 32px rgba(27,58,107,0.15);
-                                border:1px solid var(--border);z-index:999;
-                                max-height:400px;overflow-y:auto;">
-
-                        <div id="searchResults"></div>
-
-                        <div id="searchEmpty"
-                            style="display:none;padding:20px;text-align:center;
-                                    color:var(--muted);font-size:0.83rem;">
-                            <i class="bi bi-search" style="font-size:1.5rem;opacity:0.3;display:block;margin-bottom:8px;"></i>
-                            Tidak ditemukan hasil untuk "<span id="searchEmptyQuery"></span>"
-                        </div>
-
-                    </div>
-                </div>
             </div>
 
         </div>
@@ -900,7 +839,7 @@
                     </div>
 
                     <div class="footer-bottom">
-                        © {{ date('Y') }} KUDAMAS — Kabupaten Kuningan Dalam Angka Statistik
+                        © {{ date('Y') }} KUDAMAS -$_POST Kabupaten Kuningan Dalam Angka Statistik
                     </div>
 
                 </div>
@@ -917,9 +856,6 @@
     const toggleBtn = document.getElementById('sidebarToggle');
     const isDesktop = () => window.innerWidth >= 992;
 
-    if (isDesktop()) {
-        sidebar.classList.add('collapsed');
-    }
     function openSidebar() {
         if (isDesktop()) sidebar.classList.remove('collapsed');
         else { sidebar.classList.add('open'); overlay.classList.add('show'); }
