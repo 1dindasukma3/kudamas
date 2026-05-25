@@ -589,6 +589,150 @@
             height: 100%;
             object-fit: contain;
         }
+
+        /* ════════ FOOTER FIX — FULL WIDTH NO GAP ════════ */
+        .main-footer-info {
+            width: 100%;
+            background: #FFFFFF;
+            border-top: 1px solid #E2E8F0;
+            padding: 40px 40px 24px;
+            position: relative;
+            z-index: 5;
+            box-shadow: 0 -2px 16px rgba(27,58,107,0.06);
+            box-sizing: border-box;
+        }
+
+        .footer-container {
+            width: 100%;
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .footer-top {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 60px;
+            flex-wrap: nowrap;
+            margin-bottom: 28px;
+            width: 100%;
+        }
+
+        .footer-brand {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            max-width: 380px;
+            flex-shrink: 0;
+        }
+
+        .footer-logo {
+            width: 48px;
+            height: 48px;
+            border-radius: 10px;
+            object-fit: contain;
+            background: #F0F4F8;
+            border: 1px solid #E2E8F0;
+            padding: 4px;
+            flex-shrink: 0;
+        }
+
+        .footer-brand-text h3 {
+            font-size: 1.1rem;
+            font-weight: 800;
+            margin: 0 0 2px;
+            color: #1B3A6B;
+            letter-spacing: 1px;
+        }
+
+        .footer-brand-text .footer-sub {
+            color: #64748B;
+            font-size: 0.72rem;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .footer-brand-text p {
+            color: #475569;
+            line-height: 1.7;
+            font-size: 0.82rem;
+            margin: 0;
+        }
+
+        /* ═══ PERBAIKAN UTAMA ═══ */
+        .footer-links {
+            flex: 1;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px 40px;
+            align-content: start;
+            min-width: 0;
+            width: 100%;
+            justify-items: stretch;
+        }
+
+        .footer-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            width: 100%;
+        }
+
+        .footer-icon {
+            width: 36px; height: 36px;
+            border-radius: 10px;
+            background: #EFF6FF;
+            border: 1px solid #DBEAFE;
+            display: flex; align-items: center; justify-content: center;
+            color: #2563EB; font-size: 0.85rem;
+            flex-shrink: 0;
+        }
+
+        .footer-item span,
+        .footer-item a {
+            color: #475569;
+            text-decoration: none;
+            line-height: 1.6;
+            font-size: 0.82rem;
+            word-break: break-word;
+        }
+
+        .footer-item a:hover { color: #1B3A6B; font-weight: 600; }
+
+        .footer-bottom {
+            border-top: 1px solid #E2E8F0;
+            padding-top: 18px;
+            text-align: center;
+            color: #94A3B8;
+            font-size: 0.78rem;
+        }
+
+        /* ═══ RESPONSIVE ═══ */
+        @media (max-width: 991px) {
+            .main-footer-info { padding: 28px 20px 20px; }
+            .footer-top { 
+                flex-direction: column; 
+                gap: 24px; 
+                flex-wrap: wrap;
+            }
+            .footer-brand { max-width: 100%; }
+            .footer-links { 
+                grid-template-columns: 1fr;
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .footer-links {
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }
+            .footer-top {
+                gap: 20px;
+            }
+        }
     </style>
 
     @stack('styles')
@@ -773,6 +917,9 @@
     const toggleBtn = document.getElementById('sidebarToggle');
     const isDesktop = () => window.innerWidth >= 992;
 
+    if (isDesktop()) {
+        sidebar.classList.add('collapsed');
+    }
     function openSidebar() {
         if (isDesktop()) sidebar.classList.remove('collapsed');
         else { sidebar.classList.add('open'); overlay.classList.add('show'); }
