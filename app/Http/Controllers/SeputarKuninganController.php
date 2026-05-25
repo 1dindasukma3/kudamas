@@ -30,14 +30,28 @@ class SeputarKuninganController extends Controller
                     $data[$kecamatan] = [
                         'kode' => trim($item['kode']),
                         'nama' => $kecamatan,
-                        'desa' => []
+                        'desa' => [],
+                        'jumlah_desa' => 0,
+                        'jumlah_kelurahan' => 0
                     ];
                 }
 
+                // Hitung desa & kelurahan
+                if (strtolower(trim($item['status'])) == 'kelurahan') {
+
+                    $data[$kecamatan]['jumlah_kelurahan']++;
+
+                } else {
+
+                    $data[$kecamatan]['jumlah_desa']++;
+                }
+
+                // Simpan data
                 $data[$kecamatan]['desa'][] = [
                     'kd_desa'  => trim($item['kd_desa']),
                     'nama'     => trim($item['desa']),
-                    'kategori' => trim($item['kategori'])
+                    'kategori' => trim($item['kategori']),
+                    'status'   => trim($item['status'])
                 ];
             }
         }

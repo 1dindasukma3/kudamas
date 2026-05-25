@@ -236,7 +236,6 @@
                             <div class="banner-badge">📢 Pengumuman</div>
                             <h5>Sensus Ekonomi 2026</h5>
                             <p>Mari sukseskan Sensus Ekonomi 2026 yang akan dilaksanakan pada bulan Juni - Agustus 2026</p>
-                            <p>guna mewujudkan data ekonomi yang akurat dan terpercaya</p>
                         </div>
                     </div>
                 </div>
@@ -247,7 +246,6 @@
                         <div class="banner-caption">
                             <h5>Pelayanan Statistik Terpadu</h5>
                             <p>Pelayanan Statistik Terpadu sebagai pusat informasi data terpercaya</p>
-                            <p>untuk mendukung transparansi dan pembangunan daerah</p>
                         </div>
                     </div>
                 </div>
@@ -258,7 +256,6 @@
                         <div class="banner-caption">
                             <h5>Kuningan Dalam Angka Statistik</h5>
                             <p>Mewujudkan integrasi data daerah yang akurat, transparan, dan mudah diakses</p>
-                            <p>untuk mendukung pembangunan Kabupaten Kuningan</p>
                         </div>
                     </div>
                 </div>

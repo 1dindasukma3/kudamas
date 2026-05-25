@@ -170,7 +170,7 @@
         <div class="lbl">Desa / Kelurahan</div>
     </div>
     <div class="kec-stat">
-        <div class="val">15</div>
+        <div class="val">{{ collect($kecamatan)->sum(fn($kec) => $kec['jumlah_kelurahan']) }}</div>
         <div class="lbl">Kelurahan</div>
     </div>
 </div>
@@ -188,7 +188,14 @@
             <div class="kec-left">
                 <span class="kec-kode">{{ $kec['kode'] }}</span>
                 <span>{{ $kec['nama'] }}</span>
-                <span class="desa-count">({{ count($kec['desa']) }} desa)</span>
+                <span class="desa-count">
+                    (
+                    {{ $kec['jumlah_desa'] }} Desa
+                    @if($kec['jumlah_kelurahan'] > 0)
+                        / {{ $kec['jumlah_kelurahan'] }} Kelurahan
+                    @endif
+                    )
+                </span>
             </div>
             <i class="bi bi-chevron-down kec-arrow"></i>
         </div>
