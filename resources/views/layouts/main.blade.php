@@ -36,6 +36,118 @@
 
         .app-shell { display: flex; height: 100vh; }
 
+        /* ════════ FOOTER ════════ */
+        .main-footer-info {
+            width: 100%;
+            background: #FFFFFF;
+            border-top: 1px solid #E2E8F0;
+            padding: 48px 0 28px;
+            position: relative;
+            z-index: 5;
+            box-shadow: 0 -4px 24px rgba(27,58,107,0.06);
+        }
+
+        .footer-container {
+            width: 92%;
+            max-width: 1400px;
+            margin: auto;
+        }
+
+        .footer-top {
+            display: flex;
+            justify-content: space-between;
+            gap: 48px;
+            flex-wrap: wrap;
+            margin-bottom: 36px;
+        }
+
+        .footer-brand { max-width: 380px; }
+
+        .footer-brand-header {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 16px;
+        }
+
+        .footer-logo {
+            width: 52px; height: 52px;
+            border-radius: 12px;
+            object-fit: contain;
+            background: #F0F4F8;
+            padding: 4px;
+            border: 1px solid #E2E8F0;
+        }
+
+        .footer-brand h3 {
+            font-size: 1.4rem;
+            font-weight: 800;
+            margin: 0;
+            color: #1B3A6B;
+            letter-spacing: 1px;
+        }
+
+        .footer-brand > .footer-brand-header > div > span {
+            color: #64748B;
+            font-size: 0.78rem;
+        }
+
+        .footer-brand p {
+            color: #475569;
+            line-height: 1.8;
+            font-size: 0.87rem;
+        }
+
+        .footer-links {
+            flex: 1;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+            align-content: start;
+        }
+
+        .footer-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+        }
+
+        .footer-icon {
+            width: 40px; height: 40px;
+            border-radius: 12px;
+            background: #EFF6FF;
+            border: 1px solid #DBEAFE;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #2563EB;
+            font-size: 0.95rem;
+            flex-shrink: 0;
+        }
+
+        .footer-item span,
+        .footer-item a {
+            color: #475569;
+            text-decoration: none;
+            line-height: 1.6;
+            font-size: 0.85rem;
+        }
+
+        .footer-item a:hover { color: #1B3A6B; font-weight: 600; }
+
+        .footer-bottom {
+            border-top: 1px solid #E2E8F0;
+            padding-top: 22px;
+            text-align: center;
+            color: #94A3B8;
+            font-size: 0.82rem;
+        }
+
+        @media (max-width: 991px) {
+            .footer-top { flex-direction: column; gap: 28px; }
+            .footer-brand { max-width: 100%; }
+            .footer-links { grid-template-columns: 1fr; }
+        }
         /* ════════════════════════════════
            SIDEBAR
         ════════════════════════════════ */
@@ -565,12 +677,92 @@
         <div class="scroll-area">
             <div class="scroll-bg"></div>
             <div class="scroll-inner">
+
+                {{-- Konten halaman --}}
                 <div class="center-wrap">
                     @yield('main-content')
                 </div>
-            </div>
-        </div>
 
+            </div>
+
+            {{-- FOOTER — di luar scroll-inner, full width --}}
+            <footer class="main-footer-info">
+                <div class="footer-container">
+
+                    <div class="footer-top">
+
+                        <div class="footer-brand">
+                            <div class="footer-brand-header">
+                                <img src="{{ asset('images/logo kudamas.png') }}" class="footer-logo">
+                                <div>
+                                    <h3>KUDAMAS</h3>
+                                    <span>Kuningan Dalam Angka Statistik</span>
+                                </div>
+                            </div>
+                            <p>
+                                Portal statistik Kabupaten Kuningan yang menyajikan
+                                data sektoral daerah secara akurat, transparan,
+                                dan mudah diakses untuk mendukung pembangunan daerah.
+                            </p>
+                        </div>
+
+                        <div class="footer-links">
+
+                            <div class="footer-item">
+                                <div class="footer-icon">
+                                    <i class="bi bi-geo-alt-fill"></i>
+                                </div>
+                                <span>
+                                    Jl. RE. Martadinata No.66, Cijoho,
+                                    Kec. Kuningan, Kabupaten Kuningan,
+                                    Jawa Barat 45513
+                                </span>
+                            </div>
+
+                            <div class="footer-item">
+                                <div class="footer-icon">
+                                    <i class="bi bi-telephone-fill"></i>
+                                </div>
+                                <a href="tel:+62232871662">(0232) 871662</a>
+                            </div>
+
+                            <div class="footer-item">
+                                <div class="footer-icon">
+                                    <i class="bi bi-envelope-fill"></i>
+                                </div>
+                                <a href="mailto:bps3208@bps.go.id">bps3208@bps.go.id</a>
+                            </div>
+
+                            <div class="footer-item">
+                                <div class="footer-icon">
+                                    <i class="bi bi-globe"></i>
+                                </div>
+                                <a href="https://kuningankab.bps.go.id" target="_blank">
+                                    kuningankab.bps.go.id
+                                </a>
+                            </div>
+
+                            <div class="footer-item">
+                                <div class="footer-icon">
+                                    <i class="bi bi-diagram-3-fill"></i>
+                                </div>
+                                <a href="https://ppid.bps.go.id/?mfd=3208" target="_blank">
+                                    ppid.bps.go.id
+                                </a>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="footer-bottom">
+                        © {{ date('Y') }} KUDAMAS — Kabupaten Kuningan Dalam Angka Statistik
+                    </div>
+
+                </div>
+            </footer>
+
+        </div>
     </div>
 </div>
 
