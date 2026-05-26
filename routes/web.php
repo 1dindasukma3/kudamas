@@ -43,8 +43,9 @@ Route::get('/indikator-statistik/pdrb/konsep', [PageController::class, 'pdrbKons
 Route::get('/indikator-statistik/pdrb/perkapita', [PageController::class, 'pdrbPerkapita'])
     ->name('pdrb.perkapita');
 
-Route::get('/indikator-statistik/pdrb/laju-ekonomi', [PageController::class, 'lajuEkonomi'])
-    ->name('pdrb.lajuEkonomi');
+Route::get('/pdrb/laju-ekonomi',
+    [PageController::class, 'lajuEkonomi']
+)->name('pdrb.laju-ekonomi');
 
 // ===== GINI RATIO =====
 Route::get('/indikator-statistik/gini-ratio', [PageController::class, 'giniRatio'])->name('gini-ratio');
