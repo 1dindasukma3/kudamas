@@ -20,7 +20,7 @@
                     </th>
 
                     <th style="border:none; font-weight:500; padding:12px;">
-                        Ribuan Orang
+                        Dalam Ribuan Orang
                     </th>
 
                 </tr>
@@ -33,7 +33,7 @@
 
 <tr>
     <td>{{ $jm['Tahun'] }}</td>
-    <td>{{ str_replace('.', ',', $jm['Ribuan Orang']) }}</td>
+    <td>{{ str_replace('.', ',', $jm['Dalam Ribuan Orang']) }}</td>
 </tr>
 
 @endforeach

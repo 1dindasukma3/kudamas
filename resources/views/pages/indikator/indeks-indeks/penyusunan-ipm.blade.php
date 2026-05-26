@@ -1,7 +1,7 @@
 @extends('layouts.page')
 
-@section('title', 'Indeks Penyusunan IPM')
-@section('page-title', 'Indeks Penyusunan IPM')
+@section('title', 'Indeks dan IPM')
+@section('page-title', 'Indeks dan IPM')
 
 @section('page-content')
 
