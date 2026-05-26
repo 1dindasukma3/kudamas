@@ -258,58 +258,56 @@ public function kemiskinanKeparahan()
     );
 }
 
-// ===== PDRB =====
-public function pdrbKonsep() { return view('pages.indikator.pdrb.konsep'); }
-public function pdrbPerkapita()
-{
-    $urlPdrb = "https://docs.google.com/spreadsheets/d/1WmnAGk-5fXNCCPcjjw_f9OkVJ0A6v1JnLo23QJJIagY/export?format=csv&gid=809516038";
-
-    $response = Http::get($urlPdrb);
-
-    $rows = array_map('str_getcsv', explode("\n", $response->body()));
-
-    $headerPdrb = array_shift($rows);
-
-    $pdrb = [];
-
-    foreach ($rows as $row) {
-
-        if(count($headerPdrb) == count($row)) {
-
-            $pdrb[] = array_combine($headerPdrb, $row);
-
-        }
-    }
-
-    return view('pages.indikator.pdrb.perkapita', compact('pdrb'));
-}
-    // LPE
-    public function lajuEkonomi()
+    public function pdrbPerkapita()
     {
-        $urlLpe = "https://docs.google.com/spreadsheets/d/1WmnAGk-5fXNCCPcjjw_f9OkVJ0A6v1JnLo23QJJIagY/export?format=csv&gid=467430730";
-    
-        $response = Http::get($urlLpe);
-    
+        $urlPdrb = "https://docs.google.com/spreadsheets/d/1WmnAGk-5fXNCCPcjjw_f9OkVJ0A6v1JnLo23QJJIagY/export?format=csv&gid=809516038";
+
+        $response = Http::get($urlPdrb);
+
         $rows = array_map('str_getcsv', explode("\n", $response->body()));
-    
-        $headerLpe = array_shift($rows);
-    
-        $lpe = [];
-    
+
+        $headerPdrb = array_shift($rows);
+
+        $pdrb = [];
+
         foreach ($rows as $row) {
-    
-            if(count($headerLpe) == count($row)) {
-    
-                $lpe[] = array_combine($headerLpe, $row);
-    
+
+            if(count($headerPdrb) == count($row)) {
+
+                $pdrb[] = array_combine($headerPdrb, $row);
+
             }
         }
-    
-        return view(
-            'pages.indikator.pdrb.laju-ekonomi',
-            compact('lpe')
-        );
+
+        return view('pages.indikator.pdrb.perkapita', compact('pdrb'));
     }
+        // LPE
+        public function lajuEkonomi()
+        {
+            $urlLpe = "https://docs.google.com/spreadsheets/d/1WmnAGk-5fXNCCPcjjw_f9OkVJ0A6v1JnLo23QJJIagY/export?format=csv&gid=467430730";
+        
+            $response = Http::get($urlLpe);
+        
+            $rows = array_map('str_getcsv', explode("\n", $response->body()));
+        
+            $headerLpe = array_shift($rows);
+        
+            $lpe = [];
+        
+            foreach ($rows as $row) {
+        
+                if(count($headerLpe) == count($row)) {
+        
+                    $lpe[] = array_combine($headerLpe, $row);
+        
+                }
+            }
+        
+            return view(
+                'pages.indikator.pdrb.laju-ekonomi',
+                compact('lpe')
+            );
+        }
 // ===== GINI RATIO =====
 public function giniKonsep() { return view('pages.indikator.gini-ratio.konsep'); }
 public function giniData()
