@@ -152,6 +152,15 @@
         .kec-stat .val { font-size: 1.2rem; }
         .desa-grid { grid-template-columns: repeat(2, 1fr); }
     }
+
+    @media (max-width: 640px) {
+        .desa-grid {
+            grid-template-columns: 1fr; /* satu kolom di HP */
+        }
+        .kec-summary {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
 </style>
 @endpush
 

@@ -36,118 +36,6 @@
 
         .app-shell { display: flex; height: 100vh; }
 
-        /* ════════ FOOTER ════════ */
-        .main-footer-info {
-            width: 100%;
-            background: #FFFFFF;
-            border-top: 1px solid #E2E8F0;
-            padding: 48px 0 28px;
-            position: relative;
-            z-index: 5;
-            box-shadow: 0 -4px 24px rgba(27,58,107,0.06);
-        }
-
-        .footer-container {
-            width: 92%;
-            max-width: 1400px;
-            margin: auto;
-        }
-
-        .footer-top {
-            display: flex;
-            justify-content: space-between;
-            gap: 48px;
-            flex-wrap: wrap;
-            margin-bottom: 36px;
-        }
-
-        .footer-brand { max-width: 380px; }
-
-        .footer-brand-header {
-            display: flex;
-            align-items: center;
-            gap: 14px;
-            margin-bottom: 16px;
-        }
-
-        .footer-logo {
-            width: 52px; height: 52px;
-            border-radius: 12px;
-            object-fit: contain;
-            background: #F0F4F8;
-            padding: 4px;
-            border: 1px solid #E2E8F0;
-        }
-
-        .footer-brand h3 {
-            font-size: 1.4rem;
-            font-weight: 800;
-            margin: 0;
-            color: #1B3A6B;
-            letter-spacing: 1px;
-        }
-
-        .footer-brand > .footer-brand-header > div > span {
-            color: #64748B;
-            font-size: 0.78rem;
-        }
-
-        .footer-brand p {
-            color: #475569;
-            line-height: 1.8;
-            font-size: 0.87rem;
-        }
-
-        .footer-links {
-            flex: 1;
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 18px;
-            align-content: start;
-        }
-
-        .footer-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 12px;
-        }
-
-        .footer-icon {
-            width: 40px; height: 40px;
-            border-radius: 12px;
-            background: #EFF6FF;
-            border: 1px solid #DBEAFE;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #2563EB;
-            font-size: 0.95rem;
-            flex-shrink: 0;
-        }
-
-        .footer-item span,
-        .footer-item a {
-            color: #475569;
-            text-decoration: none;
-            line-height: 1.6;
-            font-size: 0.85rem;
-        }
-
-        .footer-item a:hover { color: #1B3A6B; font-weight: 600; }
-
-        .footer-bottom {
-            border-top: 1px solid #E2E8F0;
-            padding-top: 22px;
-            text-align: center;
-            color: #94A3B8;
-            font-size: 0.82rem;
-        }
-
-        @media (max-width: 991px) {
-            .footer-top { flex-direction: column; gap: 28px; }
-            .footer-brand { max-width: 100%; }
-            .footer-links { grid-template-columns: 1fr; }
-        }
         /* ════════════════════════════════
            SIDEBAR
         ════════════════════════════════ */
@@ -210,12 +98,12 @@
         .nav-link-2 .arrow { margin-left: auto; font-size: 0.56rem; transition: transform 0.22s; }
         .nav-link-2.open .arrow { transform: rotate(90deg); }
         .nav-link-2:hover { color: white; background: rgba(255,255,255,0.06); border-left-color: rgba(245,197,24,0.35); }
-        
         .nav-link-2.active {
             color: rgba(255,255,255,0.9);
             border-left: 3px solid var(--kuning);
             background: rgba(0,0,0,0.08);
         }
+
         .nav-subsub { display: none; background: rgba(0,0,0,0.1); }
         .nav-subsub.show { display: block; }
 
@@ -252,8 +140,8 @@
         .copyright { color: rgba(255,255,255,0.16); font-size: 0.59rem; margin-top: 12px; text-align: center; }
 
         /* ════════════════════════════════
-        YANG DITAMBAH
-         ════════════════════════════════ */
+           TAMBAHAN SIDEBAR
+        ════════════════════════════════ */
         .semua-menu-active {
             border-left: 3px solid var(--kuning) !important;
         }
@@ -270,7 +158,7 @@
         }
 
         /* ════════════════════════════════
-           HEADER — redesign bersih
+           HEADER
         ════════════════════════════════ */
         .top-header {
             height: 62px;
@@ -285,7 +173,6 @@
             z-index: 20;
         }
 
-        /* Kiri: toggle + logo */
         .header-left {
             display: flex; align-items: center; gap: 12px;
             flex-shrink: 0;
@@ -310,33 +197,42 @@
             display: flex; align-items: center; gap: 10px;
             text-decoration: none; flex-shrink: 0;
         }
+
+        /* FIX: Logo badge pakai white background + gambar */
         .logo-badge {
-            width: 38px; height: 38px;
-            background: linear-gradient(135deg, var(--biru), var(--biru-mid));
-            border-radius: 10px;
-            display: flex; align-items: center; justify-content: center;
-            font-size: 1.2rem;
-            box-shadow: 0 2px 8px rgba(27,58,107,0.3);
+            width: 45px;
+            height: 45px;
+            background: white;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            box-shadow: 0 1px 8px rgba(27,58,107,0.18);
             flex-shrink: 0;
+            padding: 1px;
         }
+
+        .logo-img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
         .brand-name {
             font-weight: 800; font-size: 0.95rem;
             color: var(--biru); letter-spacing: 1.5px; line-height: 1.2;
         }
         .brand-sub { font-size: 0.59rem; color: var(--muted); letter-spacing: 0.2px; }
 
-        /* Tengah: spacer */
         .header-spacer { flex: 1; }
 
-        /* Kanan: BPS info + search */
         .header-right {
             display: flex; align-items: center; gap: 16px;
             flex-shrink: 0;
         }
 
-        .bps-block {
-            text-align: right;
-        }
+        .bps-block { text-align: right; }
         .bps-name {
             font-weight: 800; font-size: 0.88rem;
             color: var(--biru); letter-spacing: 0.4px; line-height: 1.2;
@@ -348,29 +244,29 @@
         }
 
         /* ════════════════════════════════
-           SCROLL AREA + BG TRANSPARAN
+           SCROLL AREA + BG
         ════════════════════════════════ */
         .scroll-area {
             flex: 1; overflow-y: auto; position: relative;
             scrollbar-width: thin; scrollbar-color: #CBD5E1 transparent;
         }
 
-        /* Foto background hanya di content */
         .scroll-bg {
             position: fixed;
-            /* Offset supaya tidak masuk ke header & sidebar */
-            top: 62px;   /* tinggi header */
+            top: 62px;
             left: var(--sidebar-w);
             right: 0; bottom: 0;
             z-index: 0;
-            background: url('/images/bg.png') center/cover no-repeat;
+            /* FIX: pakai asset() supaya path benar di hosting */
+            background-image: url('{{ asset("images/bg.png") }}');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
             transition: left 0.32s cubic-bezier(.4,0,.2,1);
         }
 
-        /* Update left saat sidebar collapse */
         .sidebar.collapsed ~ .content-area .scroll-bg { left: 0; }
 
-        /* Overlay glassmorphism */
         .scroll-bg::after {
             content: '';
             position: absolute; inset: 0;
@@ -409,7 +305,6 @@
             background: var(--kuning); border-radius: 2px; flex-shrink: 0;
         }
 
-        /* Card pembungkus isi */
         .page-card {
             background: rgba(255,255,255,0.92);
             backdrop-filter: blur(10px);
@@ -428,7 +323,6 @@
         .page-card .table-bordered th { border-color: var(--border); }
         .page-card .table-hover tbody tr:hover td { background: #F8FAFC; }
 
-        /* Stat cards */
         .stat-card {
             background: rgba(255,255,255,0.95);
             border: 1px solid var(--border);
@@ -438,7 +332,6 @@
         .stat-card .stat-value { font-size: 1.5rem; font-weight: 800; color: var(--biru); line-height: 1.2; }
         .stat-card .stat-label { font-size: 0.7rem; color: var(--muted); margin-top: 4px; }
 
-        /* Info box */
         .info-box {
             background: rgba(239,246,255,0.9);
             border-left: 4px solid var(--biru);
@@ -448,7 +341,7 @@
         }
 
         /* ════════════════════════════════
-           SUBMENU GRID (2 kolom, biru)
+           SUBMENU GRID
         ════════════════════════════════ */
         .submenu-grid {
             display: grid;
@@ -489,9 +382,7 @@
             box-shadow: 0 14px 36px rgba(27,58,107,0.3);
         }
 
-        .submenu-card:hover::after {
-            transform: scale(2.5);
-        }
+        .submenu-card:hover::after { transform: scale(2.5); }
 
         .submenu-card .sc-icon {
             width: 56px; height: 56px;
@@ -529,55 +420,8 @@
         .sidebar-overlay.show { display: block; }
 
         /* ════════════════════════════════
-           RESPONSIVE
+           FOOTER — FIX STRUKTUR
         ════════════════════════════════ */
-        @media (max-width: 991px) {
-            .sidebar {
-                position: fixed; left: 0; top: 0; height: 100%;
-                width: var(--sidebar-w) !important;
-                transform: translateX(calc(-1 * var(--sidebar-w)));
-                transition: transform 0.32s cubic-bezier(.4,0,.2,1);
-                z-index: 100;
-            }
-            .sidebar.open { transform: translateX(0); }
-            .bps-block { display: none; }
-            .header-sep { display: none; }
-            .scroll-bg { left: 0 !important; }
-            .scroll-inner { padding: 20px 16px; }
-        }
-
-        @media (max-width: 640px) {
-            .submenu-grid { grid-template-columns: 1fr; }
-            .search-box { width: 150px; }
-            .search-box:focus-within { width: 170px; }
-            .top-header { padding: 0 14px; gap: 10px; }
-            .brand-sub { display: none; }
-        }
-
-        /* ════════════════════════════════
-           LOGO BADGE 
-        ════════════════════════════════ */
-        .logo-badge {
-            width: 45px;
-            height: 45px;
-            background: white;
-            border-radius: 14px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-            box-shadow: 0 1px 8px rgba(27,58,107,0.18);
-            flex-shrink: 0;
-            padding: 1px;
-        }
-
-        .logo-img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-        }
-
-        /* ════════ FOOTER ════════ */
         .main-footer-info {
             width: 100%;
             background: #FFFFFF;
@@ -607,6 +451,7 @@
             width: 100%;
         }
 
+        /* FIX: footer-brand sekarang flex row (logo | teks-kolom) */
         .footer-brand {
             display: flex;
             align-items: flex-start;
@@ -624,6 +469,12 @@
             border: 1px solid #E2E8F0;
             padding: 4px;
             flex-shrink: 0;
+        }
+
+        /* FIX: teks (KUDAMAS, subtitle, deskripsi) semua di dalam satu kolom */
+        .footer-brand-text {
+            display: flex;
+            flex-direction: column;
         }
 
         .footer-brand-text h3 {
@@ -691,11 +542,34 @@
             font-size: 0.78rem;
         }
 
+        /* ════════════════════════════════
+           RESPONSIVE
+        ════════════════════════════════ */
         @media (max-width: 991px) {
+            .sidebar {
+                position: fixed; left: 0; top: 0; height: 100%;
+                width: var(--sidebar-w) !important;
+                transform: translateX(calc(-1 * var(--sidebar-w)));
+                transition: transform 0.32s cubic-bezier(.4,0,.2,1);
+                z-index: 100;
+            }
+            .sidebar.open { transform: translateX(0); }
+            .bps-block { display: none; }
+            .header-sep { display: none; }
+            .scroll-bg { left: 0 !important; }
+            .scroll-inner { padding: 20px 16px; }
+
+            /* Footer mobile */
             .main-footer-info { padding: 28px 20px 20px; }
             .footer-top { flex-direction: column; gap: 20px; }
             .footer-brand { max-width: 100%; }
             .footer-links { grid-template-columns: 1fr; }
+        }
+
+        @media (max-width: 640px) {
+            .submenu-grid { grid-template-columns: 1fr; }
+            .top-header { padding: 0 14px; gap: 10px; }
+            .brand-sub { display: none; }
         }
     </style>
 
@@ -714,15 +588,15 @@
         {{-- ══ HEADER ══ --}}
         <div class="top-header">
 
-            {{-- Kiri --}}
             <div class="header-left">
                 <div class="btn-toggle" id="sidebarToggle" title="Toggle Sidebar">
                     <i class="bi bi-list"></i>
                 </div>
 
                 <a href="{{ route('home') }}" class="header-brand">
+                    {{-- FIX: nama file logo tanpa spasi --}}
                     <div class="logo-badge">
-                        <img src="{{ asset('images/logo kudamas.png') }}" alt="Logo" class="logo-img">
+                        <img src="{{ asset('images/logo-kudamas.png') }}" alt="Logo" class="logo-img">
                     </div>
                     <div>
                         <div class="brand-name">KUDAMAS</div>
@@ -731,16 +605,13 @@
                 </a>
             </div>
 
-            {{-- Spacer --}}
             <div class="header-spacer"></div>
 
-            {{-- Kanan --}}
             <div class="header-right">
                 <div class="bps-block">
                     <div class="bps-name">BADAN PUSAT STATISTIK KUNINGAN</div>
                     <div class="bps-sub">Kabupaten Kuningan - Provinsi Jawa Barat</div>
                 </div>
-
                 <div class="header-sep"></div>
             </div>
 
@@ -749,34 +620,31 @@
         {{-- ══ SCROLL AREA ══ --}}
         <div class="scroll-area">
             <div class="scroll-bg"></div>
-            <div class="scroll-inner">
 
-                {{-- Konten halaman --}}
+            <div class="scroll-inner">
                 <div class="center-wrap">
                     @yield('main-content')
                 </div>
-
             </div>
 
-            {{-- FOOTER — di luar scroll-inner, full width --}}
+            {{-- FOOTER --}}
             <footer class="main-footer-info">
                 <div class="footer-container">
 
                     <div class="footer-top">
 
+                        {{-- FIX: Struktur footer brand diperbaiki --}}
                         <div class="footer-brand">
-                            <div class="footer-brand-header">
-                                <img src="{{ asset('images/logo kudamas.png') }}" class="footer-logo">
-                                <div>
-                                    <h3>KUDAMAS</h3>
-                                    <span>Kuningan Dalam Angka Statistik</span>
-                                </div>
+                            <img src="{{ asset('images/logo-kudamas.png') }}" class="footer-logo" alt="Logo KUDAMAS">
+                            <div class="footer-brand-text">
+                                <h3>KUDAMAS</h3>
+                                <span class="footer-sub">Kuningan Dalam Angka Statistik</span>
+                                <p>
+                                    Portal statistik Kabupaten Kuningan yang menyajikan
+                                    data sektoral daerah secara akurat, transparan,
+                                    dan mudah diakses untuk mendukung pembangunan daerah.
+                                </p>
                             </div>
-                            <p>
-                                Portal statistik Kabupaten Kuningan yang menyajikan
-                                data sektoral daerah secara akurat, transparan,
-                                dan mudah diakses untuk mendukung pembangunan daerah.
-                            </p>
                         </div>
 
                         <div class="footer-links">
@@ -828,8 +696,9 @@
 
                     </div>
 
+                    {{-- FIX: hapus $_POST yang nyasar --}}
                     <div class="footer-bottom">
-                        © {{ date('Y') }} KUDAMAS -$_POST Kabupaten Kuningan Dalam Angka Statistik
+                        © {{ date('Y') }} KUDAMAS — Kabupaten Kuningan Dalam Angka Statistik
                     </div>
 
                 </div>

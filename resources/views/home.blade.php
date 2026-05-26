@@ -6,22 +6,24 @@
 <style>
 
     /* ── BANNER ── */
-    .banner-wrap {
-        border-radius: 18px;
-        overflow: hidden;
-        margin-bottom: 28px;
-        box-shadow:
-            0 4px 6px rgba(0,0,0,0.05),
-            0 20px 50px rgba(27,58,107,0.18);
-        position: relative;
+    @media (max-width: 900px) {
+        .banner-slide { 
+            height: 260px;
+            background-position: center top;
+        }
     }
 
-    .banner-slide {
-        height: 420px;
-        background-size: cover;
-        background-position: center;
-        background-color: var(--biru);
-        position: relative;
+    @media (max-width: 576px) {
+        .banner-slide { 
+            height: 220px;
+            background-position: center top;
+        }
+        /* Biar banner full width, hapus margin samping */
+        .banner-wrap {
+            margin-left: -16px;
+            margin-right: -16px;
+            border-radius: 0;
+        }
     }
 
     .banner-slide::after {

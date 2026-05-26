@@ -257,6 +257,7 @@ public function kemiskinanKeparahan()
         compact('keparahan')
     );
 }
+    public function pdrbKonsep() { return view('pages.indikator.pdrb.konsep'); }
 
     public function pdrbPerkapita()
     {
