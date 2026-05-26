@@ -59,6 +59,7 @@
                     class="nav-link-3 {{ request()->routeIs('pdrb.lajuEkonomi') ? 'active' : '' }}">
                     Laju Pertumbuhan
                 </a>
+            </div>
 
             <div class="nav-link-2 {{ request()->routeIs('gini-ratio*') ? 'open active' : '' }}"
                  onclick="toggleNav('gini', this)">
