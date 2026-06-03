@@ -242,7 +242,7 @@
 
 {{-- ===== FOOTER ===== --}}
 <footer class="footer-kudamas">
-    <span>KUDAMAS</span> — Kuningan Dalam Angka Statistik<br>
+    <span>KUDAMAS</span> - Kuningan Dalam Angka Statistik<br>
     BPS Kabupaten Kuningan &nbsp;|&nbsp; ©{{ date('Y') }}
 </footer>
 

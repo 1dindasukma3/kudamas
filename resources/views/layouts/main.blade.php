@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KUDAMAS — @yield('title', 'Kuningan Dalam Angka Statistik')</title>
+    <title>KUDAMAS - @yield('title', 'Kuningan Dalam Angka Statistik')</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet">
 
@@ -38,7 +38,7 @@
 
         /* ════════════════════════════════
            SIDEBAR
-        ════════════════════════════════ */
+           ════════════════════════════════ */
         .sidebar {
             width: var(--sidebar-w);
             height: 100vh;
@@ -98,11 +98,7 @@
         .nav-link-2 .arrow { margin-left: auto; font-size: 0.56rem; transition: transform 0.22s; }
         .nav-link-2.open .arrow { transform: rotate(90deg); }
         .nav-link-2:hover { color: white; background: rgba(255,255,255,0.06); border-left-color: rgba(245,197,24,0.35); }
-        .nav-link-2.active {
-            color: rgba(255,255,255,0.9);
-            border-left: 3px solid var(--kuning);
-            background: rgba(0,0,0,0.08);
-        }
+        .nav-link-2.active { color: rgba(255,255,255,0.9); border-left: 3px solid var(--kuning); background: rgba(0,0,0,0.08); }
 
         .nav-subsub { display: none; background: rgba(0,0,0,0.1); }
         .nav-subsub.show { display: block; }
@@ -139,9 +135,6 @@
         .contact-item a:hover { color: var(--kuning); }
         .copyright { color: rgba(255,255,255,0.16); font-size: 0.59rem; margin-top: 12px; text-align: center; }
 
-        /* ════════════════════════════════
-           TAMBAHAN SIDEBAR
-        ════════════════════════════════ */
         .semua-menu-active {
             border-left: 3px solid var(--kuning) !important;
         }
@@ -151,7 +144,7 @@
 
         /* ════════════════════════════════
            CONTENT AREA
-        ════════════════════════════════ */
+           ════════════════════════════════ */
         .content-area {
             flex: 1; display: flex; flex-direction: column;
             height: 100vh; overflow: hidden; min-width: 0;
@@ -159,7 +152,7 @@
 
         /* ════════════════════════════════
            HEADER
-        ════════════════════════════════ */
+           ════════════════════════════════ */
         .top-header {
             height: 62px;
             background: var(--surface);
@@ -174,7 +167,9 @@
         }
 
         .header-left {
-            display: flex; align-items: center; gap: 12px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
             flex-shrink: 0;
         }
 
@@ -193,12 +188,17 @@
             box-shadow: 0 4px 12px rgba(27,58,107,0.25);
         }
 
+        /* ════════════════════════════════
+           HEADER BRAND — TANPA CROWDED SUBTEXT
+           ════════════════════════════════ */
         .header-brand {
-            display: flex; align-items: center; gap: 10px;
-            text-decoration: none; flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            flex-shrink: 0;
         }
 
-        /* FIX: Logo badge pakai white background + gambar */
         .logo-badge {
             width: 45px;
             height: 45px;
@@ -219,25 +219,67 @@
             object-fit: contain;
         }
 
-        .brand-name {
-            font-weight: 800; font-size: 0.95rem;
-            color: var(--biru); letter-spacing: 1.5px; line-height: 1.2;
+        /* Container brand-text dibiarkan mengalir dinamis agar sejajar sempurna */
+        .header-brand-text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            flex-shrink: 0;
         }
-        .brand-sub { font-size: 0.59rem; color: var(--muted); letter-spacing: 0.2px; }
+
+        /* Teks KUDAMAS bersih, mewah, & terbaca jelas di semua layar */
+        .brand-name {
+            font-weight: 850;
+            font-size: 1.25rem;
+            color: var(--biru);
+            line-height: 1.0;
+            letter-spacing: 1.5px;
+            white-space: nowrap;
+        }
 
         .header-spacer { flex: 1; }
 
         .header-right {
-            display: flex; align-items: center; gap: 16px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
             flex-shrink: 0;
         }
 
-        .bps-block { text-align: right; }
-        .bps-name {
-            font-weight: 800; font-size: 0.88rem;
-            color: var(--biru); letter-spacing: 0.4px; line-height: 1.2;
+        /* ════════════════════════════════
+           BPS BLOCK — GLOBAL
+           ════════════════════════════════ */
+        .bps-block {
+            text-align: right;
         }
-        .bps-sub { font-size: 0.6rem; color: var(--muted); }
+
+        .bps-inner {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .bps-logo {
+            height: 42px;
+            width: auto;
+            object-fit: contain;
+            flex-shrink: 0;
+        }
+
+        .bps-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .bps-line {
+            font-family: 'Arial', sans-serif;
+            font-style: italic;
+            font-weight: 900;
+            font-size: 0.92rem;
+            color: var(--biru);
+            line-height: 1.2;
+            letter-spacing: 0.3px;
+        }
 
         .header-sep {
             width: 1px; height: 30px; background: var(--border); flex-shrink: 0;
@@ -245,11 +287,31 @@
 
         /* ════════════════════════════════
            SCROLL AREA + BG
-        ════════════════════════════════ */
+           ════════════════════════════════ */
         .scroll-area {
-            flex: 1; overflow-y: auto; position: relative;
-            scrollbar-width: thin; scrollbar-color: #CBD5E1 transparent;
-        }
+    flex: 1; overflow-y: auto; position: relative;
+    scrollbar-width: thin;
+    scrollbar-color: #94A3B8 #E2E8F0; /* ← thumb abu, track putih keabuan */
+}
+
+/* Webkit scrollbar — Chrome, Safari, Edge */
+.scroll-area::-webkit-scrollbar {
+    width: 6px;
+}
+
+.scroll-area::-webkit-scrollbar-track {
+    background: #E2E8F0;
+    border-radius: 99px;
+}
+
+.scroll-area::-webkit-scrollbar-thumb {
+    background: #94A3B8;
+    border-radius: 99px;
+}
+
+.scroll-area::-webkit-scrollbar-thumb:hover {
+    background: #64748B;
+}
 
         .scroll-bg {
             position: fixed;
@@ -257,7 +319,6 @@
             left: var(--sidebar-w);
             right: 0; bottom: 0;
             z-index: 0;
-            /* FIX: pakai asset() supaya path benar di hosting */
             background-image: url('{{ asset("images/bg.png") }}');
             background-size: cover;
             background-position: center;
@@ -283,7 +344,7 @@
 
         /* ════════════════════════════════
            PAGE ELEMENTS
-        ════════════════════════════════ */
+           ════════════════════════════════ */
         .page-breadcrumb {
             display: flex; align-items: center; gap: 7px;
             font-size: 0.77rem; color: var(--muted); margin-bottom: 10px;
@@ -323,26 +384,6 @@
         .page-card .table-bordered th { border-color: var(--border); }
         .page-card .table-hover tbody tr:hover td { background: #F8FAFC; }
 
-        .stat-card {
-            background: rgba(255,255,255,0.95);
-            border: 1px solid var(--border);
-            border-radius: 14px; padding: 18px 14px; text-align: center;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-        }
-        .stat-card .stat-value { font-size: 1.5rem; font-weight: 800; color: var(--biru); line-height: 1.2; }
-        .stat-card .stat-label { font-size: 0.7rem; color: var(--muted); margin-top: 4px; }
-
-        .info-box {
-            background: rgba(239,246,255,0.9);
-            border-left: 4px solid var(--biru);
-            border-radius: 0 12px 12px 0;
-            padding: 12px 16px; font-size: 0.85rem;
-            color: #1e3a5f; margin-bottom: 18px;
-        }
-
-        /* ════════════════════════════════
-           SUBMENU GRID
-        ════════════════════════════════ */
         .submenu-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -398,20 +439,9 @@
             transform: scale(1.08);
         }
 
-        .submenu-card span { position: relative; z-index: 1; }
-
-        .submenu-card.unduh {
-            background: linear-gradient(135deg, #16A34A 0%, #15803D 100%);
-            box-shadow: 0 4px 16px rgba(22,163,74,0.2);
-        }
-        .submenu-card.unduh:hover {
-            background: linear-gradient(135deg, #15803D 0%, #166534 100%);
-            box-shadow: 0 14px 36px rgba(22,163,74,0.32);
-        }
-
         /* ════════════════════════════════
            OVERLAY MOBILE
-        ════════════════════════════════ */
+           ════════════════════════════════ */
         .sidebar-overlay {
             display: none; position: fixed; inset: 0;
             background: rgba(15,25,50,0.45); z-index: 40;
@@ -420,8 +450,8 @@
         .sidebar-overlay.show { display: block; }
 
         /* ════════════════════════════════
-           FOOTER — FIX STRUKTUR
-        ════════════════════════════════ */
+           FOOTER — STRUKTUR FLEKSIBEL
+           ════════════════════════════════ */
         .main-footer-info {
             width: 100%;
             background: #FFFFFF;
@@ -451,12 +481,11 @@
             width: 100%;
         }
 
-        /* FIX: footer-brand sekarang flex row (logo | teks-kolom) */
         .footer-brand {
             display: flex;
             align-items: flex-start;
-            gap: 14px;
-            max-width: 360px;
+            gap: 10px;
+            max-width: 210px;
             flex-shrink: 0;
         }
 
@@ -471,32 +500,32 @@
             flex-shrink: 0;
         }
 
-        /* FIX: teks (KUDAMAS, subtitle, deskripsi) semua di dalam satu kolom */
         .footer-brand-text {
             display: flex;
             flex-direction: column;
         }
 
         .footer-brand-text h3 {
-            font-size: 1.1rem;
+            font-size: 0.88rem;
             font-weight: 800;
             margin: 0 0 2px;
             color: #1B3A6B;
-            letter-spacing: 1px;
+            letter-spacing: 0.8px;
         }
 
         .footer-brand-text .footer-sub {
             color: #64748B;
-            font-size: 0.72rem;
+            font-size: 0.65rem;
             display: block;
-            margin-bottom: 8px;
+            margin-bottom: 6px;
         }
 
         .footer-brand-text p {
             color: #475569;
-            line-height: 1.7;
-            font-size: 0.82rem;
+            line-height: 1.6;
+            font-size: 0.72rem;
             margin: 0;
+            text-align: justify;
         }
 
         .footer-links {
@@ -529,7 +558,8 @@
             color: #475569;
             text-decoration: none;
             line-height: 1.6;
-            font-size: 0.82rem;
+            font-size: 0.78rem;
+            text-align: justify;
         }
 
         .footer-item a:hover { color: #1B3A6B; font-weight: 600; }
@@ -541,25 +571,38 @@
             color: #94A3B8;
             font-size: 0.78rem;
         }
+        
+        .footer-vdivider {
+            width: 1px;
+            background: #E2E8F0;
+            align-self: stretch;
+            flex-shrink: 0;
+        }
+        
+        @media (max-width: 991px) {
+            .footer-vdivider { display: none; }
+        }
 
         /* ════════════════════════════════
-           RESPONSIVE
-        ════════════════════════════════ */
+           RESPONSIVE STYLE & MEDIA QUERY
+           ════════════════════════════════ */
         @media (max-width: 991px) {
             .sidebar {
                 position: fixed; left: 0; top: 0; height: 100%;
                 width: var(--sidebar-w) !important;
                 transform: translateX(calc(-1 * var(--sidebar-w)));
-                transition: transform 0.32s cubic-bezier(.4,0,.2,1);
+                transition: transform 0.32s cubic-bezier(.4,1,.2,1);
                 z-index: 100;
             }
             .sidebar.open { transform: translateX(0); }
-            .bps-block { display: none; }
+
+            .bps-logo { height: 30px; }
+            .bps-line  { font-size: 0.72rem; }
+
             .header-sep { display: none; }
-            .scroll-bg { left: 0 !important; }
+            .scroll-bg  { left: 0 !important; }
             .scroll-inner { padding: 20px 16px; }
 
-            /* Footer mobile */
             .main-footer-info { padding: 28px 20px 20px; }
             .footer-top { flex-direction: column; gap: 20px; }
             .footer-brand { max-width: 100%; }
@@ -567,10 +610,59 @@
         }
 
         @media (max-width: 640px) {
+            .bps-logo {
+                height: 24px !important;
+            }
+            .bps-line {
+                font-size: 0.6rem !important;
+                letter-spacing: 0;
+            }
+            .bps-inner {
+                gap: 5px;
+            }
+            .header-sep { display: none; }
+            
+            .brand-name {
+                font-size: 1.05rem; /* Menjaga ukuran tetap padat di HP */
+                letter-spacing: 1.2px;
+            }
+
+            .logo-badge {
+                width: 38px;
+                height: 38px;
+            }
+
             .submenu-grid { grid-template-columns: 1fr; }
             .top-header { padding: 0 14px; gap: 10px; }
-            .brand-sub { display: none; }
+            
+            .btn-toggle {
+                width: 34px;
+                height: 34px;
+                font-size: 1rem;
+            }
         }
+        
+        @media (max-width: 576px) {
+            .bps-text {
+                display: flex !important; /* Tampilkan teks BPS Kuningan di HP agar tidak terpotong */
+                flex-direction: column;
+            }
+            .bps-logo {
+                height: 28px !important; /* Ukuran tinggi logo disesuaikan untuk layar HP */
+            }
+            .bps-line {
+                font-size: 0.52rem !important; /* Ukuran font disesuaikan agar pas di layar HP */
+                line-height: 1.1;
+                white-space: nowrap;
+            }
+            .header-right {
+                gap: 6px !important;
+            }
+            .bps-inner {
+                gap: 6px;
+            }
+        }
+
     </style>
 
     @stack('styles')
@@ -594,13 +686,11 @@
                 </div>
 
                 <a href="{{ route('home') }}" class="header-brand">
-                    {{-- FIX: nama file logo tanpa spasi --}}
                     <div class="logo-badge">
                         <img src="{{ asset('images/logo-kudamas.png') }}" alt="Logo" class="logo-img">
                     </div>
-                    <div>
+                    <div class="header-brand-text">
                         <div class="brand-name">KUDAMAS</div>
-                        <div class="brand-sub">Kuningan Dalam Angka Statistik</div>
                     </div>
                 </a>
             </div>
@@ -609,8 +699,15 @@
 
             <div class="header-right">
                 <div class="bps-block">
-                    <div class="bps-name">BADAN PUSAT STATISTIK KUNINGAN</div>
-                    <div class="bps-sub">Kabupaten Kuningan - Provinsi Jawa Barat</div>
+                    <div class="bps-inner">
+                        <img src="{{ asset('images/logo-bps.png') }}"
+                             alt="BPS"
+                             class="bps-logo">
+                        <div class="bps-text">
+                            <div class="bps-line">BADAN PUSAT STATISTIK</div>
+                            <div class="bps-line">KABUPATEN KUNINGAN</div>
+                        </div>
+                    </div>
                 </div>
                 <div class="header-sep"></div>
             </div>
@@ -630,77 +727,66 @@
             {{-- FOOTER --}}
             <footer class="main-footer-info">
                 <div class="footer-container">
-
                     <div class="footer-top">
 
-                        {{-- FIX: Struktur footer brand diperbaiki --}}
                         <div class="footer-brand">
-                            <img src="{{ asset('images/logo-kudamas.png') }}" class="footer-logo" alt="Logo KUDAMAS">
+                            <img src="{{ asset('images/logo-kudamas.png') }}" class="footer-logo" alt="Logo">
                             <div class="footer-brand-text">
                                 <h3>KUDAMAS</h3>
                                 <span class="footer-sub">Kuningan Dalam Angka Statistik</span>
-                                <p>
-                                    Portal statistik Kabupaten Kuningan yang menyajikan
-                                    data sektoral daerah secara akurat, transparan,
-                                    dan mudah diakses untuk mendukung pembangunan daerah.
-                                </p>
+                                <p>Portal statistik Kabupaten Kuningan yang menyajikan data sektoral daerah secara akurat, transparan, dan mudah diakses.</p>
                             </div>
                         </div>
+
+                        <div class="footer-vdivider"></div>
 
                         <div class="footer-links">
 
                             <div class="footer-item">
-                                <div class="footer-icon">
-                                    <i class="bi bi-geo-alt-fill"></i>
-                                </div>
+                                <div class="footer-icon"><i class="bi bi-geo-alt-fill"></i></div>
                                 <span>
-                                    Jl. RE. Martadinata No.66, Cijoho,
-                                    Kec. Kuningan, Kabupaten Kuningan,
-                                    Jawa Barat 45513
+                                    Jl. RE. Martadinata No.66, Cijoho, Kec. Kuningan,<br>
+                                    Kabupaten Kuningan, Jawa Barat 45513
                                 </span>
                             </div>
 
                             <div class="footer-item">
-                                <div class="footer-icon">
-                                    <i class="bi bi-telephone-fill"></i>
-                                </div>
+                                <div class="footer-icon"><i class="bi bi-telephone-fill"></i></div>
                                 <a href="tel:+62232871662">(0232) 871662</a>
                             </div>
 
                             <div class="footer-item">
-                                <div class="footer-icon">
-                                    <i class="bi bi-envelope-fill"></i>
+                                <div class="footer-icon"><i class="bi bi-whatsapp"></i></div>
+                                <div>
+                                    <div style="font-size:0.72rem;color:#64748B;margin-bottom:1px;">Pengaduan Layanan (chat only)</div>
+                                    <a href="https://wa.me/62082299993208" target="_blank"
+                                       style="color:#16A34A;font-weight:600;">
+                                        0822-9999-3208
+                                    </a>
                                 </div>
+                            </div>
+
+                            <div class="footer-item">
+                                <div class="footer-icon"><i class="bi bi-envelope-fill"></i></div>
                                 <a href="mailto:bps3208@bps.go.id">bps3208@bps.go.id</a>
                             </div>
 
                             <div class="footer-item">
-                                <div class="footer-icon">
-                                    <i class="bi bi-globe"></i>
-                                </div>
-                                <a href="https://kuningankab.bps.go.id" target="_blank">
-                                    kuningankab.bps.go.id
-                                </a>
+                                <div class="footer-icon"><i class="bi bi-globe"></i></div>
+                                <a href="https://kuningankab.bps.go.id" target="_blank">kuningankab.bps.go.id</a>
                             </div>
 
                             <div class="footer-item">
-                                <div class="footer-icon">
-                                    <i class="bi bi-diagram-3-fill"></i>
-                                </div>
-                                <a href="https://ppid.bps.go.id/?mfd=3208" target="_blank">
-                                    ppid.bps.go.id
-                                </a>
+                                <div class="footer-icon"><i class="bi bi-diagram-3-fill"></i></div>
+                                <a href="https://ppid.bps.go.id/?mfd=3208" target="_blank">ppid.bps.go.id</a>
                             </div>
 
                         </div>
-
                     </div>
 
-                    {{-- FIX: hapus $_POST yang nyasar --}}
                     <div class="footer-bottom">
-                        © {{ date('Y') }} KUDAMAS — Kabupaten Kuningan Dalam Angka Statistik
+                        © {{ date('Y') }} KUDAMAS - Kabupaten Kuningan Dalam Angka Statistik
                     </div>
-
                 </div>
             </footer>
 
@@ -710,28 +796,47 @@
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <script>
-    const sidebar   = document.getElementById('sidebar');
-    const overlay   = document.getElementById('overlay');
+    // Robust element selectors with fallback configurations
+    const sidebar   = document.getElementById('sidebar') || document.querySelector('.sidebar');
+    const overlay   = document.getElementById('overlay') || document.querySelector('.sidebar-overlay');
     const toggleBtn = document.getElementById('sidebarToggle');
     const isDesktop = () => window.innerWidth >= 992;
 
     function openSidebar() {
-        if (isDesktop()) sidebar.classList.remove('collapsed');
-        else { sidebar.classList.add('open'); overlay.classList.add('show'); }
+        if (!sidebar) return;
+        if (isDesktop()) {
+            sidebar.classList.remove('collapsed');
+        } else { 
+            sidebar.classList.add('open'); 
+            if (overlay) overlay.classList.add('show'); 
+        }
     }
+    
     function closeSidebar() {
-        if (isDesktop()) sidebar.classList.add('collapsed');
-        else { sidebar.classList.remove('open'); overlay.classList.remove('show'); }
+        if (!sidebar) return;
+        if (isDesktop()) {
+            sidebar.classList.add('collapsed');
+        } else { 
+            sidebar.classList.remove('open'); 
+            if (overlay) overlay.classList.remove('show'); 
+        }
     }
+    
     function toggleSidebar() {
-        if (isDesktop()) sidebar.classList.toggle('collapsed');
-        else {
+        if (!sidebar) return;
+        if (isDesktop()) {
+            sidebar.classList.toggle('collapsed');
+        } else {
             sidebar.classList.contains('open') ? closeSidebar() : openSidebar();
         }
     }
 
-    toggleBtn.addEventListener('click', toggleSidebar);
-    overlay.addEventListener('click', closeSidebar);
+    if (toggleBtn) {
+        toggleBtn.addEventListener('click', toggleSidebar);
+    }
+    if (overlay) {
+        overlay.addEventListener('click', closeSidebar);
+    }
 
     function toggleNav(id, el) {
         const sub = document.getElementById('sub-' + id);

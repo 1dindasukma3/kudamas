@@ -2,115 +2,151 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>KUDAMAS</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        :root {
-            --biru-tua: #1B3A6B;
-            --kuning: #F5C518;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         html, body {
             height: 100%;
-            margin: 0;
-            background-color: var(--biru-tua);
+            width: 100%;
+            overflow: hidden; /* tidak bisa scroll */
+            background: #1B3A6B;
+            font-family: 'Segoe UI', sans-serif;
         }
 
-        .splash-wrapper {
-            min-height: 100vh;
+        .splash-wrap {
+            height: 100vh;
+            width: 100vw;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            gap: 20px;
-            padding: 40px 20px;
-            text-align: center;
+            gap: 0;
+            background: linear-gradient(160deg, #1B3A6B 0%, #0f2447 100%);
+            position: relative;
+            overflow: hidden;
         }
 
+        /* Lingkaran dekoratif */
+        .splash-wrap::before {
+            content: '';
+            position: absolute;
+            width: 500px; height: 500px;
+            border-radius: 50%;
+            background: rgba(245,197,24,0.04);
+            top: -100px; right: -100px;
+        }
+
+        .splash-wrap::after {
+            content: '';
+            position: absolute;
+            width: 300px; height: 300px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.03);
+            bottom: -80px; left: -80px;
+        }
+
+        /* Logo kuda */
         .splash-logo {
-            width: 260px;
-            height: 260px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            width: min(160px, 35vw);
+            height: min(160px, 35vw);
+            display: flex; align-items: center; justify-content: center;
+            margin-bottom: clamp(16px, 3vh, 28px);
+            animation: popIn 0.6s cubic-bezier(.34,1.56,.64,1) forwards;
+            position: relative; z-index: 1;
+            /* HAPUS background kuning */
+            background: none;
+            border-radius: 0;
+            box-shadow: none;
         }
 
-        .logo-img {
+        .splash-logo img {
             width: 100%;
             height: 100%;
             object-fit: contain;
-            filter: drop-shadow(0 10px 25px rgba(0,0,0,0.25));
+            /* Drop shadow biar logo tetap terlihat di bg gelap */
+            filter: drop-shadow(0 8px 24px rgba(245,197,24,0.4));
         }
 
-
+        /* KUDAMAS title */
         .splash-title {
             color: white;
-            font-size: clamp(2rem, 6vw, 3.5rem); /* otomatis skala sesuai layar */
+            font-size: clamp(2rem, 7vw, 3.5rem);
             font-weight: 800;
-            letter-spacing: 8px;
+            letter-spacing: clamp(6px, 2vw, 12px);
+            text-align: center;
+            position: relative; z-index: 1;
+            animation: fadeUp 0.6s ease 0.2s both;
         }
 
-        .splash-subtitle {
-            color: rgba(255,255,255,0.75);
-            font-size: clamp(0.75rem, 2vw, 1rem);
-            letter-spacing: 2px;
-        }
-
+        /* Divider kuning */
         .splash-divider {
-            width: 50px;
+            width: clamp(40px, 8vw, 60px);
             height: 3px;
-            background-color: var(--kuning);
+            background: #F5C518;
             border-radius: 99px;
-            margin: 4px auto;
+            margin: clamp(8px, 1.5vh, 14px) auto;
+            position: relative; z-index: 1;
+            animation: fadeUp 0.6s ease 0.35s both;
         }
 
-        .btn-masuk {
-            background-color: var(--kuning);
-            color: var(--biru-tua);
-            font-weight: 700;
-            font-size: 0.9rem;
-            padding: 12px 36px;
-            border-radius: 99px;
-            border: none;
-            text-decoration: none;
-            letter-spacing: 0.5px;
-            box-shadow: 0 4px 16px rgba(0,0,0,0.2);
-            transition: transform 0.15s, box-shadow 0.15s;
-            display: inline-block;
+        /* Subtitle Kuningan Dalam Angka Statistik */
+        .splash-subtitle {
+            color: rgba(255,255,255,0.72);
+            font-size: clamp(0.72rem, 2.2vw, 0.95rem);
+            letter-spacing: clamp(1px, 0.5vw, 2px);
+            text-align: center;
+            text-transform: uppercase;
+            position: relative; z-index: 1;
+            animation: fadeUp 0.6s ease 0.45s both;
+            margin-bottom: clamp(12px, 2vh, 20px);
         }
 
-        .btn-masuk:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 24px rgba(0,0,0,0.3);
-            color: var(--biru-tua);
+        /* BPS text — Arial Italic */
+        .splash-bps {
+            font-family: 'Arial', sans-serif;
+            font-style: italic;
+            font-weight: 900;
+            font-size: clamp(0.8rem, 2.5vw, 1.05rem);
+            color: rgba(255,255,255,0.85);
+            text-align: center;
+            line-height: 1.4;
+            position: relative; z-index: 1;
+            animation: fadeUp 0.6s ease 0.55s both;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            justify-content: center;
         }
 
-        /* Animasi fade in stagger */
-        .splash-wrapper > * {
-            animation: fadeUp 0.8s ease forwards;
-            opacity: 0;
+        .splash-bps img {
+            height: clamp(28px, 5vw, 38px);
+            width: auto;
+            object-fit: contain;
+            filter: brightness(0) invert(1);
+            opacity: 0.85;
         }
-        .splash-wrapper > *:nth-child(1) { animation-delay: 0.2s; }
-        .splash-wrapper > *:nth-child(2) { animation-delay: 0.5s; }
-        .splash-wrapper > *:nth-child(3) { animation-delay: 0.7s; }
-        .splash-wrapper > *:nth-child(4) { animation-delay: 0.9s; }
 
+        /* Progress bar */
+        .splash-progress {
+            position: fixed;
+            bottom: 0; left: 0;
+            height: 3px;
+            background: #F5C518;
+            animation: progress 2.5s linear forwards;
+            z-index: 10;
+        }
+
+        @keyframes popIn {
+            from { opacity: 0; transform: scale(0.6); }
+            to   { opacity: 1; transform: scale(1); }
+        }
         @keyframes fadeUp {
-            from { opacity: 0; transform: translateY(24px); }
+            from { opacity: 0; transform: translateY(16px); }
             to   { opacity: 1; transform: translateY(0); }
         }
-
-        /* Progress bar auto redirect */
-        .progress-bar-splash {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            height: 3px;
-            background-color: var(--kuning);
-            animation: progress 5s linear forwards;
-        }
-
         @keyframes progress {
             from { width: 0%; }
             to   { width: 100%; }
@@ -119,36 +155,30 @@
 </head>
 <body>
 
-    <div class="splash-wrapper">
-
+    <div class="splash-wrap">
+        {{-- Logo kuda — polosan tanpa circle --}}
         <div class="splash-logo">
-                        <img src="{{ asset('images/logo kudamas.png') }}" alt="Logo" class="logo-img">
+            <img src="{{ asset('images/logo-kudamas.png') }}" alt="KUDAMAS"
+                 onerror="this.src='';this.alt='🐴'">
         </div>
 
-        <div>
-            <div class="splash-title">KUDAMAS</div>
-            <div class="splash-divider"></div>
-            <div class="splash-subtitle">KUNINGAN DALAM ANGKA STATISTIK</div>
-        </div>
+        {{-- KUDAMAS --}}
+        <div class="splash-title">KUDAMAS</div>
 
-        <div style="color: rgba(255,255,255,0.5); font-size: 0.8rem;">
-            BPS Kabupaten Kuningan
-        </div>
+        {{-- Divider --}}
+        <div class="splash-divider"></div>
 
-        <a href="{{ route('home') }}" class="btn-masuk">
-            Masuk ke Aplikasi
-        </a>
+        {{-- Subtitle saja — BPS dihapus --}}
+        <div class="splash-subtitle">Kuningan Dalam Angka Statistik</div>
 
     </div>
 
-    {{-- Progress bar di bawah --}}
-    <div class="progress-bar-splash"></div>
+    <div class="splash-progress"></div>
 
     <script>
         setTimeout(() => {
             window.location.href = "{{ route('home') }}";
         }, 2500);
     </script>
-
 </body>
 </html>

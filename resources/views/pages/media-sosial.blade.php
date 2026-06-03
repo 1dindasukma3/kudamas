@@ -126,11 +126,18 @@ $bpsData = [
         'sub'   => 'Badan Pusat Statistik RI',
         'icon'  => '🇮🇩',
         'sosmed' => [
-            ['type'=>'s-website',  'label'=>'Website',   'icon'=>'bi-globe',          'url'=>'https://bps.go.id'],
-            ['type'=>'s-facebook',  'label'=>'Facebook',  'icon'=>'bi-facebook',       'url'=>'https://facebook.com/bpsgoid'],
-            ['type'=>'s-twitter',   'label'=>'Twitter/X', 'icon'=>'bi-twitter-x',      'url'=>'https://twitter.com/bpsgoid'],
-            ['type'=>'s-instagram', 'label'=>'Instagram', 'icon'=>'bi-instagram',      'url'=>'https://instagram.com/bpsgoid'],
-            ['type'=>'s-youtube',   'label'=>'YouTube',   'icon'=>'bi-youtube',        'url'=>'https://youtube.com/@bpsgoid'],
+            ['type'=>'s-website',  'label'=>'Website',   'icon'=>'bi-globe','url'=>'https://bps.go.id'],
+            ['type'=>'s-facebook',  'label'=>'Facebook',  'icon'=>'bi-facebook', 'url'=>'https://www.facebook.com/bpsstatistics/?locale=id_ID'],
+            ['type'=>'s-twitter',   'label'=>'Twitter/X', 'icon'=>'bi-twitter-x', 'url'=>'https://x.com/bps_statistics'],
+            ['type'=>'s-instagram', 'label'=>'Instagram', 'icon'=>'bi-instagram', 'url'=>'https://www.instagram.com/bps_statistics/'],
+            ['type'=>'s-youtube',   'label'=>'YouTube',   'icon'=>'bi-youtube','url'=>'http://www.youtube.com/@BPSStatistics'],
+            [
+                'type'  => 's-tiktok',
+                'label' => 'TikTok',
+                'icon'  => 'bi bi-tiktok',
+                'url'   => 'https://tiktok.com/@bps_statistics'
+            ],
+            
         ],
     ],
     [
@@ -139,10 +146,9 @@ $bpsData = [
         'icon'  => '🏞️',
         'sosmed' => [
             ['type'=>'s-website',  'label'=>'Website',   'icon'=>'bi-globe',          'url'=>'https://jabar.bps.go.id'],
-            ['type'=>'s-facebook',  'label'=>'Facebook',  'icon'=>'bi-facebook',       'url'=>'https://facebook.com/bpsjabar'],
-            ['type'=>'s-twitter',   'label'=>'Twitter/X', 'icon'=>'bi-twitter-x',      'url'=>'https://twitter.com/bpsjabar'],
-            ['type'=>'s-instagram', 'label'=>'Instagram', 'icon'=>'bi-instagram',      'url'=>'https://instagram.com/bpsjabar'],
-            ['type'=>'s-youtube',   'label'=>'YouTube',   'icon'=>'bi-youtube',        'url'=>'https://youtube.com/@bpsjabar'],
+            ['type'=>'s-facebook',  'label'=>'Facebook',  'icon'=>'bi-facebook',       'url'=>'https://www.facebook.com/bpsjabar/'],
+            ['type'=>'s-instagram', 'label'=>'Instagram', 'icon'=>'bi-instagram',      'url'=>'https://www.instagram.com/bpsjabar/'],
+            ['type'=>'s-youtube',   'label'=>'YouTube',   'icon'=>'bi-youtube',        'url'=>'https://www.youtube.com/@bpsjabar32'],
         ],
     ],
     [
@@ -151,10 +157,9 @@ $bpsData = [
         'icon'  => '📊',
         'sosmed' => [
             ['type'=>'s-website',  'label'=>'Website',   'icon'=>'bi-globe',          'url'=>'https://kuningankab.bps.go.id'],
-            ['type'=>'s-facebook',  'label'=>'Facebook',  'icon'=>'bi-facebook',       'url'=>'https://facebook.com/bps3208'],
-            ['type'=>'s-twitter',   'label'=>'Twitter/X', 'icon'=>'bi-twitter-x',      'url'=>'https://twitter.com/bps3208'],
-            ['type'=>'s-instagram', 'label'=>'Instagram', 'icon'=>'bi-instagram',      'url'=>'https://instagram.com/bps3208'],
-            ['type'=>'s-youtube',   'label'=>'YouTube',   'icon'=>'bi-youtube',        'url'=>'https://youtube.com/@bps3208'],
+            ['type'=>'s-facebook',  'label'=>'Facebook',  'icon'=>'bi-facebook',       'url'=>'https://web.facebook.com/people/BPS-Kabupaten-Kuningan/100069221379550/?_rdc=1&_rdr#'],
+            ['type'=>'s-instagram', 'label'=>'Instagram', 'icon'=>'bi-instagram',      'url'=>'https://www.instagram.com/bps_kuningan/'],
+            ['type'=>'s-youtube',   'label'=>'YouTube',   'icon'=>'bi-youtube',        'url'=>'https://www.youtube.com/@bpskuningan'],
         ],
     ],
 ];

@@ -102,16 +102,27 @@
 
             <div class="nav-link-2 {{ request()->routeIs('indeks*') ? 'open active' : '' }}"
                  onclick="toggleNav('indeks', this)">
-                <span>Indeks-Indeks</span><i class="bi bi-chevron-right arrow"></i>
-            </div>
-            <div class="nav-subsub {{ request()->routeIs('indeks*') ? 'show' : '' }}" id="sub-indeks">
-                <a href="{{ route('indeks.konsep') }}" class="nav-link-3 {{ request()->routeIs('indeks.konsep') ? 'active' : '' }}">Konsep</a>
-                <a href="{{ route('indeks.penyusunan') }}" class="nav-link-3 {{ request()->routeIs('indeks.penyusunan') ? 'active' : '' }}">Indeks Penyusunan IPM</a>
-                <a href="{{ route('indeks.gender') }}" class="nav-link-3 {{ request()->routeIs('indeks.gender') ? 'active' : '' }}">Indeks Gender</a>
+                <span>Indeks-Indeks</span>
+                <i class="bi bi-chevron-right arrow"></i>
             </div>
 
-        </div>
+                    <div class="nav-subsub {{ request()->routeIs('indeks*') ? 'show' : '' }}" id="sub-indeks">
+                        <a href="{{ route('indeks.konsep') }}"
+                           class="nav-link-3 {{ request()->routeIs('indeks.konsep') ? 'active' : '' }}">
+                            Konsep
+                        </a>
 
+                        <a href="{{ route('indeks.penyusunan') }}"
+                           class="nav-link-3 {{ request()->routeIs('indeks.penyusunan') ? 'active' : '' }}">
+                            Indeks dan IPM
+                        </a>
+
+                        <a href="{{ route('indeks.gender') }}"
+                           class="nav-link-3 {{ request()->routeIs('indeks.gender') ? 'active' : '' }}">
+                            Indeks Gender
+                        </a>
+                    </div>
+            </div>
         {{-- SEPUTAR KUNINGAN --}}
         <div class="nav-link-1 {{ request()->routeIs('seputar-kuningan*','sk.*') ? 'open active' : '' }}"
              onclick="toggleNav('seputar', this)">
@@ -182,98 +193,16 @@
         </div>
 
         {{-- LINK SEPUTAR KUNINGAN --}}
-        <div class="nav-link-1 {{ request()->routeIs('link-seputar') ? 'open active' : '' }}"
-             onclick="toggleNav('link-seputar', this)">
+        <a href="{{ route('link-seputar') }}" class="nav-link-1 {{ request()->routeIs('link-seputar') ? 'active' : '' }}">
             <i class="bi bi-box-arrow-up-right icon"></i>
             <span>Link Seputar Kuningan</span>
-            <i class="bi bi-chevron-right arrow"></i>
-        </div>
-        <div class="nav-sub {{ request()->routeIs('link-seputar') ? 'show' : '' }}"
-             id="sub-link-seputar">
-            <a href="{{ route('link-seputar') }}" class="nav-link-2 {{ request()->routeIs('link-seputar') ? 'active' : '' }}">
-                <i class="bi bi-grid-fill" style="font-size:0.7rem;"></i>
-                <span>Semua Link</span>
-            </a>
-            <a href="https://kuningankab.go.id" target="_blank" class="nav-link-2">
-                <span>Pemda Kab. Kuningan</span>
-                <i class="bi bi-box-arrow-up-right" style="margin-left:auto;font-size:0.6rem;opacity:0.5;"></i>
-            </a>
-            <a href="https://polreskubu.com" target="_blank" class="nav-link-2">
-                <span>Polres Kuningan</span>
-                <i class="bi bi-box-arrow-up-right" style="margin-left:auto;font-size:0.6rem;opacity:0.5;"></i>
-            </a>
-            <a href="https://diskominfo.kuningankab.go.id" target="_blank" class="nav-link-2">
-                <span>Diskominfo</span>
-                <i class="bi bi-box-arrow-up-right" style="margin-left:auto;font-size:0.6rem;opacity:0.5;"></i>
-            </a>
-            <a href="https://pn-kuningan.go.id" target="_blank" class="nav-link-2">
-                <span>Pengadilan Negeri</span>
-                <i class="bi bi-box-arrow-up-right" style="margin-left:auto;font-size:0.6rem;opacity:0.5;"></i>
-            </a>
-            <a href="https://pa-kuningan.go.id" target="_blank" class="nav-link-2">
-                <span>Pengadilan Agama</span>
-                <i class="bi bi-box-arrow-up-right" style="margin-left:auto;font-size:0.6rem;opacity:0.5;"></i>
-            </a>
-            <a href="https://disdukcapil.kuningankab.go.id" target="_blank" class="nav-link-2">
-                <span>Disdukcapil</span>
-                <i class="bi bi-box-arrow-up-right" style="margin-left:auto;font-size:0.6rem;opacity:0.5;"></i>
-            </a>
-            <a href="https://disporapar.kuningankab.go.id" target="_blank" class="nav-link-2">
-                <span>Disporapar</span>
-                <i class="bi bi-box-arrow-up-right" style="margin-left:auto;font-size:0.6rem;opacity:0.5;"></i>
-            </a>
-        </div>
-
+        </a>
+ 
         {{-- MEDIA SOSIAL BPS --}}
-        <div class="nav-link-1 {{ request()->routeIs('media-sosial') ? 'open active' : '' }}"
-             onclick="toggleNav('sosmed', this)">
+        <a href="{{ route('media-sosial') }}" class="nav-link-1 {{ request()->routeIs('media-sosial') ? 'active' : '' }}">
             <i class="bi bi-share-fill icon"></i>
             <span>Media Sosial BPS</span>
-            <i class="bi bi-chevron-right arrow"></i>
-        </div>
-        <div class="nav-sub {{ request()->routeIs('media-sosial') ? 'show' : '' }}"
-             id="sub-sosmed">
-            <a href="{{ route('media-sosial') }}" class="nav-link-2 {{ request()->routeIs('media-sosial') ? 'active' : '' }}">
-                <i class="bi bi-grid-fill" style="font-size:0.7rem;"></i>
-                <span>Semua Media Sosial</span>
-            </a>
-
-            <div class="nav-link-2" onclick="toggleNav('sosmed-ri', this)">
-                <span>BPS Republik Indonesia</span>
-                <i class="bi bi-chevron-right arrow"></i>
-            </div>
-            <div class="nav-subsub" id="sub-sosmed-ri">
-                <a href="https://bps.go.id" target="_blank" class="nav-link-3"><i class="bi bi-globe" style="margin-right:4px;"></i> Website</a>
-                <a href="https://facebook.com/bpsgoid" target="_blank" class="nav-link-3"><i class="bi bi-facebook" style="margin-right:4px;color:#1877F2;"></i> Facebook</a>
-                <a href="https://twitter.com/bpsgoid" target="_blank" class="nav-link-3"><i class="bi bi-twitter-x" style="margin-right:4px;"></i> Twitter/X</a>
-                <a href="https://instagram.com/bpsgoid" target="_blank" class="nav-link-3"><i class="bi bi-instagram" style="margin-right:4px;color:#E1306C;"></i> Instagram</a>
-                <a href="https://youtube.com/@bpsgoid" target="_blank" class="nav-link-3"><i class="bi bi-youtube" style="margin-right:4px;color:#FF0000;"></i> YouTube</a>
-            </div>
-
-            <div class="nav-link-2" onclick="toggleNav('sosmed-jabar', this)">
-                <span>BPS Prov. Jawa Barat</span>
-                <i class="bi bi-chevron-right arrow"></i>
-            </div>
-            <div class="nav-subsub" id="sub-sosmed-jabar">
-                <a href="https://jabar.bps.go.id" target="_blank" class="nav-link-3"><i class="bi bi-globe" style="margin-right:4px;"></i> Website</a>
-                <a href="https://facebook.com/bpsjabar" target="_blank" class="nav-link-3"><i class="bi bi-facebook" style="margin-right:4px;color:#1877F2;"></i> Facebook</a>
-                <a href="https://twitter.com/bpsjabar" target="_blank" class="nav-link-3"><i class="bi bi-twitter-x" style="margin-right:4px;"></i> Twitter/X</a>
-                <a href="https://instagram.com/bpsjabar" target="_blank" class="nav-link-3"><i class="bi bi-instagram" style="margin-right:4px;color:#E1306C;"></i> Instagram</a>
-                <a href="https://youtube.com/@bpsjabar" target="_blank" class="nav-link-3"><i class="bi bi-youtube" style="margin-right:4px;color:#FF0000;"></i> YouTube</a>
-            </div>
-
-            <div class="nav-link-2" onclick="toggleNav('sosmed-kuningan', this)">
-                <span>BPS Kab. Kuningan</span>
-                <i class="bi bi-chevron-right arrow"></i>
-            </div>
-            <div class="nav-subsub" id="sub-sosmed-kuningan">
-                <a href="https://kuningankab.bps.go.id" target="_blank" class="nav-link-3"><i class="bi bi-globe" style="margin-right:4px;"></i> Website</a>
-                <a href="https://facebook.com/bps3208" target="_blank" class="nav-link-3"><i class="bi bi-facebook" style="margin-right:4px;color:#1877F2;"></i> Facebook</a>
-                <a href="https://twitter.com/bps3208" target="_blank" class="nav-link-3"><i class="bi bi-twitter-x" style="margin-right:4px;"></i> Twitter/X</a>
-                <a href="https://instagram.com/bps3208" target="_blank" class="nav-link-3"><i class="bi bi-instagram" style="margin-right:4px;color:#E1306C;"></i> Instagram</a>
-                <a href="https://youtube.com/@bps3208" target="_blank" class="nav-link-3"><i class="bi bi-youtube" style="margin-right:4px;color:#FF0000;"></i> YouTube</a>
-            </div>
-        </div>
+        </a>
 
     </nav>
 </aside>
