@@ -5,7 +5,29 @@
 
 @section('page-content')
 
-<div style="color:#2B2B2B; line-height:1.9; font-size:15px; text-align:justify;">
+<style>
+.konsep-content{
+    color:#2B2B2B;
+    line-height:1.9;
+    font-size:15px;
+    text-align:justify;
+}
+
+@media (max-width:768px){
+
+    .konsep-content{
+        font-size:14px;
+        line-height:1.8;
+        text-align:left;
+    }
+
+    .konsep-content p{
+        margin-bottom:12px;
+    }
+}
+</style>
+
+<div class="konsep-content">
 
     <p>
         Gini Ratio didasarkan pada kurva lorenz, yaitu sebuah kurva pengeluaran kumulatif yang membandingkan distribusi dari suatu variabel tertentu (misalnya pendapatan) dengan distribusi uniform (seragam) yang mewakili persentase kumulatif penduduk. Mengetahui ukuran tingkat ketimpangan pengeluaran sebagai proksi pendapatan penduduk.

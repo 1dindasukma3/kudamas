@@ -5,7 +5,49 @@
 
 @section('page-content')
 
-<div style="color:#2B2B2B; line-height:1.9; font-size:15px; text-align:justify;">
+<style>
+.konsep-content{
+    color:#2B2B2B;
+    line-height:1.9;
+    font-size:15px;
+    text-align:justify;
+}
+
+.konsep-content h4{
+    color:#4A4A4A;
+    font-weight:700;
+}
+
+.konsep-content h5{
+    color:#3A3A3A;
+    font-weight:700;
+}
+
+@media (max-width:768px){
+
+   .konsep-content{
+    color:#2B2B2B;
+    line-height:1.9;
+    font-size:15px;
+    text-align:justify;
+}
+
+    .konsep-content p{
+        margin-bottom:14px;
+        text-indent:30px;
+    }
+
+    .konsep-content h4{
+        font-size:1.2rem;
+    }
+
+    .konsep-content h5{
+        font-size:1rem;
+    }
+}
+</style>
+
+<div class="konsep-content">
 
     <h4 class="fw-bold mb-4" style="color:#4A4A4A;">
         KEPENDUDUKAN

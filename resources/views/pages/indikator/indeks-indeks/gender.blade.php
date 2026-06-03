@@ -13,39 +13,41 @@
         <table class="table border-0 align-middle"
                style="font-size:15px; width:100%;">
 
-            <thead>
+               <thead>
 
-                <tr>
-                    <th colspan="3"
-                        style="background:#2F4B7C; color:white; text-align:center;
-                               padding:14px; border:none;">
-                        Indeks Ketimpangan Gender (IKG)
-                    </th>
-                </tr>
+        <tr>
+            <th colspan="4"
+                style="background:#2F4B7C; color:white; text-align:center;
+                       padding:14px; border:none;">
+                Indeks Ketimpangan Gender (IKG)
+            </th>
+        </tr>
 
-                <tr style="background:#2F4B7C; color:white; text-align:center;">
+        <tr style="background:#2F4B7C; color:white; text-align:center;">
 
-                    <th style="border:none;">Variabel IKG</th>
-                    <th style="border:none;">Thn. 2022</th>
-                    <th style="border:none;">Thn. 2023</th>
+            <th style="border:none;">Variabel IKG</th>
+            <th style="border:none;">Thn. 2023</th>
+            <th style="border:none;">Thn. 2024</th>
+            <th style="border:none;">Thn. 2025</th>
 
-                </tr>
+        </tr>
 
-            </thead>
+    </thead>
 
-            <tbody style="text-align:center;">
+    <tbody style="text-align:center;">
 
-                @foreach($ikg as $i)
+        @foreach($ikg as $i)
 
-                <tr>
-                    <td style="text-align:left;">{{ $i['variabel'] }}</td>
-                    <td>{{ $i['tahun2022'] }}</td>
-                    <td>{{ $i['tahun2023'] }}</td>
-                </tr>
+        <tr>
+            <td style="text-align:left;">{{ $i['variabel'] }}</td>
+            <td>{{ $i['tahun2023'] }}</td>
+            <td>{{ $i['tahun2024'] }}</td>
+            <td>{{ $i['tahun2025'] }}</td>
+        </tr>
 
-                @endforeach
+        @endforeach
 
-            </tbody>
+    </tbody>
 
         </table>
 
@@ -57,39 +59,41 @@
         <table class="table border-0 align-middle"
                style="font-size:15px; width:100%;">
 
-            <thead>
+                <thead>
 
-                <tr>
-                    <th colspan="3"
-                        style="background:#2F4B7C; color:white; text-align:center;
-                               padding:14px; border:none;">
-                        Indeks Pembangunan Gender (IPG)
-                    </th>
-                </tr>
+        <tr>
+            <th colspan="4"
+                style="background:#2F4B7C; color:white; text-align:center;
+                       padding:14px; border:none;">
+                Indeks Pembangunan Gender (IPG)
+            </th>
+        </tr>
 
-                <tr style="background:#2F4B7C; color:white; text-align:center;">
+        <tr style="background:#2F4B7C; color:white; text-align:center;">
 
-                    <th style="border:none;">Komponen</th>
-                    <th style="border:none;">Thn. 2022</th>
-                    <th style="border:none;">Thn. 2023</th>
+            <th style="border:none;">Komponen</th>
+            <th style="border:none;">Thn. 2023</th>
+            <th style="border:none;">Thn. 2024</th>
+            <th style="border:none;">Thn. 2025</th>
 
-                </tr>
+        </tr>
 
-            </thead>
+    </thead>
 
-            <tbody style="text-align:center;">
+    <tbody style="text-align:center;">
 
-                @foreach($ipg as $i)
+        @foreach($ipg as $i)
 
-                <tr>
-                    <td style="text-align:left;">{{ $i['variabel'] }}</td>
-                    <td>{{ $i['tahun2022'] }}</td>
-                    <td>{{ $i['tahun2023'] }}</td>
-                </tr>
+        <tr>
+            <td style="text-align:left;">{{ $i['variabel'] }}</td>
+            <td>{{ $i['tahun2023'] }}</td>
+            <td>{{ $i['tahun2024'] }}</td>
+            <td>{{ $i['tahun2025'] }}</td>
+        </tr>
 
-                @endforeach
+        @endforeach
 
-            </tbody>
+    </tbody>
 
         </table>
 

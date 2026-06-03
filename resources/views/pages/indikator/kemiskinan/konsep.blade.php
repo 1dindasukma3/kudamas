@@ -4,16 +4,52 @@
 @section('page-title', 'Konsep')
 
 @section('page-content')
+    
+        <style>
+    .konsep-content{
+        color:#2B2B2B;
+        line-height:2;
+        font-size:15px;
+        text-align:justify;
+    }
 
-<div style="color:#2B2B2B; line-height:1.9; font-size:15px; text-align:justify;">
+    .konsep-content p{
+        margin-bottom:14px;
+        text-indent:30px;
+    }
+
+    .konsep-content h5{
+        color:#3A3A3A;
+        font-weight:700;
+    }
+
+    @media (max-width:768px){
+
+            .konsep-content p{
+            margin-bottom:14px;
+            text-indent:30px;
+        }
+
+        .konsep-content p.mb-1,
+        .konsep-content p.mb-2{
+            text-indent:0;
+        }
+
+        .konsep-content h5{
+            font-size:1rem;
+        }
+    }
+    </style>
+
+<div class="konsep-content">
 
     <h5 class="fw-bold mt-2" style="color:#3A3A3A;">
         I. Penduduk Miskin
     </h5>
 
-    <p class="mb-1">
-        <strong>Konsep :</strong>
-    </p>
+    <p class="mb-2">
+    <strong>Konsep:</strong>
+</p>
 
     <p>
         Untuk mengukur kemiskinan, BPS menggunakan konsep kemampuan memenuhi kebutuhan dasar (basic needs approach). Dengan pendekatan ini, kemiskinan dipandang sebagai ketidakmampuan dari sisi ekonomi untuk memenuhi kebutuhan dasar makanan dan bukan makanan yang diukur dari sisi pengeluaran. Jadi Penduduk Miskin adalah penduduk yang memiliki rata-rata pengeluaran perkapita perbulan dibawah garis kemiskinan.
@@ -28,7 +64,7 @@
     </p>
 
     <p>
-        1. Garis Kemiskinan (GK) merupakan penjumlahan dari Garis Kemiskinan Makanan (GKM) dan Garis Kemiskinan Non Makanan (GKNM). Penduduk yang memiliki rata-rata pengeluaran perkapita per bulan dibawah Garis Kemiskinan dikategorikan sebagai penduduk miskin.
+        1. Garis Kemiskinan (GK) merupakan penjumlahan dari Garis Kemiskinan Makanan (GKM) dan Garis Kemiskinan Non Makanan (GKNM). Penduduk yang memiliki rata-rata pengeluaran per kapita per bulan dibawah Garis Kemiskinan dikategorikan sebagai penduduk miskin.
     </p>
 
     <p>
