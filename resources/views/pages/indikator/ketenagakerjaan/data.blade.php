@@ -5,13 +5,43 @@
 
 @section('page-content')
 
+<style>
+@media (max-width:768px){
+
+    .table-ketenagakerjaan{
+        font-size:12px !important;
+    }
+
+    .table-ketenagakerjaan th{
+        padding:8px 4px !important;
+        font-size:12px !important;
+    }
+
+    .table-ketenagakerjaan td{
+        padding:8px 4px !important;
+        font-size:12px !important;
+    }
+
+    .table-ketenagakerjaan th:first-child,
+    .table-ketenagakerjaan td:first-child{
+        width:34%;
+    }
+
+    .table-ketenagakerjaan th:not(:first-child),
+    .table-ketenagakerjaan td:not(:first-child){
+        width:22%;
+    }
+}
+</style>
+
 <div style="font-size:15px; color:#3A3A3A;">
+
 
     {{-- ANGKATAN KERJA --}}
     <div class="table-responsive">
 
-        <table class="table border-0 align-middle"
-               style="font-size:15px; table-layout:fixed; width:100%;">
+        <table class="table border-0 align-middle table-ketenagakerjaan"
+      		 style="font-size:15px; table-layout:fixed; width:100%;">
 
             <thead>
 
@@ -67,8 +97,8 @@
     {{-- BUKAN ANGKATAN KERJA --}}
     <div class="table-responsive mt-4">
 
-        <table class="table border-0 align-middle"
-               style="font-size:15px; table-layout:fixed; width:100%;">
+       <table class="table border-0 align-middle table-ketenagakerjaan"
+      	 style="font-size:15px; table-layout:fixed; width:100%;">
 
             <thead>
 

@@ -10,8 +10,8 @@
     {{-- TPT --}}
     <div class="table-responsive mb-4">
 
-        <table class="table table-bordered align-middle"
-               style="width:100%; font-size:15px;">
+        <table class="table border-0 align-middle"
+       style="width:100%; font-size:15px;">
 
             <thead>
 
@@ -71,8 +71,8 @@
     {{-- TPAK --}}
     <div class="table-responsive">
 
-        <table class="table table-bordered align-middle"
-               style="width:100%; font-size:15px;">
+        <table class="table border-0 align-middle"
+       style="width:100%; font-size:15px;">
 
             <thead>
 

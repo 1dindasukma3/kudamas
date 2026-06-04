@@ -5,9 +5,50 @@
 
 @section('page-content')
 
-<div style="color:#2B2B2B; line-height:1.9; font-size:15px; text-align:justify;">
+<style>
+.konsep-content{
+    color:#2B2B2B;
+    font-size:15px;
+    line-height:2;
+    text-align:justify;
+    text-justify:inter-word;
+}
 
-    <h5 class="fw-bold mt-2" style="color:#3A3A3A;">
+.konsep-content p{
+    margin-bottom:14px;
+}
+
+.konsep-content h5{
+    color:#3A3A3A;
+    font-weight:700;
+    margin-top:24px;
+    margin-bottom:12px;
+    line-height:1.4;
+}
+
+@media (max-width:768px){
+
+    .konsep-content{
+        font-size:14px;
+        line-height:1.8;
+        text-align:justify;
+    }
+
+    .konsep-content p{
+        margin-bottom:12px;
+    }
+
+    .konsep-content h5{
+        font-size:1rem;
+        margin-top:20px;
+        margin-bottom:10px;
+    }
+}
+</style>
+
+<div class="konsep-content">
+
+    <h5 class="fw-bold mt-2">
         1. Penduduk usia kerja
     </h5>
 
@@ -15,7 +56,7 @@
         Penduduk usia kerja adalah penduduk berumur 15 tahun dan lebih.
     </p>
 
-    <h5 class="fw-bold mt-4" style="color:#3A3A3A;">
+    <h5 class="fw-bold mt-4">
         2. Penduduk yang termasuk angkatan kerja
     </h5>
 

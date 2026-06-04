@@ -125,7 +125,7 @@
             </p>
         </div>
 
-        <div class="history-item p-3 rounded-4"
+        <div class="history-item mb-0 p-3 rounded-4"
              style="background:#fff;border:1px solid #E5E7EB;">
             <div class="fw-bold mb-2" style="color:#2563EB;font-size:1rem;">
                 🏙️ Perkembangan Wilayah
@@ -139,10 +139,12 @@
             </p>
         </div>
 
+    </div>{{-- /timeline-history --}}
+
     <div class="mt-3 text-center">
         <small class="text-muted">Sumber: Pemerintah Kabupaten Kuningan</small>
     </div>
 
-</div>
+</div>{{-- /bg-white --}}
 
 @endsection

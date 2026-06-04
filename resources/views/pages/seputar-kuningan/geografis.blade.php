@@ -254,13 +254,13 @@
         Kabupaten Kuningan terdiri atas
         <strong>32 Kecamatan</strong>,
         <strong>15 Kelurahan</strong> dan
-        <strong>361 Desa</strong>.
+        <strong>376 Desa</strong>.
     </p>
 
 </div>
 
 <div class="source-text">
-    Sumber: Pemerintah Kabupaten Kuningan
+    Sumber: BPS Kbaupaten Kuningan
 </div>
 
 @endsection

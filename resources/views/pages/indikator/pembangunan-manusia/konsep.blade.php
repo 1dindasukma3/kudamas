@@ -4,16 +4,43 @@
 @section('page-title', 'Konsep')
 
 @section('page-content')
+    
+<style>
+.konsep-content{
+    color:#4B5563;
+    font-size:15px;
+    line-height:2;
+}
 
-<div style="font-size:15px; line-height:1.8; color:#4B5563;">
+.konsep-content p{
+    margin-bottom:14px;
+    text-indent:30px;
+    text-align:justify;
+}
 
-    <p>
-        <strong>I. Pembangunan Manusia</strong><br>
+@media (max-width:768px){
+
+    .konsep-content{
+        font-size:14px;
+        line-height:1.8;
+    }
+
+    .konsep-content p{
+        margin-bottom:12px;
+        text-indent:20px;
+        text-align:left;
+    }
+}
+</style>
+
+<div class="konsep-content">
+
+    <p><strong>I. Pembangunan Manusia</strong></p>
         Mengutip isi Human Development Report (HDR) pertama tahun 1990, pembangunan manusia adalah suatu proses untuk memperbanyak pilihan-pilihan yang dimiliki oleh manusia. Diantara banyak pilihan tersebut, pilihan yang terpenting adalah untuk berumur panjang dan sehat, untuk berilmu pengetahuan, dan untuk mempunyai akses terhadap sumber daya yang dibutuhkan agar dapat hidup secara layak.
     </p>
 
     <p class="mt-4">
-        <strong>II. Indeks Pembangunan Manusia (IPM)</strong><br>
+        <p><strong>II. Indeks Pembangunan Manusia (IPM)</strong></p>
         Indeks Pembangunan Manusia (IPM) mengukur capaian pembangunan manusia berbasis sejumlah komponen dasar kualitas hidup. Sebagai ukuran kualitas hidup, IPM dibangun melalui pendekatan tiga dimensi dasar. Dimensi tersebut mencakup umur panjang dan sehat; pengetahuan; dan kehidupan yang layak. Ketiga dimensi tersebut memiliki pengertian sangat luas karena terkait banyak faktor. Untuk mengukur dimensi kesehatan, digunakan angka harapan hidup waktu lahir. Selanjutnya untuk mengukur dimensi pengetahuan digunakan gabungan indikator angka melek huruf dan rata-rata lama sekolah. Adapun untuk mengukur dimensi hidup layak digunakan indikator kemampuan daya beli masyarakat terhadap sejumlah kebutuhan pokok yang dilihat dari rata-rata besarnya pengeluaran per kapita sebagai pendekatan pendapatan yang mewakili capaian pembangunan untuk hidup layak.
     </p>
 
