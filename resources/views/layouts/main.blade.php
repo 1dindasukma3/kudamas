@@ -289,29 +289,32 @@
            SCROLL AREA + BG
            ════════════════════════════════ */
         .scroll-area {
-    flex: 1; overflow-y: auto; position: relative;
-    scrollbar-width: thin;
-    scrollbar-color: #94A3B8 #E2E8F0; /* ← thumb abu, track putih keabuan */
-}
+            flex: 1; overflow-y: auto; position: relative;
+            scrollbar-width: thin;
+            scrollbar-color: #94A3B8 #E2E8F0;
+            display: flex;
+            flex-direction: column;
+        }
+            
 
-/* Webkit scrollbar — Chrome, Safari, Edge */
-.scroll-area::-webkit-scrollbar {
-    width: 6px;
-}
+        /* Webkit scrollbar — Chrome, Safari, Edge */
+        .scroll-area::-webkit-scrollbar {
+            width: 6px;
+        }
 
-.scroll-area::-webkit-scrollbar-track {
-    background: #E2E8F0;
-    border-radius: 99px;
-}
+        .scroll-area::-webkit-scrollbar-track {
+            background: #E2E8F0;
+            border-radius: 99px;
+        }
 
-.scroll-area::-webkit-scrollbar-thumb {
-    background: #94A3B8;
-    border-radius: 99px;
-}
+        .scroll-area::-webkit-scrollbar-thumb {
+            background: #94A3B8;
+            border-radius: 99px;
+        }
 
-.scroll-area::-webkit-scrollbar-thumb:hover {
-    background: #64748B;
-}
+        .scroll-area::-webkit-scrollbar-thumb:hover {
+            background: #64748B;
+        }
 
         .scroll-bg {
             position: fixed;
@@ -338,6 +341,7 @@
         .scroll-inner {
             position: relative; z-index: 1;
             padding: 28px 30px 60px;
+            flex: 1;
         }
 
         .center-wrap { max-width: 940px; margin: 0 auto; }
@@ -461,6 +465,8 @@
             z-index: 5;
             box-shadow: 0 -2px 16px rgba(27,58,107,0.06);
             box-sizing: border-box;
+            margin-top: auto;
+            
         }
 
         .footer-container {
